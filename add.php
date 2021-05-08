@@ -8,12 +8,14 @@
 
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 </head>
 <body>
+<label for="name">Trial</label>
 <div class="container">
   <form action="add.php" method="POST">
     <div class="form-group">
