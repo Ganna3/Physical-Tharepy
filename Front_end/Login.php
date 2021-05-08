@@ -25,7 +25,7 @@
                         </div>
                     </form>
                     <p class="loginhere">
-                        Create New Account ? <a href="#" class="loginhere-link">Sign Up</a>
+                        Create New Account ? <a href="SignUp.php" class="loginhere-link">Sign Up</a>
                     </p>
                 </div>
             </div>
