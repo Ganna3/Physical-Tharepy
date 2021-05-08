@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 </head>
 <body>
-
+<h1 > trial </h1>
 <div class="container">
   <form action="add.php" method="POST">
     <div class="form-group">
