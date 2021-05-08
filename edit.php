@@ -26,7 +26,7 @@
   <form action="edit.php" method="POST">
     <div class="form-group">
       <label for="name">Doctor Schedule day:</label> 
-      <label for="name">Doctor Schedule day:</label> 
+      
       <select class="form-control" name="UDoctorsScheduleday" value="<?php echo $DoctorSch['Doctors_Schedule_day']; ?>" required="">
      <option value="Saturday">Saturday</option>
   <option value="Sunday">Sunday</option>
