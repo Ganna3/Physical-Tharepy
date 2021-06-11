@@ -1,5 +1,16 @@
     
     <?php require APPROOT . '/views/inc/footer_content.php';?>
+	</div>
+						<!-- /Copyright -->
+						
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+				
+			</footer>
+			<!-- /Footer -->
+		   
+		</div>
     <script src="<?php echo URLROOT; ?>public/assets/js/jquery.min.js"></script>
 		<script src="<?php echo URLROOT; ?>public/assets/js/popper.min.js"></script>
 		<script src="<?php echo URLROOT; ?>public/assets/js/bootstrap.min.js"></script>

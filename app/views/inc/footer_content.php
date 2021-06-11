@@ -126,14 +126,4 @@
 									
 								</div>
 							</div>
-						</div>
-						<!-- /Copyright -->
 						
-					</div>
-				</div>
-				<!-- /Footer Bottom -->
-				
-			</footer>
-			<!-- /Footer -->
-		   
-		</div>
