@@ -111,11 +111,11 @@ class UserModel extends model
       function setGender($Gender) {
         return $this->Gender = $Gender;
       }
-      function getBithdate() {
-        return $this->Bithdate;
+      function getBirthdate() {
+        return $this->Birthdate;
       }
       function setBithdate($Birthdate) {
-        return $this->Bithdate = $Bithdate;
+        return $this->Birthdate = $Birthdate;
       }
       function getImage() {
         return $this->image;

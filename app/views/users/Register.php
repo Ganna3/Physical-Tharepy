@@ -32,8 +32,14 @@ class Register extends view
                       <form action="$action" method ="POST">
 EOT;
     echo $text;
-    $this->printName();
+    $this->printFName();
+    $this->printLName();
+    $this->printNumber();
+    $this->printAddress();
+    $this->printGender();
     $this->printEmail();
+    //$this->printImage();
+    $this->printBirthdate();
     $this->printPassword();
     $this->printConfirmPassword();
     $text = <<<EOT
@@ -55,7 +61,7 @@ EOT;
     echo $text;
   }
 
-  private function prinFName()
+  private function printFName()
   {
     $val = $this->model->getFName();
     $err = $this->model->getNameErr();
@@ -67,7 +73,7 @@ EOT;
   private function printLName()
   {
     $val = $this->model->getLName();
-    $err = $this->model->getLNameErr();
+   $err = //$this->model->getLNameErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'LName', $val, $err, $valid);
@@ -75,7 +81,7 @@ EOT;
   private function printNumber()
   {
     $val = $this->model->getNumber();
-    $err = $this->model->getNumberErr();
+    $err = //$this->model->getNumberErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'Number', $val, $err, $valid);
@@ -83,7 +89,7 @@ EOT;
   private function printAddress()
   {
     $val = $this->model->getAddress();
-    $err = $this->model->getAddressErr();
+    $err = //$this->model->getAddressErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'Address', $val, $err, $valid);
@@ -91,7 +97,7 @@ EOT;
   private function printGender()
   {
     $val = $this->model->getGender();
-    $err = $this->model->getGenderErr();
+    $err = //$this->model->getGenderErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'Gender', $val, $err, $valid);
@@ -99,28 +105,28 @@ EOT;
   private function printEmail()
   {
     $val = $this->model->getEmail();
-    $err = $this->model->getEmailErr();
+    $err = //$this->model->getEmailErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
-    $this->printInput('text', 'name', $val, $err, $valid);
+    $this->printInput('email', 'Email', $val, $err, $valid);
   }
-  private function printBithdate()
+  private function printBirthdate()
   {
-    $val = $this->model->getBithdate();
-    $err = $this->model->getBithdateErr();
+    $val = $this->model->getBirthdate();
+    $err = //$this->model->getBithdateErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
-    $this->printInput('email', 'Bithdate', $val, $err, $valid);
+    $this->printInput('date', 'Birthdate', $val, $err, $valid);
   }
-  private function printUsername()
+  private function printImage()
   {
-    $val = $this->model->getUsername();
-    $err = $this->model->getUsernameErr();
+    $val = $this->model->getImage();
+    $err = //$this->model->getBithdateErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
-    $this->printInput('text', 'Usernamename', $val, $err, $valid);
+    $this->printInput('Image', 'Image', $val, $err, $valid);
   }
-
+ 
   private function printPassword()
   {
     $val = $this->model->getPassword();
@@ -145,7 +151,7 @@ EOT;
     $text = <<<EOT
     <div class="form-group form-focus">
     <input type="$type" name="$fieldName" id="$fieldName" value="$val" class="form-control floating">
-    <label class="focus-label">for="$fieldName"</label>a
+    <label class="focus-label">$fieldName</label>
   </div>
 EOT;
     echo $text;

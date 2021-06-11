@@ -6,17 +6,17 @@ class Users extends Controller
         $registerModel = $this->getModel();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Process form
-            $registerModel->setFName(trim($_POST['Fname']));
+            $registerModel->setFName(trim($_POST['FName']));
             $registerModel->setLName(trim($_POST['LName']));
             $registerModel->setEmail(trim($_POST['Email']));
             $registerModel->setPassword(trim($_POST['password']));
             $registerModel->setConfirmPassword(trim($_POST['confirm_password']));
-            $registerModel->setNumber((trim($_POST['Number']));
-            $registerModel->setAddress((trim($_POST['Address']));
-            $registerModel->setGender((trim($_POST['Gender']));
-            $registerModel->setBithdate((trim($_POST['Birthdate']));
-            $registerModel->setImage((trim($_POST['Image']));
-            $registerModel->setUsername((trim($_POST['Username']));
+            $registerModel->setNumber(trim($_POST['Number']));
+            $registerModel->setAddress(trim($_POST['Address']));
+            $registerModel->setGender(trim($_POST['Gender']));
+            $registerModel->setBithdate(trim($_POST['Birthdate']));
+            //$registerModel->setImage(trim($_POST['Image']));
+           // $registerModel->setUsername(trim($_POST['Username']));
             
             //validation
             if (empty($registerModel->getLName())) {
