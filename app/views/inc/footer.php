@@ -8,6 +8,7 @@
     <script src="<?php echo URLROOT; ?>public/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/plugins/select2/js/select2.min.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/js/moment.min.js"></script>
+	<script src="<?php echo URLROOT; ?>public/assets/js/aboutus.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/js/script.js"></script>

@@ -47,7 +47,7 @@
 								<a href="<?php echo URLROOT . 'public/users/login'; ?>">Services</a>
 							</li>
 							<li>
-								<a href="<?php echo URLROOT . 'public/users/login'; ?>">About us</a>
+								<a href="<?php echo URLROOT . 'public/pages/about'; ?>">About us</a>
 							</li>
 							
 						</ul>
