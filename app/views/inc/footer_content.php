@@ -13,7 +13,7 @@
      height="101" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p>Our clinic provides good services for patients. </p>
 										<div class="social-icon">
 											
 										</div>

@@ -15,7 +15,7 @@ class Index extends view{
 						<div class="banner-header text-center style="color:#000000;">
 						<div class="text-block">
 							<h1>Search Doctor, Make an Appointment</h1>
-							<p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
+							<p>Discover the best doctors and specialists.</p>
 							</div>
 						</div>
                          
@@ -32,8 +32,8 @@ class Index extends view{
 			<section class="section section-specialities">
 				<div class="container-fluid">
 					<div class="section-header text-center">
-						<h2>Clinic and Specialities</h2>
-						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<h2>Physical Therapy Specialists</h2>
+						<p class="sub-title">The clinic is famous for these specialists.</p>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-9">
@@ -46,7 +46,7 @@ class Index extends view{
 										<img src="assets/img/specialities/Mangment.png" class="img-fluid" alt="Speciality">
 										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 									</div>
-									<p>Urology</p>
+									<p>Orthopedic</p>
 								</div>	
 								<!-- /Slider Item -->
 								
@@ -56,7 +56,7 @@ class Index extends view{
 										<img src="assets/img/specialities/Post Surgical.png" class="img-fluid" alt="Speciality">
 										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 									</div>
-									<p>Neurology</p>	
+									<p>Rehabilitation</p>	
 								</div>							
 								<!-- /Slider Item -->
 								
@@ -66,7 +66,7 @@ class Index extends view{
 										<img src="assets/img/specialities/Women Health.png" class="img-fluid" alt="Speciality">
 										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 									</div>	
-									<p>Orthopedic</p>	
+									<p>Woman Health</p>	
 								</div>							
 								<!-- /Slider Item -->
 								
@@ -76,7 +76,7 @@ class Index extends view{
 										<img src="assets/img/specialities/Physiotherapy.png" class="img-fluid" alt="Speciality">
 										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 									</div>	
-									<p>Cardiologist</p>	
+									<p>Physiotherapy</p>	
 								</div>							
 								<!-- /Slider Item -->
 								
@@ -86,7 +86,7 @@ class Index extends view{
 										<img src="assets/img/specialities/Sports injury.png" class="img-fluid" alt="Speciality">
 										<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 									</div>	
-									<p>Dentist</p>
+									<p>Sports Injury</p>
 								</div>							
 								<!-- /Slider Item -->
 								<!-- Slider Item -->
@@ -108,7 +108,7 @@ class Index extends view{
 					</div>
 				</div>   
 			</section>	 
-			<!-- Clinic and Specialities -->
+			<!-- Physio Therapy Specialists-->
 		  
 			<!-- Popular Section -->
 			<section class="section section-doctor">
@@ -117,10 +117,10 @@ class Index extends view{
 						<div class="col-lg-4">
 							<div class="section-header ">
 								<h2>Book Our Doctor</h2>
-								<p>Lorem Ipsum is simply dummy text </p>
+								<p>Choose the specific doctor according to your injury</p>
 							</div>
 							<div class="about-content">
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+								<p>It is a long established fact that a patient will be distracted by the readable content of a page when looking for it's specialist. The point of using Lorem Ipsum.</p>
 								<p>web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>					
 								<a href="javascript:;">Read More..</a>
 							</div>
@@ -529,7 +529,7 @@ class Index extends view{
 						<div class="col-md-7">
 							<div class="section-header">	
 								<h2 class="mt-2">Availabe Features in Our Clinic</h2>
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+								<p>It is a fact that a patient will be happy at viewing the content of app when founding suitable specialist. </p>
 							</div>	
 							<div class="features-slider slider">
 								<!-- Slider Item -->
