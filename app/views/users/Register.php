@@ -40,7 +40,7 @@ EOT;
     $this->printAddress();
     $this->printGender();
     $this->printEmail();
-    //$this->printImage();
+    $this->printImage();
     $this->printBirthdate();
     $this->printPassword();
     $this->printConfirmPassword();
@@ -142,7 +142,7 @@ EOT;
     $err = //$this->model->getBithdateErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
-    $this->printInput('Image', 'Image', $val, $err, $valid);
+    $this->printFile('file', 'Image', $val, $err, $valid);
   }
  
   private function printPassword()
@@ -174,4 +174,19 @@ EOT;
 EOT;
     echo $text;
   }
+  private function printFile($type, $fieldName, $val, $err, $valid)
+  {
+    $label = str_replace("_", " ", $fieldName);
+    $label = ucwords($label);
+    $text = <<<EOT
+  <div class="form-group  ">
+  <label class="focus-label">Profile Picture</label>
+    <input class="form-control floating" type="$type" name="$fieldName"  id="$fieldName" >
+  </div>
+EOT;
+    echo $text;
+  }
+
+
+
 }

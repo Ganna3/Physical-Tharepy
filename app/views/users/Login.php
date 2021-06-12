@@ -23,7 +23,7 @@ class Login extends view
 							<div class="account-content">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-md-7 col-lg-6 login-left">
-										<img src="assets/img/login-banner.png" class="img-fluid" alt="Doccure Login">
+										<img src="assets/img/Home.png" class="img-fluid" alt="Doccure Login">
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
 										<div class="login-header">
@@ -91,8 +91,8 @@ EOT;
     $label = ucwords($label);
     $text = <<<EOT
     <div class="form-group form-focus">
-    <label for="$fieldName"> $label: <sup>*</sup></label>
 				<input type="$type" name="$fieldName" id="$fieldName" value="$val" class="form-control floating" required="">
+        <label class="focus-label">$fieldName</label>
 									</div>
 EOT;
     echo $text;

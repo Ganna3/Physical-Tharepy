@@ -16,7 +16,7 @@
 					<div class="main-menu-wrapper">
 						<div class="menu-header">
 							<a href="<?php echo URLROOT . 'public';?>" class="menu-logo">
-								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+								<img src="<?php echo URLROOT . 'public';?>/assets/img/amr.png" class="img-fluid" alt="Logo">
 							</a>
 							<a id="menu_close" class="menu-close" href="javascript:void(0);">
 								<i class="fas fa-times"></i>
