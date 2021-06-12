@@ -30,10 +30,12 @@ class Register extends view
                       </div>
                       <!-- Register Form -->
                       <form action="$action" method ="POST">
+                      
 EOT;
     echo $text;
     $this->printFName();
     $this->printLName();
+   $this->printUsername();
     $this->printNumber();
     $this->printAddress();
     $this->printGender();
@@ -57,6 +59,13 @@ EOT;
     </div>
     </div>
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
 EOT;
     echo $text;
   }
@@ -68,6 +77,15 @@ EOT;
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'FName', $val, $err, $valid);
+  
+  }
+  private function printUsername()
+  {
+    $val = $this->model->getUsername();
+    $err =// $this->model->getNameErr();
+    $valid = (!empty($err) ? 'is-invalid' : '');
+
+    $this->printInput('text', 'Username', $val, $err, $valid);
   
   }
   private function printLName()
@@ -84,7 +102,7 @@ EOT;
     $err = //$this->model->getNumberErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
-    $this->printInput('text', 'Number', $val, $err, $valid);
+    $this->printInput('tel', 'Phone_number', $val, $err, $valid);
   }
   private function printAddress()
   {

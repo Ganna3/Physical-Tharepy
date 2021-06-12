@@ -8,7 +8,7 @@ class UserModel extends model
     private $address;
     private $Gender;
     private $password;
-    private $number;
+    private $Phone_number;
     private $email;
     private $Birthdate;
     private $image;
@@ -85,10 +85,10 @@ class UserModel extends model
       }
 
       function getNumber() {
-        return $this->number;
+        return $this->Phone_number;
       }
-      function setNumber($number) {
-        return $this->number = $number;
+      function setNumber($Phone_number) {
+        return $this->Phone_number = $Phone_number;
       }
       function getUsername() {
         return $this->username;

@@ -338,7 +338,7 @@ table.table td h2 span {
 }
 .bg-primary,
 .badge-primary {
-	background-color: #09e5ab !important;
+	background-color: #c3ae77 !important;
 }
 a.bg-primary:focus, 
 a.bg-primary:hover, 
@@ -395,7 +395,7 @@ button.bg-danger:hover {
 }
 .text-primary,
 .dropdown-menu > li > a.text-primary {
-	color: #09e5ab !important;
+	color: #c3ae77 !important;
 }
 .text-success,
 .dropdown-menu > li > a.text-success {
@@ -421,8 +421,8 @@ button.bg-danger:hover {
     color: #757575 !important;
 }
 .btn-primary {
-	background-color: #09e5ab;
-	border: 1px solid #09e5ab;
+	background-color: #c3ae77;
+	border: 1px solid #c3ae77;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -457,8 +457,8 @@ button.bg-danger:hover {
 	box-shadow: unset;
 }
 .btn-primary.disabled, .btn-primary:disabled {
-    background-color: #09e5ab;
-    border-color: #09e5ab;
+    background-color: #c3ae77;
+    border-color: #c3ae77;
     color: #fff;
 }
 .btn-secondary.active:focus:not(:disabled):not(.disabled), 
@@ -642,12 +642,12 @@ button.bg-danger:hover {
     box-shadow: unset;
 }
 .btn-outline-primary {
-	color: #09e5ab;
-	border-color: #09e5ab;
+	color: #c3ae77;
+	border-color: #c3ae77;
 }
 .btn-outline-primary:hover {
-	background-color: #09e5ab;
-	border-color: #09e5ab;
+	background-color: #c3ae77;
+	border-color: #c3ae77;
 }
 .btn-outline-primary:focus, 
 .btn-outline-primary.focus {
@@ -655,14 +655,14 @@ button.bg-danger:hover {
 }
 .btn-outline-primary.disabled, 
 .btn-outline-primary:disabled {
-	color: #09e5ab;
+	color: #c3ae77;
 	background-color: transparent;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active, 
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
-	background-color: #09e5ab;
-	border-color: #09e5ab;
+	background-color: #c3ae77;
+	border-color: #c3ae77;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, 
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
@@ -816,7 +816,7 @@ button.bg-danger:hover {
     transform-origin: left top 0;
 }
 .dropdown-item.active, .dropdown-item:active {
-    background-color: #0de0fe;
+    background-color: #30465b;
 }
 .navbar-nav .open .dropdown-menu {
 	border: 0;
@@ -1509,7 +1509,7 @@ button.bg-danger:hover {
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-    background-color: #0de0fe;
+    background-color: #30465b;
 	color: #fff;
 	opacity: 1;
 }
@@ -1809,8 +1809,8 @@ button.bg-danger:hover {
 	border-radius: 0 0 5px 5px;
 }
 .header-navbar-rht li a.header-login:hover {
-    background-color: #09e5ab;
-    border-color: #09e5ab;
+    background-color: #c3ae77;
+    border-color: #c3ae77;
     color: #fff;
 }
 .header-navbar-rht li .dropdown-menu a:hover {
@@ -1820,12 +1820,12 @@ button.bg-danger:hover {
 	background-color: #fff;
 }
 .header-navbar-rht li a.header-login {
-    border: 2px solid #09e5ab;
+    border: 2px solid #c3ae77;
     border-radius: 4px;
     padding: 10px 15px !important;
     text-align: center;
     font-size: 15px;
-    color: #09e5ab;
+    color: #c3ae77;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -1978,7 +1978,7 @@ button.bg-danger:hover {
     width: 31px;
 }
 .bar-icon span {
-    background-color: #0de0fe;
+    background-color: #30465b;
     display: block;
     float: left;
     height: 3px;
@@ -2005,10 +2005,12 @@ html.menu-opened body {
 -----------------------*/
 
 .footer {
-    background-color: #15558d;
+    background-color:  #30465b;
+	
 }
 .footer .footer-top {
-	padding: 40px 0;
+	
+	padding: 30px 0;
 }
 .footer-title {
     color: #fff;
@@ -2024,7 +2026,7 @@ html.menu-opened body {
     outline: none;
 }
 .footer .footer-widget .footer-logo {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .footer .footer-widget .footer-about-content p {
 	color: #fff;
@@ -2079,7 +2081,7 @@ html.menu-opened body {
 	font-size: 15px;
 }
 .footer .footer-bottom .copyright-text p a {
-	color: #09e5ab;
+	color: #c3ae77;
 	-webkit-transition: all 0.4s ease 0s;
 	-o-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
@@ -2114,7 +2116,7 @@ html.menu-opened body {
 	transition: all 0.4s ease 0s;
 }
 .footer .social-icon ul li a:hover {
-	color: #09e5ab;
+	color: #c3ae77;
 }
 .policy-menu {
     font-size: 14px;
@@ -2133,7 +2135,7 @@ html.menu-opened body {
     color: #fff;
 }
 .policy-menu li a:hover, .policy-menu li a:focus {
-	color: #09e5ab;
+	color: #c3ae77;
 }
 .policy-menu li::after {
 	color: #fff;
@@ -2156,11 +2158,13 @@ html.menu-opened body {
 .account-page .content {
     padding: 50px 0;
 }
-.login-right {
+.login-right 
+{
 	background-color: #fff;
 	border: 1px solid #f0f0f0;
 	border-radius: 4px;
 	padding: 25px;
+	margin-bottom: 25px;
 }
 .login-header {
 	margin-bottom: 20px;
@@ -2173,7 +2177,7 @@ html.menu-opened body {
     margin-bottom: 3px;
 }
 .login-header h3 a {
-    color: #0de0fe;
+    color: #30465b;
     float: right;
     font-size: 15px;
     margin-top: 2px;
@@ -2241,14 +2245,25 @@ html.menu-opened body {
 /*-----------------
 	15. Home
 -----------------------*/
+.text-block {
+	position: relative;
+	background-color: rgb(245, 240, 240,0.5);
+	padding-left: 40px;
+	padding-right: 40px;
+	border: 1px solid rgb(250, 248, 248);
+    border-radius: 2px;
+  }
+
+ 
 
 .section-search { 
-	background: #f9f9f9 url(../img/search-bg.png) no-repeat bottom center;
+	background: #f9f9f9 url(../img/Is-Pain.jpg) no-repeat bottom center;
     min-height: 450px;
     background-size: 100% auto;
     position: relative;
     background-blend-mode: Darken;
     padding: 80px 0;
+	border: 2px  solid #30465b;
 }
 .section-header {
     margin-bottom: 60px;
@@ -2284,7 +2299,7 @@ html.menu-opened body {
 	font-weight: 600;
 }
 .banner-wrapper .banner-header p {
-	color: #757575;
+	color: #0c0a0a;
 	font-size: 20px;
 	margin-bottom: 0;
 }
@@ -2395,11 +2410,11 @@ html.menu-opened body {
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button {
-    background-color: #0de0fe;
+    background-color: #30465b;
 }
 .slick-dots li.slick-active button:before {
     opacity: 1;
-    color: #0de0fe;
+    color: #30465b;
 }
 .slick-slide {
 	outline: none !important;
@@ -2452,7 +2467,7 @@ html.menu-opened body {
 }
 .speicality-img span i {
     font-size: 15px;
-	color:#0de0fe;
+	color:#30465b;
 }
 .speicality-item p {
     font-size: 16px;
@@ -2604,21 +2619,21 @@ html.menu-opened body {
     padding-right: 3px;
 }
 .view-btn {
-    color: #0de0fe;
+    color: #30465b;
     font-size: 13px;
-    border: 2px solid #0de0fe;
+    border: 2px solid #30465b;
     text-align: center;
     display: block;
     font-weight: 500;
 	padding: 6px;
 }
 .view-btn:hover, .view-btn:focus {
-	background-color: #0de0fe;
+	background-color: #30465b;
 	color: #fff;
 }
 .book-btn {
-	background-color: #0de0fe;
-    border: 2px solid #0de0fe;
+	background-color: #30465b;
+    border: 2px solid #30465b;
     color: #fff;
     font-size: 13px;
     text-align: center;
@@ -2645,7 +2660,7 @@ html.menu-opened body {
 	margin-top: 20px;
 }
 .about-content a {
-    background-color: #0de0fe;
+    background-color: #30465b;
     border-radius: 4px;
 	color: #fff;
     display: inline-block;
@@ -2793,7 +2808,7 @@ html.menu-opened body {
     display: none;
     left: 4px;
     top: 0;
-    color: #0de0fe;
+    color: #30465b;
     font-size: 11px;
 }
 .custom_check input:checked ~ .checkmark:after {
@@ -2862,8 +2877,8 @@ html.menu-opened body {
 	line-height: 18px;
 }
 .btn-search .btn {
-    background-color: #0de0fe;
-    border: 1px solid #0de0fe;
+    background-color: #30465b;
+    border: 1px solid #30465b;
     color: #fff;
     height: 46px;
 	font-weight:500;
@@ -2910,7 +2925,7 @@ html.menu-opened body {
     margin-bottom: 25px;
 }
 .doc-location a {
-    color: #09e5ab;
+    color: #c3ae77;
     font-weight: 500;
 }
 .doctor-widget .doc-name {
@@ -3038,7 +3053,7 @@ html.menu-opened body {
 	margin-bottom: 25px;
 }
 .clinic-direction a {
-    color: #09e5ab;
+    color: #c3ae77;
     font-weight: 500;
 }
 .doctor-action {
@@ -3058,13 +3073,13 @@ html.menu-opened body {
 	color: #fff;
 }
 .msg-btn:hover, .msg-btn:focus {
-	background-color: #09e5ab;
-	border-color: #09e5ab;
+	background-color: #c3ae77;
+	border-color: #c3ae77;
 	color: #fff;
 }
 .call-btn:hover, .call-btn:focus {
-	background-color: #09e5ab;
-	border-color: #09e5ab;
+	background-color: #c3ae77;
+	border-color: #c3ae77;
 	color: #fff;
 }
 .user-tabs .nav-tabs > li > a {
@@ -3750,7 +3765,7 @@ html.menu-opened body {
     color: #fff;
     width: 60px;
     height: 60px;
-    border: 2px solid #09e5ab;
+    border: 2px solid #c3ae77;
     border-radius: 50%;
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
@@ -3760,7 +3775,7 @@ html.menu-opened body {
 	-ms-flex-pack: center;
     font-size: 30px;
     margin-bottom: 30px;
-    background-color: #09e5ab;
+    background-color: #c3ae77;
 }
 .success-cont h3 {
     font-size: 24px;
@@ -4024,7 +4039,7 @@ html.menu-opened body {
 -----------------------*/
 
 .add-new-btn {
-    background-color: #0de0fe;
+    background-color: #30465b;
     border-radius: 30px;
     color: #fff;
     display: inline-block;
@@ -4033,7 +4048,7 @@ html.menu-opened body {
     padding: 10px 20px;
 }
 .add-new-btn:focus, .add-new-btn:hover,.add-new-btn:active {
-	background-color: #0de0fe;
+	background-color: #30465b;
     color: #fff;
 }
 .patient-info {
@@ -4075,7 +4090,7 @@ html.menu-opened body {
 	margin-bottom: 10px;
 }
 .add-more-item a {
-	color: #0de0fe;
+	color: #30465b;
 	font-weight: 500;
 }
 .signature-wrap {
@@ -4478,8 +4493,8 @@ html.menu-opened body {
     color: #9f9f9f;
 }
 .chat-cont-right .chat-footer .input-group .input-group-append .btn.msg-send-btn {
-    background-color: #0de0fe;
-    border-color: #0de0fe;
+    background-color: #30465b;
+    border-color: #30465b;
     border-radius: 50%;
     color: #fff;
     margin-left: 10px;
@@ -5096,7 +5111,7 @@ html.menu-opened body {
 }
 .dashboard-menu > ul > li:hover > a,
 .dashboard-menu > ul > li.active > a {
-	color:#0de0fe;
+	color:#30465b;
 }
 .dashboard-menu ul li a i {
     font-size: 16px;
@@ -5104,7 +5119,7 @@ html.menu-opened body {
     width: 16px;
 }
 .unread-msg {
-    background-color: #09e5ab;
+    background-color: #c3ae77;
     border-radius: 2px;
     color: #272b41;
     font-size: 10px;
@@ -6327,7 +6342,7 @@ html.menu-opened body {
 	}
 	.nav-tabs > li > a:hover,
 	.nav-tabs > li > a:focus {
-		background-color: #fafafa;
+		background-color: #c3ae77;
 	}
 	.nav-tabs .nav-item.show .nav-link,
 	.nav-tabs .nav-link.active,
@@ -6340,7 +6355,7 @@ html.menu-opened body {
 	.nav-tabs > li.open:not(.active) > a,
 	.nav-tabs > li.open:not(.active) > a:hover,
 	.nav-tabs > li.open:not(.active) > a:focus {
-		background-color: #fafafa;
+		background-color: #c3ae77;
 	}
 	.nav-tabs.nav-tabs-solid {
 		padding: 5px;
@@ -6676,7 +6691,7 @@ html.menu-opened body {
 		padding: 30px 0;
 	} 
 	.login-header h3 a {
-		color: #0de0fe;
+		color: #30465b;
 		float: none;
 		font-size: 15px;
 		margin-top: 10px;

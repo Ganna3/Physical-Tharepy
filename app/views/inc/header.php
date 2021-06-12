@@ -16,7 +16,6 @@
 		<script src="<?php echo URLROOT; ?>public/assets/js/respond.min.js"></script>
 	</head>
 	<body>
-		<div class="main-wrapper">
 <?php require APPROOT . '/views/inc/navbar.php';?>
-   <div class="container">
+   
 

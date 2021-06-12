@@ -2,6 +2,16 @@
 require_once 'UserModel.php';
 class RegisterModel extends UserModel
 { 
+    private $fname;
+    private $lname;
+    private $username;
+    private $address;
+    private $Gender;
+    private $password;
+    private $Phone_number;
+    private $email;
+    private $Birthdate;
+    private $image;
     protected $nameErr;
     protected $confirmPassword;
     protected $confirmPasswordErr;
@@ -43,12 +53,18 @@ class RegisterModel extends UserModel
 
     public function signup()
     {
-      //  $this->dbh->query("INSERT INTO patient (name, email, password) VALUES(:uname, :email, :pass)");
-      "INSERT INTO patient (Email,Password,FName,LName,Username,birthdate,Gender,Phone_Num,Image,Address) VALUES ('$email', '$password','$email','$fname','$lname','$username','$Birthdate','$Gender','$number','$image','$address')";
-        $this->dbh->bind(':uname', $this->name);
-        $this->dbh->bind(':email', $this->email);
-        $this->dbh->bind(':pass', $this->password);
-
+      $this->dbh->query("INSERT INTO patient (Email,Password,FName,LName,Username,birthdate,Gender,Phone_Num,Image,Address) VALUES(:Email, :password,:fname,:lname,:username,:Birthdate,:Gender,:Phone_number,:image,:address)");
+     // "INSERT INTO patient (Email,Password,FName,LName,Username,birthdate,Gender,Phone_Num,Image,Address) VALUES (:email, :password,:fname,:lname,:username,:Birthdate,:Gender',:number,:image,:address)");
+        $this->dbh->bind(':Email', $this->email);
+        $this->dbh->bind(':fname', $this->fname);
+        $this->dbh->bind(':lname', $this->lname);
+        $this->dbh->bind(':username', $this->username);
+        $this->dbh->bind(':address', $this->address);
+        $this->dbh->bind(':Gender', $this->Gender);
+        $this->dbh->bind(':password', $this->password);
+        $this->dbh->bind(':Phone_number', $this->Phone_number);
+        $this->dbh->bind(':Birthdate', $this->Birthdate);
+        $this->dbh->bind(':image', $this->image);
         return $this->dbh->execute();
     }
 }

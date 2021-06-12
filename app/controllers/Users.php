@@ -11,12 +11,12 @@ class Users extends Controller
             $registerModel->setEmail(trim($_POST['Email']));
             $registerModel->setPassword(trim($_POST['password']));
             $registerModel->setConfirmPassword(trim($_POST['confirm_password']));
-            $registerModel->setNumber(trim($_POST['Number']));
+            $registerModel->setNumber(trim($_POST['Phone_number']));
             $registerModel->setAddress(trim($_POST['Address']));
             $registerModel->setGender(trim($_POST['Gender']));
             $registerModel->setBithdate(trim($_POST['Birthdate']));
             //$registerModel->setImage(trim($_POST['Image']));
-           // $registerModel->setUsername(trim($_POST['Username']));
+            $registerModel->setUsername(trim($_POST['Username']));
             
             //validation
             if (empty($registerModel->getLName())) {
@@ -27,7 +27,7 @@ class Users extends Controller
             }
             if (empty($registerModel->getEmail())) {
                 $registerModel->setEmailErr('Please enter an email');
-            } elseif ($registerModel->emailExist($_POST['email'])) {
+            } elseif ($registerModel->emailExist($_POST['Email'])) {
                 $registerModel->setEmailErr('Email is already registered');
             }
             if (empty($registerModel->getPassword())) {
@@ -47,8 +47,9 @@ class Users extends Controller
                 empty($registerModel->getConfirmPasswordErr())
             ) {
                 //Hash Password
+                //$registerModel->getPassword()
                 $registerModel->setPassword(md5($registerModel->getPassword(), PASSWORD_DEFAULT));
-
+                
                 if ($registerModel->signup()) {
                     header('location: ' . URLROOT . 'public/users/login');
                 } else {

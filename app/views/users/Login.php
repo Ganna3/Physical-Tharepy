@@ -30,6 +30,7 @@ class Login extends view
 											<h3>Login <span>Doccure</span></h3>
 										</div>
 										<form action="$action" method="post">
+                
 EOT;
     echo $text;
     $this->printEmail();
@@ -61,6 +62,8 @@ EOT;
 						</div>
 					</div>
 				</div>
+        </div>
+        </div>
 EOT;
     echo $text;
   }
