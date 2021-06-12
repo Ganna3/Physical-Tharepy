@@ -25,6 +25,7 @@
 						<ul class="main-nav">
 							<li>
 								<a href="<?php echo URLROOT . 'public';?>">Home</a>
+						
 							</li>
 							<li class="has-submenu">
 								<a href="#">Doctors<i class="fas fa-chevron-down"></i></a>
