@@ -10,6 +10,6 @@ class LoginModel extends UserModel
         $this->dbh->bind(':email', $email);
 
         $record = $this->dbh->single();
-        //$hash_pass = $record->password;
+        $hash_pass = $record->password;
     }
 }

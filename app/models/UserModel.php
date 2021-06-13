@@ -1,17 +1,17 @@
 <?php
 class UserModel extends model
 {
-    private $ID;
-    private $fname;
-    private $lname;
-    private $username;
-    private $address;
-    private $Gender;
-    private $password;
-    private $Phone_number;
-    private $email;
-    private $Birthdate;
-    private $image;
+  protected $ID;
+  protected $fname;
+  protected $lname;
+  protected $username;
+  protected $address;
+  protected $Gender;
+  protected $password;
+  protected $Phone_number;
+  protected $email;
+  protected $Birthdate;
+  protected $image;
 
     protected $emailErr;
     protected $passwordErr;
@@ -29,7 +29,7 @@ class UserModel extends model
         $this->address="";
         $this->password="";
         $this->Gender="";
-       // $this->email    = "";
+       //$this->email    = "";
         //$this->password = "";
 
         $this->emailErr    = "";
@@ -125,7 +125,7 @@ class UserModel extends model
       }
     public function findUserByEmail($email)
     {
-        $this->dbh->query('select * from patient where Email= :email');
+        $this->dbh->query('select * from patient where Email = :email');
         $this->dbh->bind(':email', $email);
 
         $userRecord = $this->dbh->single();

@@ -2,16 +2,7 @@
 require_once 'UserModel.php';
 class RegisterModel extends UserModel
 { 
-    private $fname;
-    private $lname;
-    private $username;
-    private $address;
-    private $Gender;
-    private $password;
-    private $Phone_number;
-    private $email;
-    private $Birthdate;
-    private $image;
+  
     protected $nameErr;
     protected $confirmPassword;
     protected $confirmPasswordErr;

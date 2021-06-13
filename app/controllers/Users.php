@@ -1,6 +1,10 @@
 <?php
 class Users extends Controller
 {
+
+     
+  
+
     public function register()
     {
         $registerModel = $this->getModel();
@@ -15,7 +19,7 @@ class Users extends Controller
             $registerModel->setAddress(trim($_POST['Address']));
             $registerModel->setGender(trim($_POST['Gender']));
             $registerModel->setBithdate(trim($_POST['Birthdate']));
-            //$registerModel->setImage(trim($_POST['Image']));
+            $registerModel->setImage(trim($_POST['Image']));
             $registerModel->setUsername(trim($_POST['Username']));
             
             //validation
@@ -51,6 +55,7 @@ class Users extends Controller
                 $registerModel->setPassword(md5($registerModel->getPassword(), PASSWORD_DEFAULT));
                 
                 if ($registerModel->signup()) {
+                    $_SESSION['auth_status']=true;
                     header('location: ' . URLROOT . 'public/users/login');
                 } else {
                     die('Error in sign up');
@@ -96,7 +101,10 @@ class Users extends Controller
                 //Check login is correct
                // $userModel->login($email, $password);
                 if ( $userModel->login($email, $password)) {
+                   // header('location: ' . URLROOT . 'public/users/Reg');
+                   $_SESSION['auth_status']=true;
                     header('location: ' . URLROOT . 'public');
+                    
                     die('Done');
                 } else {
                     die('Error in sign in');
@@ -109,5 +117,12 @@ class Users extends Controller
         require_once $viewPath;
         $view = new Login($userModel, $this);
         $view->output();
+    }
+
+    public function  logout()
+    {
+      session_destroy();
+      $_SESSION['auth_status']="";
+      header('location: ' . URLROOT . 'public');
     }
 }

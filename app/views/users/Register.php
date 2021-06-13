@@ -29,7 +29,7 @@ class Register extends view
                         <h3>Patient Register <a href="doctor-register.html">Are you a Doctor?</a></h3>
                       </div>
                       <!-- Register Form -->
-                      <form action="$action" method ="POST">
+                      <form action="$action" method="POST">
                       
 EOT;
     echo $text;
