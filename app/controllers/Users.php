@@ -155,5 +155,11 @@ class Users extends Controller
 
     }
 
-    
+    public function finddoctors()
+    {
+        $viewPath = VIEWS_PATH . 'users/finddoctors.php';
+        require_once $viewPath;
+        $aboutView = new finddoctors($this->getModel(), $this);
+        $aboutView->output();
+    }
 }

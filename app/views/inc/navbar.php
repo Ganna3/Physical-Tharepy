@@ -30,7 +30,7 @@
 							<li class="has-submenu">
 								<a href="#">Doctors<i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="">Find Doctors</a></li>
+									<li><a href="<?php echo URLROOT . 'public/users/finddoctors'; ?>">Find Doctors</a></li>
 									<li><a href="">Doctors Reports</a></li>
 								</ul>
 							</li>	
@@ -43,8 +43,10 @@
 								</ul>
 							</li>	
 						
+					
 							<li>
-							<a href="<?php echo URLROOT . 'public/pages/service'; ?>">Services</a>
+
+								<a href="<?php echo URLROOT . 'public/pages/services'; ?>">Services</a>
 							</li>
 							<li>
 								<a href="<?php echo URLROOT . 'public/pages/about'; ?>">About us</a>
