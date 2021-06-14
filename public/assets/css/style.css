@@ -2322,7 +2322,7 @@ html.menu-opened body {
     width: 240px;
 }
 .search-location .form-control {
-	background: #fff url(../img/location.png) no-repeat 10px center;
+	background: #fff url(../img/search.png) no-repeat 10px center;
 }
 .search-box .search-info {
     -ms-flex: 0 0 490px;
@@ -5826,6 +5826,8 @@ html.menu-opened body {
     display: inline-block;
     font-size: 16px;
 }
+
+
 
 /*-----------------
 	38. Responsive

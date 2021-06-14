@@ -1,10 +1,6 @@
 <?php
 class Users extends Controller
 {
-
-     
-  
-
     public function register()
     {
         $registerModel = $this->getModel();
@@ -69,6 +65,7 @@ class Users extends Controller
         $view = new Register($this->getModel(), $this);
         $view->output();
     }
+
     public function login()
     {
         $userModel = $this->getModel();
@@ -95,34 +92,68 @@ class Users extends Controller
                 empty($userModel->getEmailErr()) &&
                 empty($userModel->getPasswordErr())
             ) {
-                $email=$userModel->getEmail();
-                $password=$userModel->getPassword();
-
-                //Check login is correct
-               // $userModel->login($email, $password);
-                if ( $userModel->login($email, $password)) {
-                   // header('location: ' . URLROOT . 'public/users/Reg');
-                   $_SESSION['auth_status']=true;
-                    header('location: ' . URLROOT . 'public');
-                    
-                    die('Done');
-                } else {
-                    die('Error in sign in');
-                }
+    
+               $loggedUser = $userModel->login();
+               if ($loggedUser) {
+                   //create related session variables
+                   $this->createUserSession($loggedUser);
+                   die('Success log in User');
+                   //header('location: ' . URLROOT . 'public');
+               } else {
+                die('Success no');
+                   $userModel->setPasswordErr('Password is not correct');      
             }
         }
+    }
         // Load form
         //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
         $viewPath = VIEWS_PATH . 'users/Login.php';
         require_once $viewPath;
         $view = new Login($userModel, $this);
         $view->output();
+    
+    }
+    public function logout()
+    {
+       // echo 'logout called';
+        unset($_SESSION['user_id']);
+        unset($_SESSION['user_name']);
+        session_destroy();
+        redirect('users/login');
+        header('location: ' . URLROOT . 'public');
+    }
+    public function createUserSession($user)
+    {
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_name'] = $user->username;
+        //header('location: ' . URLROOT . 'pages');
+         redirect('pages');
+         header('location: ' . URLROOT . 'public');
+    }
+    public function isLoggedIn()
+    {
+        return isset($_SESSION['user_id']);
+    }
+    function Post()
+    {
+        $patients = $this->getModel();
+        $patients->getPatients();
+        $viewPath = VIEWS_PATH . 'users/Post.php';
+        require_once $viewPath;
+        $view = new Post($this->getModel(), $this);
+        $view->output();
+
+    }
+    function EditProfile()
+    {
+        $Edit = $this->getModel();
+        $patients->getPatients();
+        $viewPath = VIEWS_PATH . 'users/EditProfile.php';
+        require_once $viewPath;
+        $view = new EditProfile($this->getModel(), $this);
+        $view->output();
+
     }
 
-    public function  logout()
-    {
-      session_destroy();
-      $_SESSION['auth_status']="";
-      header('location: ' . URLROOT . 'public');
-    }
+    
 }

@@ -12,6 +12,10 @@
 	<script src="<?php echo URLROOT; ?>public/assets/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
 	<script src="<?php echo URLROOT; ?>public/assets/js/script.js"></script>
+	<script src="<?php echo URLROOT; ?>public/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<!-- Datatables JS -->
+	<script src="<?php echo URLROOT; ?>public/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="<?php echo URLROOT; ?>public/assets/plugins/datatables/datatables.min.js"></script>
 	<script src="assets/js/slick.js"></script>
 <div class="sidebar-overlay"></div>
 	</body>

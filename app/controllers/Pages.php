@@ -17,4 +17,14 @@ class Pages extends Controller
         $aboutView = new About($this->getModel(), $this);
         $aboutView->output();
     }
+    public function service()
+    {
+        $viewPath = VIEWS_PATH . 'pages/Service.php';
+        require_once $viewPath;
+        $aboutView = new About($this->getModel(), $this);
+        $aboutView->output();
+    }
+    
+
+
 }

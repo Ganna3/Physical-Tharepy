@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">
-<head>
+	<head>
 		<meta charset="utf-8">
 		<title><?php echo SITENAME; ?></title>
 		
@@ -13,10 +13,9 @@
 		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/plugins/select2/css/select2.min.css">
 		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/plugins/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/css/style.css">
-		<script src="<?php echo URLROOT; ?>public/assets/js/html5shiv.min.js"></script>
-		<script src="<?php echo URLROOT; ?>public/assets/js/respond.min.js"></script>
+		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/css/service.css">
+		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/css/Admin_nav.css">
+		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/plugins/datatables/datatables.min.css">
+		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/css/feathericon.min.css">
 	</head>
 	<body>
-
-   
-

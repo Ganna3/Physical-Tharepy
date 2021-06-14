@@ -1,7 +1,7 @@
 <?php
 class UserModel extends model
 {
-  protected $ID;
+  protected $id;
   protected $fname;
   protected $lname;
   protected $username;
@@ -103,7 +103,7 @@ class UserModel extends model
         return $this->address = $address;
       }
       function getID() {
-        return $this->ID;
+        return $this->id;
       }
       function getGender() {
         return $this->Gender;

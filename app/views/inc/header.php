@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/plugins/select2/css/select2.min.css">
 		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/plugins/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/css/style.css">
+		<link rel="stylesheet" href="<?php echo URLROOT; ?>public/assets/css/service.css">
 		<script src="<?php echo URLROOT; ?>public/assets/js/html5shiv.min.js"></script>
 		<script src="<?php echo URLROOT; ?>public/assets/js/respond.min.js"></script>
 	</head>

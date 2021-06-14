@@ -1,11 +1,13 @@
 <?php
 //temp for testing
-class PostModel extends model
+require_once 'UserModel.php';
+class PostModel extends UserModel
 {
-    public function getPosts()
+    
+    public function getPatients()
     {
-        $this->db->query("SELECT * FROM post");
+        $this->dbh->query("SELECT * FROM patient");
 
-        return $this->db->resultSet();
+        return $this->dbh->resultSet();
     }
 }

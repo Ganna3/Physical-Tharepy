@@ -35,7 +35,7 @@ EOT;
     echo $text;
     $this->printFName();
     $this->printLName();
-   $this->printUsername();
+    $this->printUsername();
     $this->printNumber();
     $this->printAddress();
     $this->printGender();

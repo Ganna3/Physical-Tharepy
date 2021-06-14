@@ -1,5 +1,5 @@
 <?php
-class AboutModel extends model{
+class FindDoctorModel extends model{
      //public $title = 'About MIU SE305 Blog';
 
 }

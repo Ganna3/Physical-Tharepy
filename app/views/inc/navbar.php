@@ -44,7 +44,7 @@
 							</li>	
 						
 							<li>
-								<a href="<?php echo URLROOT . 'public/users/login'; ?>">Services</a>
+							<a href="<?php echo URLROOT . 'public/pages/service'; ?>">Services</a>
 							</li>
 							<li>
 								<a href="<?php echo URLROOT . 'public/pages/about'; ?>">About us</a>

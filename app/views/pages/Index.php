@@ -107,7 +107,8 @@ class Index extends view{
 						</div>
 					</div>
 				</div>   
-			</section>	 
+			</section>
+			
 			<!-- Physio Therapy Specialists-->
 		  
 			<!-- Popular Section -->
