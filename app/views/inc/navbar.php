@@ -65,7 +65,10 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link header-login" href="<?php echo URLROOT . 'public/users/login'; ?>">login / Signup </a>
+							<a class="nav-link header-login" href="<?php echo URLROOT . 'public/users/login'; ?>">login </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link header-login" href="<?php echo URLROOT . 'public/users/Register'; ?>">Signup </a>
 						</li>
 					</ul>
 				</nav>

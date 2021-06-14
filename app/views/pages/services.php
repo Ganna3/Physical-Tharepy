@@ -7,13 +7,24 @@ class services extends view{
     require APPROOT . '/views/inc/header.php';
     $text = <<<EOT
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Sevices</h2>
-
-        </div>
+    <div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Profile Settings</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+    <section  class="services section-bg">
+     
+        
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
@@ -98,6 +109,7 @@ class services extends view{
 
         </div>
 
+      </div>
       </div>
     </section><!-- End Sevices Section -->
 

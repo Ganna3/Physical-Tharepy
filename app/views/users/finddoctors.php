@@ -5,6 +5,21 @@ class finddoctors extends view{
    // $title = $this->model->title;
     require APPROOT . '/views/inc/header.php';
     $text = <<<EOT
+	<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Profile Settings</h2>
+						</div>
+					</div>
+				</div>
+			</div>
     <div class="content">
 				<div class="container-fluid">
 

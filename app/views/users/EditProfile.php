@@ -6,10 +6,10 @@ class EditProfile extends view
     public function output()
     {
       //$title = $this->model->title;
-     require APPROOT . '/views/inc/header_login.php';
+     require APPROOT . '/views/inc/header.php';
      // require APPROOT . '/views/inc/AdminNavbar.php';
       $this->editForm();
-      require APPROOT . '/views/inc/footer_login.php';
+      require APPROOT . '/views/inc/footer.php';
     }
     public function editForm()
 	{

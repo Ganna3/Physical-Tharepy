@@ -26,9 +26,7 @@ $text =<<<EOT
             <div class="login-wrapper">
             	<div class="container" >
                 	<div class="loginbox" >
-                    	<div class="login-left" style="max-width:400px;">
-							<img class="img-fluid" src="$pic"  alt="Logo">
-                        </div>
+                   
                         <div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Login</h1>
@@ -105,7 +103,7 @@ EOT;
         <div class="form-group form-focus">
 				<input type="$type" name="$fieldName" id="$fieldName" value="$val" class="form-control floating" required="">
         <label class="focus-label">$fieldName</label>
-        <span class="invalid-feedback">$err</span>
+        <Alert class="invalid-feedback">$err</Alert>
 									</div>  
 EOT;
     echo $text;

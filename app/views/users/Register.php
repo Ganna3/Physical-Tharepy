@@ -12,6 +12,7 @@ class Register extends view
   {
     $action = URLROOT . 'public/users/register';
     $loginUrl = URLROOT . 'public/users/login';
+    $pic = URLROOT . 'public/assets/img/Logo-footer.png';
     $text = <<<EOT
     <div class="content">
     <div class="container-fluid">
@@ -22,7 +23,7 @@ class Register extends view
                 <div class="account-content">
                   <div class="row align-items-center justify-content-center">
                     <div class="col-md-7 col-lg-6 login-left">
-                      <img src="assets/img/login-banner.png" class="img-fluid" alt="Doccure Register">	
+                      <img src="$pic" class="img-fluid" style="width:500px; height:200px;" alt="Doccure Register">	
                     </div>
                     <div class="col-md-12 col-lg-6 login-right">
                       <div class="login-header">
@@ -51,7 +52,7 @@ EOT;
           <input type="submit" value="Register" class="form-control btn btn-lg btn-primary btn-block">
         </div>
         <div class="col">
-          <a href="$loginUrl" class="form-control btn btn-lg btn-block">Current user, login here</a>
+          <a href="$loginUrl" class="form-control btn btn-lg btn-block  ">login here</a>
         </div>
       </div>
       </div>

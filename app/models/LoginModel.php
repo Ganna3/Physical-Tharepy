@@ -12,6 +12,8 @@ class LoginModel extends UserModel
        echo  $this->password;
 
        $record = $this->dbh->single();
+       return $record;
+
       /*$hash_pass = $record->password;
 
        if (password_verify($this->password,  $hash_pass)) {

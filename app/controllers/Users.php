@@ -96,13 +96,13 @@ class Users extends Controller
                $loggedUser = $userModel->login();
                if ($loggedUser) {
                    //create related session variables
-                   $this->createUserSession($loggedUser);
-                   die('Success log in User');
-                   //header('location: ' . URLROOT . 'public');
+                 //  $this->createUserSession($loggedUser);
+                   //die('Success log in User');
+                   header('location: ' . URLROOT . 'public');
                } else {
                 die('Success no');
                    $userModel->setPasswordErr('Password is not correct');      
-            }
+               }
         }
     }
         // Load form
@@ -147,7 +147,7 @@ class Users extends Controller
     function EditProfile()
     {
         $Edit = $this->getModel();
-        $patients->getPatients();
+       // $patients->getPatients();
         $viewPath = VIEWS_PATH . 'users/EditProfile.php';
         require_once $viewPath;
         $view = new EditProfile($this->getModel(), $this);

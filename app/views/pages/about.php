@@ -6,14 +6,24 @@ class about extends view{
     //$subtitle = $this->model->subtitle;
     require APPROOT . '/views/inc/header.php';
     $text = <<<EOT
-   
-  <div class="container h-100" style="background-color: #272B41;">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3">About Us</h1>
-      </div>
+    <div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title">Profile Settings</h2>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
 <!-- Team -->
 <section id="team" class="pb-5">
     <div class="container">
