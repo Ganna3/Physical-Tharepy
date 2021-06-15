@@ -31,14 +31,14 @@
 								<a href="#">Doctors<i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
 									<li><a href="<?php echo URLROOT . 'public/users/finddoctors'; ?>">Find Doctors</a></li>
-									<li><a href="">Doctors Reports</a></li>
+									<li><a href="<?php echo URLROOT . 'public/users/doctorreports'; ?>">Doctors Reports</a></li>
 								</ul>
 							</li>	
 							<li class="has-submenu">
 								<a href="#">Appointment<i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="">Book Appointment</a></li>
-									<li><a href="">Appointments History</a></li>
+									<li><a href="<?php echo URLROOT . 'public/users/bookappointments'; ?>">Book Appointment</a></li>
+									<li><a href="<?php echo URLROOT . 'public/users/appointmentshistory'; ?>">Appointments History</a></li>
 									
 								</ul>
 							</li>	

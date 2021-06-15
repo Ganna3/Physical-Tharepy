@@ -23,11 +23,7 @@ abstract class Controller
     {
         return $this->model;
     }
-    protected $view;
 
-    protected function view($template,$params=[])
-    {
-        $this->view = new View($template,$params);
-        return $this->view;
-    }
+
 }
+
