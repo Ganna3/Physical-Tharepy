@@ -169,4 +169,18 @@ class Users extends Controller
         $aboutView = new doctorreports($this->getModel(), $this);
         $aboutView->output();
     }
+    public function bookappointments()
+    {
+        $viewPath = VIEWS_PATH . '../views/users/bookappointments.php';
+        require_once $viewPath;
+        $aboutView = new  bookappointments($this->getModel(), $this);
+        $aboutView->output();
+    }
+    public function appointmentshistory()
+    {
+        $viewPath = VIEWS_PATH . '../views/users/appointmentshistory.php';
+        require_once $viewPath;
+        $aboutView = new  appointmentshistory($this->getModel(), $this);
+        $aboutView->output();
+    }
 }

@@ -37,8 +37,8 @@
 							<li class="has-submenu">
 								<a href="#">Appointment<i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
-									<li><a href="">Book Appointment</a></li>
-									<li><a href="">Appointments History</a></li>
+									<li><a href="<?php echo URLROOT . 'public/users/bookappointments'; ?>">Book Appointment</a></li>
+									<li><a href="<?php echo URLROOT . 'public/users/appointmentshistory'; ?>">Appointments History</a></li>
 									
 								</ul>
 							</li>	

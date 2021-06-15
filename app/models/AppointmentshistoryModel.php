@@ -1,5 +1,7 @@
 <?php
-class DoctorreportsModel extends model{
+class appointmentshistoryModel extends model
+{
     // public $title = 'About MIU SE305 Blog';
 
 }
+?>
