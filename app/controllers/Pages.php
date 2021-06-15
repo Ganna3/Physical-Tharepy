@@ -25,4 +25,5 @@ class Pages extends Controller
         $aboutView = new services($this->getModel(), $this);
         $aboutView->output();
     }
+    
 }

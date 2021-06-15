@@ -1,4 +1,5 @@
 <?php
+require_once(APPROOT.'/models/UserModel.php');
 class Users extends Controller
 {
     public function register()
@@ -86,17 +87,15 @@ class Users extends Controller
             } elseif (strlen($userModel->getPassword()) < 4) {
                 $userModel->setPasswordErr('Password must contain at least 4 characters');
             }
-
-
             if (
                 empty($userModel->getEmailErr()) &&
                 empty($userModel->getPasswordErr())
             ) {
-    
                $loggedUser = $userModel->login();
                if ($loggedUser) {
+                //$_SESSION['user_name'] = $userModel->getEmail();
                    //create related session variables
-                 //  $this->createUserSession($loggedUser);
+                 $this->createUserSession($loggedUser);
                    //die('Success log in User');
                    header('location: ' . URLROOT . 'public');
                } else {
@@ -116,6 +115,7 @@ class Users extends Controller
     public function logout()
     {
        // echo 'logout called';
+
         unset($_SESSION['user_id']);
         unset($_SESSION['user_name']);
         session_destroy();
@@ -124,24 +124,29 @@ class Users extends Controller
     }
     public function createUserSession($user)
     {
-        $_SESSION['user_id'] = $user->id;
-        $_SESSION['user_name'] = $user->username;
+
+        $_SESSION['user_id'] = $user->Patient_ID;
+        $_SESSION['user_name'] = $user->Username;
+        //die($_SESSION['user_id'] );
         //header('location: ' . URLROOT . 'pages');
-         redirect('pages');
-         header('location: ' . URLROOT . 'public');
+        // redirect('pages');
+        // header('location: ' . URLROOT . 'public');
     }
     public function isLoggedIn()
     {
         return isset($_SESSION['user_id']);
     }
-    function Post()
+    function ViewDoctors()
     {
         $patients = $this->getModel();
         $patients->getPatients();
+        //var_dump($patients);
+       // $this->patients['patients'] =$patients;
         $viewPath = VIEWS_PATH . 'users/Post.php';
         require_once $viewPath;
         $view = new Post($this->getModel(), $this);
         $view->output();
+       // return $patients;
 
     }
     function EditProfile()

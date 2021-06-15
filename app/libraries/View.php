@@ -10,4 +10,5 @@ abstract class View{
     }
 
     public abstract function output();
+    
 }

@@ -3,18 +3,19 @@ class Index extends view{
   public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
+	$idd=$_SESSION['user_id'];
+	//print_r($_SESSION);
     require APPROOT . '/views/inc/header.php';
     $text = <<<EOT
 
 			<!-- /Header -->
-      
 			<!-- Home Banner -->
 			<section class="section section-search">
 				<div class="container-fluid">
 					<div class="banner-wrapper">
 						<div class="banner-header text-center style="color:#000000;">
 						<div class="text-block">
-							<h1>Search Doctor, Make an Appointment</h1>
+							<h1>Search Doctor,$idd<p ></h1>
 							<p>Discover the best doctors and specialists.</p>
 							</div>
 						</div>

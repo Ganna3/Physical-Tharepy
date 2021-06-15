@@ -6,21 +6,19 @@ class LoginModel extends UserModel
 
    public function login()
    {
-       $this->dbh->query('SELECT * from patient WHERE Email = :email');
+       $this->dbh->query('SELECT * from patient WHERE Email = :email AND Password = :password' );
        $this->dbh->bind(':email', $this->email);
-       echo  $this->email;
-       echo  $this->password;
-
+       $this->dbh->bind(':password', $this->password);
        $record = $this->dbh->single();
-       return $record;
+       //return $record;
 
-      /*$hash_pass = $record->password;
+     // $hash_pass = $record->password;
 
-       if (password_verify($this->password,  $hash_pass)) {
-           return $record;
-       } else {
+      if ($this->password == $_POST['password'] ) {
+          return $record;
+      } else {
            return false;
        }
-       */
+       
    }
 }

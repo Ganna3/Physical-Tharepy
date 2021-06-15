@@ -103,7 +103,7 @@ EOT;
         <div class="form-group form-focus">
 				<input type="$type" name="$fieldName" id="$fieldName" value="$val" class="form-control floating" required="">
         <label class="focus-label">$fieldName</label>
-        <Alert class="invalid-feedback">$err</Alert>
+        <span class="invalid-feedback">$err</span>
 									</div>  
 EOT;
     echo $text;

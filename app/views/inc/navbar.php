@@ -45,7 +45,6 @@
 						
 					
 							<li>
-
 								<a href="<?php echo URLROOT . 'public/pages/services'; ?>">Services</a>
 							</li>
 							<li>
@@ -62,6 +61,7 @@
 							<div class="header-contact-detail">
 								<p class="contact-header">Contact</p>
 								<p class="contact-info-header">+201551864244</p>
+								
 							</div>
 						</li>
 						<li class="nav-item">
