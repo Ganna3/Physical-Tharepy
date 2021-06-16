@@ -13,7 +13,7 @@ class bookappointments extends view
     }
     public function viewreports()
 	{
-        $id=$_GET['id'];
+       $id=$_GET['id'];
        $Doctors = $this->model->getDoctor($id);
        $IDD = $Doctors->Doctor_ID;
         $text =<<<EOT
