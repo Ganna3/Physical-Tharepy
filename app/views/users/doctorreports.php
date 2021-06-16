@@ -23,7 +23,7 @@ $text =<<<EOT
             <img src="assets/img/patients/patient.jpg" alt="User Image">
         </a>
         <div class="profile-det-info">
-            <h3><a href="patient-profile.html">Richard Wilson</a></h3>
+            <h3><a href="patient-profile.html">Session Reports</a></h3>
             <div class="patient-details">
                 <h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
                 <h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
