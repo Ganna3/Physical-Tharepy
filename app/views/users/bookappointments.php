@@ -13,6 +13,9 @@ class bookappointments extends view
     }
     public function viewreports()
 	{
+        $id=$_GET['id'];
+       $Doctors = $this->model->getDoctor($id);
+       $IDD = $Doctors->Doctor_ID;
         $text =<<<EOT
             <div class="col-md-12">
                 <div class="card">
@@ -26,7 +29,7 @@ class bookappointments extends view
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>First Name</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" value="$IDD" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Last Name</label>

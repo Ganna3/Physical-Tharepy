@@ -87,10 +87,13 @@ class Users extends Controller
             } elseif (strlen($userModel->getPassword()) < 4) {
                 $userModel->setPasswordErr('Password must contain at least 4 characters');
             }
+
+
             if (
                 empty($userModel->getEmailErr()) &&
                 empty($userModel->getPasswordErr())
             ) {
+    
                $loggedUser = $userModel->login();
                if ($loggedUser) {
                 //$_SESSION['user_name'] = $userModel->getEmail();
@@ -136,7 +139,7 @@ class Users extends Controller
     {
         return isset($_SESSION['user_id']);
     }
-    function ViewDoctors()
+    function Post()
     {
         $patients = $this->getModel();
         $patients->getPatients();
@@ -161,31 +164,28 @@ class Users extends Controller
     }
 
     public function finddoctors()
+
     {
+        $Doctors = $this->getModel();
+        $Doctors->getDoctors();
         $viewPath = VIEWS_PATH . 'users/finddoctors.php';
         require_once $viewPath;
         $aboutView = new finddoctors($this->getModel(), $this);
         $aboutView->output();
     }
-    public function doctorreports()
-    {
-        $viewPath = VIEWS_PATH . 'users/doctorreports.php';
-        require_once $viewPath;
-        $aboutView = new doctorreports($this->getModel(), $this);
-        $aboutView->output();
-    }
     public function bookappointments()
     {
-        $viewPath = VIEWS_PATH . '../views/users/bookappointments.php';
+        if (isset($_GET['id']))
+        {
+            //$id=$_GET['id'];
+            //var_dump($id);
+        $Doctor = $this->getModel();
+        //$Doctor->getDoctor($id);
+        $viewPath = VIEWS_PATH . 'users/bookappointments.php';
         require_once $viewPath;
-        $aboutView = new  bookappointments($this->getModel(), $this);
+        $aboutView = new bookappointments($this->getModel(), $this);
         $aboutView->output();
-    }
-    public function appointmentshistory()
-    {
-        $viewPath = VIEWS_PATH . '../views/users/appointmentshistory.php';
-        require_once $viewPath;
-        $aboutView = new  appointmentshistory($this->getModel(), $this);
-        $aboutView->output();
+        }
+        
     }
 }
