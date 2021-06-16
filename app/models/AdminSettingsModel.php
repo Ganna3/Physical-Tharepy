@@ -1,5 +1,5 @@
 <?php
-class AdminModel extends model
+class AdminSettingsModel extends model
 {
 
     public $title = 'Admin';
