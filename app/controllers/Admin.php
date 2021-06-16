@@ -8,7 +8,7 @@ class Admin extends Controller
         $homeView = new AdminHome($this->getModel(), $this);
         $homeView->output();
 
-    } public function AdminSettings()
+    }  public function AdminSettings()
     {
         $viewPath = VIEWS_PATH . 'admin/AdminSettings.php';
         require_once $viewPath;
