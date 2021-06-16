@@ -2,7 +2,13 @@
 class AdminDoctorsModel extends model
 {
 
-    public $title = 'Admin';
+   
+    function displaydoctors()
+    {
+    $this->dbh->query("SELECT * FROM doctor");
+    $doctors = $this->dbh->resultSet();
+    return $doctors;
+    }
 
 }
 ?>
