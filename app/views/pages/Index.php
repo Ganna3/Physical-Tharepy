@@ -3,8 +3,11 @@ class Index extends view{
   public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
-	$idd=$_SESSION['user_id'];
+	$idd = $_SESSION['user_id'];
 	//print_r($_SESSION);
+	//echo $_SESSION['user_name'];
+	
+	
     require APPROOT . '/views/inc/header.php';
     $text = <<<EOT
 

@@ -41,7 +41,6 @@ $text =<<<EOT
 	<div class="container-fluid">
 
 		<div class="row">
-			<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 			
 				<!-- Profile Sidebar -->
 				<div class="profile-sidebar">
@@ -132,7 +131,8 @@ $text =<<<EOT
 							</ul>
 						</nav>
 					</div>
-				</div>
+				</div><div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+			
 				<!-- /Profile Sidebar -->
 				
 			</div>
@@ -187,7 +187,7 @@ EOT;
 
 	foreach($this->model->getPatients() as $patients)
 	$email =  $patients->Email;
-	$id = $_SESSION['user_id'];
+	//$id = $_SESSION['user_id'];
  {
 
 		

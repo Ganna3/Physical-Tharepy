@@ -56,9 +56,9 @@ EOT;
 	$Appointment = URLROOT . 'public/users/bookappointments';
 	foreach($this->model->getDoctors() as $Doctors)
 	{
-	$Doctor_ID = $Doctors->Doctor_ID; 
-     $Fname = $Doctors->LName; 
-	 $Lname = $Doctors->FName; 
+	 $Doctor_ID = $Doctors->Doctor_ID;
+     $Fname = $Doctors->LName;
+	 $Lname = $Doctors->FName;
 	 $Expert_at =$Doctors->Expert_at;
 	 $Profile_pic =$Doctors->Profile_pic;
 	 $Salary =$Doctors->Salary;

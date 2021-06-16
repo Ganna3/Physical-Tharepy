@@ -99,11 +99,12 @@ class Users extends Controller
                 //$_SESSION['user_name'] = $userModel->getEmail();
                    //create related session variables
                  $this->createUserSession($loggedUser);
+                 //var_dump($loggedUser);
                    //die('Success log in User');
                    header('location: ' . URLROOT . 'public');
                } else {
                 die('Success no');
-                   $userModel->setPasswordErr('Password is not correct');      
+                   //$userModel->setPasswordErr('Password is not correct');      
                }
         }
     }
@@ -129,6 +130,7 @@ class Users extends Controller
     {
 
         $_SESSION['user_id'] = $user->Patient_ID;
+        //var_dump($_SESSION['user_id']);
         $_SESSION['user_name'] = $user->Username;
         //die($_SESSION['user_id'] );
         //header('location: ' . URLROOT . 'pages');
