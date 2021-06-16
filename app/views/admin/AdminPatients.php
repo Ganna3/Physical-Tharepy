@@ -1,6 +1,6 @@
 <?php
-class patients extends view{
-public function Patients(){
+class AdminPatients extends view{
+public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
    // require APPROOT . '/views/inc/header.php';

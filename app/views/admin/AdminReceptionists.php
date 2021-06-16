@@ -1,6 +1,6 @@
 <?php
-class receptionists extends view{
-public function Receptionists(){
+class AdminReceptionists extends view{
+public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
    // require APPROOT . '/views/inc/header.php';

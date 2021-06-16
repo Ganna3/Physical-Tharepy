@@ -1,6 +1,6 @@
 <?php
-class admin extends view{
-public function Doctors(){
+class AdminDoctors extends view{
+public function output(){
   
    include APPROOT . '/views/inc/includesImp.php';
     include APPROOT . '/views/inc/adminupperDashboard.php';

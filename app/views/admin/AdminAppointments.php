@@ -1,6 +1,6 @@
 <?php
-class appointemnts extends view{
-public function Appointemnts(){
+class AdminAppointments extends view{
+public function output(){
   //$title = $this->model->title;
   //$subtitle = $this->model->subtitle;
  // require APPROOT . '/views/inc/header.php';

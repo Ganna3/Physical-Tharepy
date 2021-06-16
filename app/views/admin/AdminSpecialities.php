@@ -1,6 +1,6 @@
 <?php
-class specialities extends view{
-public function speceialities(){
+class AdminSpecialities extends view{
+public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
    // require APPROOT . '/views/inc/header.php';

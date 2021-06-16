@@ -1,6 +1,6 @@
 <?php
-class profile extends view{
-public function profile(){
+class AdminProfile extends view{
+public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
    // require APPROOT . '/views/inc/header.php';
