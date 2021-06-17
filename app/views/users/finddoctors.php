@@ -70,6 +70,7 @@ EOT;
 										<div class="doc-info-left">
 											<div class="doctor-img">
 												<a href="doctor-profile.html">
+
 													<img src="$pic/$Profile_pic" class="img-fluid" alt="User Image">
 												</a>
 											</div>
@@ -79,6 +80,8 @@ EOT;
 												<p class="doc-department"><img src="$picS/$Spaciality_Pic" style="width: 100px;" class="img-fluid" alt="Speciality"></p>
 											
 												
+												
+
 												
 											</div>
 										</div>

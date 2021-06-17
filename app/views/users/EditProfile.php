@@ -13,6 +13,7 @@ class EditProfile extends view
     }
     public function editForm()
 	{
+		
 $text =<<<EOT
 	
 <div class="breadcrumb-bar">
