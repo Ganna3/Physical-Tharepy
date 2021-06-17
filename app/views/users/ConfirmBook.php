@@ -21,8 +21,9 @@ class bookappointments extends view
            $DocFName = $Doc->LName;
            $p_ID= $_SESSION['id'];
            $DocLName = $Doc->FName;
+           $Reservation ='Yes';
            // insert appointment 
-           $this->model->Add_APP($doct_ID,$p_ID,$AppID,$App_Time,$App_Date);
+           $this->model->Add_APP($doct_ID,$p_ID,$AppID,$App_Time,$App_Date,$Reservation);
        }
        $text = <<<EOT
        <div class="content success-page-cont">
