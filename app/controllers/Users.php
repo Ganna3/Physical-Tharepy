@@ -96,21 +96,18 @@ class Users extends Controller
     
                $loggedUser = $userModel->login();
                if ($loggedUser) {
-                //$_SESSION['user_name'] = $userModel->getEmail();
-                   //create related session variables
                  $this->createUserSession($loggedUser);
-                 //var_dump($loggedUser);
-                   //die('Success log in User');
-                   header('location: ' . URLROOT . 'public');
                } else {
-                die('Success no');
-                   //$userModel->setPasswordErr('Password is not correct');      
+               // die('Success no');
+                    $userModel->setPasswordErr('Password is not correct'); 
+                    echo $userModel->getPasswordErr();
+                        
                }
         }
     }
-        // Load form
-        //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
+       
         $viewPath = VIEWS_PATH . 'users/Login.php';
+        require_once $viewPath;
         require_once $viewPath;
         $view = new Login($userModel, $this);
         $view->output();
@@ -128,18 +125,13 @@ class Users extends Controller
     }
     public function createUserSession($user)
     {
-
-        $_SESSION['user_id'] = $user->Patient_ID;
-        //var_dump($_SESSION['user_id']);
-        $_SESSION['user_name'] = $user->Username;
-        //die($_SESSION['user_id'] );
-        //header('location: ' . URLROOT . 'pages');
-        // redirect('pages');
-        // header('location: ' . URLROOT . 'public');
+        $_SESSION['id'] = $user->Patient_ID;
+        $_SESSION['user_name'] = $user->Username;   
+        header('location: ' . URLROOT . 'public');  
     }
     public function isLoggedIn()
     {
-        return isset($_SESSION['user_id']);
+        return isset($_SESSION['id']);
     }
     function Post()
     {
@@ -190,4 +182,15 @@ class Users extends Controller
         }
         
     }
+    public function ConfirmBook()
+    {
+        
+        $viewPath = VIEWS_PATH . 'users/ConfirmBook.php';
+        require_once $viewPath;
+        $aboutView = new bookappointments($this->getModel(), $this);
+        $aboutView->output();
+
+    }
+  
+    
 }

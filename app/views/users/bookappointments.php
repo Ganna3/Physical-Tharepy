@@ -1,222 +1,175 @@
 <?php
 class bookappointments extends view
 {
-
+    
 
     public function output()
     {
         
+     
         //$title = $this->model->title;
         require APPROOT . '/views/inc/header.php';
         $this->viewreports();
         require APPROOT . '/views/inc/footer.php';
         
     }
+   
+
     public function viewreports()
 	{
+       
     $pic = URLROOT . 'public/assets/img/Doctors';
+   
    // require APPROOT . '/views/inc/ProfileSidenav.php';
        $id=$_GET['id'];
        $Doctors = $this->model->getDoctor($id);
        $FName = $Doctors->FName;
        $LName =  $Doctors->LName ;
        $Profile_pic = $Doctors->Profile_pic;
-        $text =<<<EOT
-        <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-        <div class="profile-sidebar">
-					<div class="widget-profile pro-widget-content">
-						<div class="profile-info-widget">
-							<a href="#" class="booking-doc-img">
-								<img src="$pic/$Profile_pic" alt="User Image">
-							</a>
-							<div class="profile-det-info">
-								<h3>$LName</h3>
-								
-								<div class="patient-details">
-									<h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="dashboard-widget">
-						<nav class="dashboard-menu">
-							<ul>
-								<li>
-									<a href="doctor-dashboard.html">
-										<i class="fas fa-columns"></i>
-										<span>Dashboard</span>
-									</a>
-								</li>
-								<li>
-									<a href="appointments.html">
-										<i class="fas fa-calendar-check"></i>
-										<span>Appointments</span>
-									</a>
-								</li>
-								<li class="active">
-									<a href="my-patients.html">
-										<i class="fas fa-user-injured"></i>
-										<span>My Patients</span>
-									</a>
-								</li>
-								<li>
-									<a href="schedule-timings.html">
-										<i class="fas fa-hourglass-start"></i>
-										<span>Schedule Timings</span>
-									</a>
-								</li>
-								<li>
-									<a href="invoices.html">
-										<i class="fas fa-file-invoice"></i>
-										<span>Invoices</span>
-									</a>
-								</li>
-								<li>
-									<a href="reviews.html">
-										<i class="fas fa-star"></i>
-										<span>Reviews</span>
-									</a>
-								</li>
-								<li>
-									<a href="chat-doctor.html">
-										<i class="fas fa-comments"></i>
-										<span>Message</span>
-										<small class="unread-msg">23</small>
-									</a>
-								</li>
-								<li>
-									<a href="doctor-profile-settings.html">
-										<i class="fas fa-user-cog"></i>
-										<span>Profile Settings</span>
-									</a>
-								</li>
-								<li>
-									<a href="social-media.html">
-										<i class="fas fa-share-alt"></i>
-										<span>Social Media</span>
-									</a>
-								</li>
-								<li>
-									<a href="doctor-change-password.html">
-										<i class="fas fa-lock"></i>
-										<span>Change Password</span>
-									</a>
-								</li>
-								<li>
-									<a href="index-2.html">
-										<i class="fas fa-sign-out-alt"></i>
-										<span>Logout</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			
-				<!-- /Profile Sidebar -->
-				
-			</div>
+        
+       $text = <<<EOT
 
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Two Column Vertical Form</h4>
-                    </div>
-                    <div class="card-body">
-                        <form action="#">
-                            <h4 class="card-title">Personal Information</h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" value="" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                    <label>Blood Group</label>
-                        <select class="select">
-                            <option>Select</option>
-                            <option value="1">A+</option>
-                            <option value="2">O+</option>
-                            <option value="3">B+</option>
-                            <option value="4">AB+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="d-block">Gender:</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1">
-                            <label class="form-check-label" for="gender_male">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                            <label class="form-check-label" for="gender_female">Female</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="text" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Repeat Password</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-            </div>
-            <h4 class="card-title">Postal Address</h4>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Address Line 1</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Address Line 2</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>State</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>City</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Postal Code</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-            </div>
-            <div class="text-right">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
-    </div>
-</div>
-</div>
+       <!-- Breadcrumb -->
+       <div class="breadcrumb-bar">
+           <div class="container-fluid">
+               <div class="row align-items-center">
+                   <div class="col-md-12 col-12">
+                       <nav aria-label="breadcrumb" class="page-breadcrumb">
+                           <ol class="breadcrumb">
+                               
+                           </ol>
+                       </nav>
+                       <h2 class="breadcrumb-title"> Doctor :  $LName  Appointment</h2>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!-- /Breadcrumb -->
+       
+       <!-- Page Content -->
+       <div class="content">
+           <div class="container-fluid">
+       
+               <div class="row">
+                   
+                       <!-- Profile Sidebar -->
+                       <div class="profile-sidebar">
+                           <div class="widget-profile pro-widget-content">
+                               <div class="profile-info-widget">
+                                   <a href="#" class="booking-doc-img">
+                                       <img src="$pic/$Profile_pic" alt="User Image">
+                                   </a>
+                                   <div class="profile-det-info">
+                                   <h4 class="doc-name"><a>$LName</a> <a>$FName</a></h4>
+                                       
+                                       <div class="patient-details">
+                                           
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                          
+                       </div><div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                   
+                       <!-- /Profile Sidebar -->
+                       
+                   </div>
+                   <div class="tab-content">
+                                               
+                                                   <!-- Upcoming Appointment Tab -->
+                                                   <div class="tab-pane show active" id="upcoming-appointments">
+                                                       <div class="card card-table mb-0">
+                                                           <div class="card-body">
+                                                               <div class="table-responsive">
+                                                                   <table class="table table-hover table-center mb-0">
+                                                                       <thead>
+                                                                           <tr>
+                                                                               <th>Session Day</th>
+                                                                               <th>Session Date</th>
+                        
+                                                                               <th class="text-center">Session Price</th>
+                                                                               <th></th>
+                                                                           </tr>
+                                                                       </thead>
+    <tbody>
+                                                                           
 EOT;
-    echo $text;
-  }
-}
-?>
+                                                                    
+       echo $text;
+                                                                       
+                                                                
+       $this->printdata();
+                                                                   
+    $text = <<<EOT
+                                               
+                                                                       
+
+                                                           
+    </tbody>
+                                                                   </table>		
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   </div>
+                                                   </div>
+                                             </div>
+                                </div>
+
+       
+       
+EOT;
+       
+           echo $text;
+         }
+       
+private function printdata(){
+    if(isset($_SESSION['id'])){
+    $book= URLROOT . 'public/users/ConfirmBook';
+    }else{
+        $book = URLROOT . 'public/users/login';
+    }
+           //$patients = new PostModel();
+           //$patients->getPatients();
+           //var_dump($patients);
+$id=$_GET['id'];
+foreach($this->model->getAppointments($id) as $Appointment){
+$App_ID= $Appointment->Doctors_Schedule_ID ;
+$Doctor_id=$Appointment->Doctor_ID;
+$Appointmentday= $Appointment->Doctors_Schedule_day;
+$Appointment_Date= $Appointment->Doctors_Schedule_date;
+$Appointment_Time=$Appointment->Doctors_Schedule_Start;
+$Appointment_Price=$Appointment->Session_Price ;
+           $text = <<<EOT
+           <tr>
+                
+                                           
+                                           <td>$Appointmentday</td>
+                                           <td>$Appointment_Date<span class="d-block text-info">$Appointment_Time PM</span></td>
+                                           <td class="text-center">$Appointment_Price</td>
+                                           <td class="text-right">
+                                               <div class="table-action">
+                                               
+                                                   <a href="$book?D_id=$Doctor_id&app_id=$App_ID" class="btn btn-sm bg-success-light">
+                                                       <i class="fas fa-check"></i> Reserve Appointment
+                                                   </a>
+
+                                        </div>
+                    </td>
+        </tr>
+        </tr>
+EOT;
+           echo $text;
+           //if(isset($_SESSION['id']){
+            //<a href="" class="btn btn-sm bg-success-light">
+           //}
+           //else{
+               //<a href="" class="btn btn-sm bg-success-light">
+           }
+           }
+         }
+       
+       
+
+
+       

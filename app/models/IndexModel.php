@@ -1,5 +1,5 @@
 <?php
 class IndexModel extends model{
      public $title = 'Clinic';
-     public $subtitle = '';
+    // public $subtitle = $_SESSION['id'];
 }

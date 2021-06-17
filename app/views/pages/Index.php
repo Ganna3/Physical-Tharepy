@@ -3,8 +3,18 @@ class Index extends view{
   public function output(){
     //$title = $this->model->title;
     //$subtitle = $this->model->subtitle;
-	$idd = $_SESSION['user_id'];
-	//print_r($_SESSION);
+	//echo $subtitle;
+
+	if(isset($_SESSION['user_name'])){
+    $P_Name=$_SESSION['user_name'];
+	}
+	else{
+		$P_Name='';
+	}
+	
+	
+	//}$idd = $_SESSION['user_id'];
+	
 	//echo $_SESSION['user_name'];
 	
 	
@@ -18,7 +28,7 @@ class Index extends view{
 					<div class="banner-wrapper">
 						<div class="banner-header text-center style="color:#000000;">
 						<div class="text-block">
-							<h1>Search Doctor,$idd<p ></h1>
+							<h1>Welcome<p > $P_Name</h1>
 							<p>Discover the best doctors and specialists.</p>
 							</div>
 						</div>

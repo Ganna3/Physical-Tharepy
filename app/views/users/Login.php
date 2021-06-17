@@ -30,7 +30,7 @@ $text =<<<EOT
                         <div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Login</h1>
-								<p class="account-subtitle">Access to our dashboard</p>
+								<p class="account-subtitle">Login To Use Our Features</p>
 								<form action="$action" method="post">
 								<!-- Form -->
 							
@@ -49,6 +49,7 @@ EOT;
 								<!-- /Form -->
 								
 								<div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
+                <div class="btn btn-primary btn-center"><a href="forgot-password.html">Back to Home</a></div>
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
@@ -91,6 +92,7 @@ EOT;
   {
     $val = $this->model->getPassword();
     $err = $this->model->getPasswordErr();
+    //die(var_dump($err));
     $valid = (!empty($err) ? 'is-invalid' : '');
     $this->printInput('password', 'password', $val, $err, $valid);
   }
@@ -103,7 +105,8 @@ EOT;
         <div class="form-group form-focus">
 				<input type="$type" name="$fieldName" id="$fieldName" value="$val" class="form-control floating" required="">
         <label class="focus-label">$fieldName</label>
-        <span class="invalid-feedback">$err</span>
+        <span clas="invalid-feedback"  style="color:red; font-size: 80%; width: 100%;
+        margin-top: .25rem;">$err</span>
 									</div>  
 EOT;
     echo $text;

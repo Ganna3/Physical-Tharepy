@@ -10,13 +10,14 @@ class LoginModel extends UserModel
        $this->dbh->bind(':email', $this->email);
        $this->dbh->bind(':password', $this->password);
        $record = $this->dbh->single();
-      // $_SESSION['user_id'] = $record->Patient_ID;
-      // return $record;
-      // die(var_dump($record));
+       
+       return $record;
+       die(var_dump($_SESSION['user_id']));
      //$hash_pass = $record->password;
 
       if ($this->password == $_POST['password'] ) {
-          return $record;
+        $_SESSION['user_id'] = $record->Patient_ID; 
+        return $record;
       } else {
            return false;
        }
