@@ -100,7 +100,7 @@ class Users extends Controller
                } else {
                // die('Success no');
                     $userModel->setPasswordErr('Password is not correct'); 
-                    echo $userModel->getPasswordErr();
+                   
                         
                }
         }

@@ -18,12 +18,17 @@ class bookappointments extends view
            $App_Date= $App->Doctors_Schedule_date;
            $App_Time=$App->Doctors_Schedule_Start;
            $Doc = $this->model->getDoctor($doct_ID);
-           $DocFName = $Doc->LName;
+           $DocFName = $Doc->Full_Name;
            $p_ID= $_SESSION['id'];
-           $DocLName = $Doc->FName;
-           $Reservation ='Yes';
+          // $DocLName = $Doc->FName;
+           
            // insert appointment 
+           if(isset($_SESSION['id']))
+           {
+            $Reservation ='Yes';
            $this->model->Add_APP($doct_ID,$p_ID,$AppID,$App_Time,$App_Date,$Reservation);
+           $this->model->Reserve($App_id);
+           }
        }
        $text = <<<EOT
        <div class="content success-page-cont">
@@ -38,7 +43,7 @@ class bookappointments extends view
                            <div class="success-cont">
                                <i class="fas fa-check"></i>
                                <h3>Appointment booked Successfully!</h3>
-                               <p>Appointment booked with <strong>Dr. $DocLName </strong><br> on <strong>$App_Date at  $App_Time</strong></p>
+                               <p>Appointment booked with <strong>$DocFName </strong><br> on <strong>$App_Date at  $App_Time</strong></p>
                                <a href="invoice-view.html" class="btn btn-primary view-inv-btn">View Invoice</a>
                            </div>
                        </div>

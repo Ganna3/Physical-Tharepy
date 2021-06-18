@@ -23,8 +23,8 @@ class bookappointments extends view
    // require APPROOT . '/views/inc/ProfileSidenav.php';
        $id=$_GET['id'];
        $Doctors = $this->model->getDoctor($id);
-       $FName = $Doctors->FName;
-       $LName =  $Doctors->LName ;
+       $FullName = $Doctors->Full_Name;
+       
        $Profile_pic = $Doctors->Profile_pic;
         
        $text = <<<EOT
@@ -39,7 +39,7 @@ class bookappointments extends view
                                
                            </ol>
                        </nav>
-                       <h2 class="breadcrumb-title"> Doctor :  $LName  Appointment</h2>
+                       <h2 class="breadcrumb-title"> Doctor : $FullName </h2>
                    </div>
                </div>
            </div>
@@ -60,7 +60,7 @@ class bookappointments extends view
                                        <img src="$pic/$Profile_pic" alt="User Image">
                                    </a>
                                    <div class="profile-det-info">
-                                   <h4 class="doc-name"><a>$LName</a> <a>$FName</a></h4>
+                                   <h4 class="doc-name"> $FullName </h4>
                                        
                                        <div class="patient-details">
                                            
@@ -127,7 +127,7 @@ private function printdata(){
     if(isset($_SESSION['id'])){
     $book= URLROOT . 'public/users/ConfirmBook';
     }else{
-        $book = URLROOT . 'public/users/login';
+    $book = URLROOT . 'public/users/login';
     }
            //$patients = new PostModel();
            //$patients->getPatients();

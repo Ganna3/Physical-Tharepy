@@ -51,18 +51,23 @@ EOT;
   }
 
   function PrintDoctors(){
+	   
 	$pic = URLROOT . 'public/assets/img/Doctors';
 	$picS = URLROOT . 'public/assets/img/specialities';
 	$Appointment = URLROOT . 'public/users/bookappointments';
-	foreach($this->model->getDoctors() as $Doctors)
+	foreach($this->model->getDoctors() as $Doctors  )
 	{
-	 $Doctor_ID = $Doctors->Doctor_ID;
-     $Fname = $Doctors->LName;
-	 $Lname = $Doctors->FName;
-	 $Expert_at =$Doctors->Expert_at;
+	 $Doctor_ID = $Doctors->Stuff_id;
+	 
+     $Fullname = $Doctors->Full_Name;
+	// $Expert_at =$Doctors->Expert_at;
 	 $Profile_pic =$Doctors->Profile_pic;
-	 $Salary =$Doctors->Salary;
-	 $Spaciality_Pic=$Doctors->Spaciality_Pic;
+	// $Salary =$Doctors->Salary;
+	// $Spaciality_Pic=$Doctors->Spaciality_Pic;
+	$info = $this->model->getDoctor_info($Doctor_ID);
+	$Salary =$info->Salary;
+	$Spaciality_Pic=$info->Spaciality_Pic;
+	$Expert_at =$info->Expert_at;
 		$text = <<<EOT
 		<div class="card">
 								<div class="card-body">
@@ -70,18 +75,15 @@ EOT;
 										<div class="doc-info-left">
 											<div class="doctor-img">
 												<a href="doctor-profile.html">
-
 													<img src="$pic/$Profile_pic" class="img-fluid" alt="User Image">
 												</a>
 											</div>
 											<div class="doc-info-cont">
-												<h4 class="doc-name"><a>$Fname</a> <a>$Lname</a></h4>
+												<h4 class="doc-name"><a>$Fullname</a></h4>
 												<p class="doc-speciality"><a>Speciality</a> : <a>$Expert_at</a></p>
 												<p class="doc-department"><img src="$picS/$Spaciality_Pic" style="width: 100px;" class="img-fluid" alt="Speciality"></p>
 											
 												
-												
-
 												
 											</div>
 										</div>

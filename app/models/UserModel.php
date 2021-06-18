@@ -122,5 +122,18 @@ class UserModel extends model
       function setImage($image) {
         return $this->image = $image;
       }
+      public function findUserByEmail($email)
+    {
+        $this->dbh->query('select * from patient where email= :email');
+        $this->dbh->bind(':email', $email);
+
+        $userRecord = $this->dbh->single();
+        return $this->dbh->rowCount();
+    }
+
+    public function emailExist($email)
+    {
+        return $this->findUserByEmail($email) > 0;
+    }
     
 }

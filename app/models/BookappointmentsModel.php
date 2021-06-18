@@ -6,12 +6,20 @@ class bookappointmentsModel extends Model
     public function getDoctor($id)
     {
         //var_dump($id);
-        $this->dbh->query("SELECT * FROM doctor WHERE Doctor_ID = :id");
+        $this->dbh->query("SELECT * FROM clinic_stuff WHERE Stuff_id = :id");
         $this->dbh->bind(':id', $id);
         $Doctor = $this->dbh->single();
         //var_dump($Doctor);
         return $Doctor;
         
+    }
+    public function Reserve($App_ID)
+    {
+         $this->dbh->query("UPDATE `doctors_schedule` SET `Reservation`= 'Yes'  WHERE Doctors_Schedule_ID  = :id ");
+
+        $this->dbh->bind(':id', $App_ID);
+        //$this->dbh->bind(':Done',$Reservation);
+        return $this->dbh->execute();
     }
     public function getAppointments($id)
     {
@@ -38,8 +46,8 @@ class bookappointmentsModel extends Model
    
     public function Add_APP($Doctor_ID,$Patient_ID,$Doctors_Schedule_ID,$Time,$Day,$Reservation)
     {
+
       $this->dbh->query("INSERT INTO appointments (Doctor_ID ,Patient_ID,Doctors_Schedule_ID,Time,Day,Reservation) VALUES(:D_ID, :P_ID,:D_S_ID,:Time,:Day,:Reserve)");
-     // "INSERT INTO patient (Email,Password,FName,LName,Username,birthdate,Gender,Phone_Num,Image,Address) VALUES (:email, :password,:fname,:lname,:username,:Birthdate,:Gender',:number,:image,:address)");
         $this->dbh->bind(':D_ID', $Doctor_ID);
         $this->dbh->bind(':P_ID', $Patient_ID);
         $this->dbh->bind(':D_S_ID',$Doctors_Schedule_ID);
