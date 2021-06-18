@@ -2,7 +2,4 @@
 class Reports extends Controller
 {
    
-
-
-
 }

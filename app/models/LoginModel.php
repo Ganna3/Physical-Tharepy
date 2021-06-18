@@ -12,7 +12,7 @@ class LoginModel extends UserModel
        $record = $this->dbh->single();
        
        return $record;
-       die(var_dump($_SESSION['user_id']));
+      // die(var_dump($_SESSION['user_id']));
      //$hash_pass = $record->password;
 
       if ($this->password == $_POST['password'] ) {

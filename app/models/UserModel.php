@@ -12,9 +12,8 @@ class UserModel extends model
   protected $email;
   protected $Birthdate;
   protected $image;
-
-    protected $emailErr;
-    protected $passwordErr;
+  protected $emailErr;
+  protected $passwordErr;
 
     public function __construct()
     {
@@ -123,17 +122,5 @@ class UserModel extends model
       function setImage($image) {
         return $this->image = $image;
       }
-    public function findUserByEmail($email)
-    {
-        $this->dbh->query('select * from patient where Email = :email');
-        $this->dbh->bind(':email', $email);
-
-        $userRecord = $this->dbh->single();
-        return $this->dbh->rowCount();
-    }
-
-    public function emailExist($email)
-    {
-        return $this->findUserByEmail($email) > 0;
-    }
+    
 }

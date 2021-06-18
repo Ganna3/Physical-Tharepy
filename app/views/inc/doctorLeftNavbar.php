@@ -18,19 +18,19 @@ include APPROOT . '/views/inc/includesImp.php';
 								<span>Main</span>
 							</li>
 							<li class="active"> 
-                            <li><a href="<?php echo URLROOT . 'public/Doctor/DoctorHome'; ?>">Dashbourd</a></li>
+                            <li><a href="<?php echo URLROOT . 'public/Stuff/Doctor/DoctorHome'; ?>">Dashbourd</a></li>
 							</li>
                             
                             
                             
 							<li> 
-                            <li><a href="<?php echo URLROOT . 'public/Doctor/DoctorAppointments'; ?>">Appointments</a></li>
+                            <li><a href="<?php echo URLROOT . 'public/Stuff/Doctor/DoctorAppointments'; ?>">Appointments</a></li>
 							</li>
 							
 							
 							
 							
-                            <li><a href="<?php echo URLROOT . 'public/Doctor/MyPatients'; ?>">MyPatients</a></li>
+                            <li><a href="<?php echo URLROOT . 'public/Stuff/Doctor/MyPatients'; ?>">MyPatients</a></li>
 							
 						
 							
