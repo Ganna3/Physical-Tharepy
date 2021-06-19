@@ -167,6 +167,16 @@ class Users extends Controller
         $aboutView = new finddoctors($this->getModel(), $this);
         $aboutView->output();
     }
+    public function doctorreports()
+
+    {
+      
+      
+        $viewPath = VIEWS_PATH . 'users/doctorreports.php';
+        require_once $viewPath;
+        $aboutView = new doctorreports($this->getModel(), $this);
+        $aboutView->output();
+    }
     public function bookappointments()
     {
         if (isset($_GET['id']))
