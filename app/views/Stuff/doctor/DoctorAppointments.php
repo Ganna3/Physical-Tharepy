@@ -4,9 +4,9 @@ public function Output(){
   //$title = $this->model->title;
   //$subtitle = $this->model->subtitle;
  // require APPROOT . '/views/inc/header.php';
- include APPROOT . '/views/inc/includesImp.php';
-  include APPROOT . '/views/inc/doctorupperDashboard.php';
-  include APPROOT . '/views/inc/doctorLeftNavbar.php';
+ 
+include APPROOT . '/views/inc/doctcorupperDashboard.php';
+include APPROOT . '/views/inc/doctorLeftNavbar.php';
   $text = <<<EOT
   
 			<!-- Breadcrumb -->

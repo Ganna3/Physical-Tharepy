@@ -24,7 +24,7 @@ include APPROOT . '/views/inc/includesImp.php';
                             
                             
 							<li> 
-                            <li><a href="<?php echo URLROOT . 'public/Stuff/Doctor/DoctorAppointments'; ?>">Appointments</a></li>
+                            <li><a href="<?php echo URLROOT . 'public/Stuff/DoctorAppointments'; ?>">Appointments</a></li>
 							</li>
 							
 							

@@ -14,6 +14,8 @@ class Login extends view
     $action = URLROOT . 'public/users/login';
     $registerUrl = URLROOT . 'public/users/register';
     $pic = URLROOT . 'public/assets/img/Home.jpg';
+    $Home = URLROOT . 'public';
+    $Doctor = URLROOT . 'public/Stuff/Stuff_Login';
 
 $text =<<<EOT
 <!DOCTYPE html>
@@ -30,6 +32,7 @@ $text =<<<EOT
                         <div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Login</h1>
+                <h5><a href="$Doctor">Are you a Doctor?</a></h5>
 								<p class="account-subtitle">Login To Use Our Features</p>
 								<form action="$action" method="post">
 								<!-- Form -->
@@ -49,7 +52,7 @@ EOT;
 								<!-- /Form -->
 								
 								<div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
-                <div class="btn btn-primary btn-center"><a href="forgot-password.html">Back to Home</a></div>
+                <div class="btn btn-primary btn-block"><a href="$Home">Back to Home</a></div>
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
@@ -73,7 +76,6 @@ EOT;
 		
 	
 
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:46 GMT -->
 
 EOT;
     echo $text;
