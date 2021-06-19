@@ -29,7 +29,7 @@
 							</li>
 								
 							<?php  if(isset($_SESSION['id'])) {
-							$f_D = URLROOT . 'public/users/finddoctor';
+							$f_D = URLROOT . 'public/users/Appointmentshistory';
 							$MyReports = URLROOT . 'public/users/doctorreports';
                             
 								$text = <<<EOT
@@ -111,7 +111,7 @@ else {
 					//	echo $_SESSION['user_id'];	
 }
 ?>
-					
+
 				</nav>
 			</header>
-		</div>		
+		</div>

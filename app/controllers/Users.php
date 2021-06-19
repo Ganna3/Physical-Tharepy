@@ -199,21 +199,17 @@ class Users extends Controller
         $aboutView->output();
 
     }
-    public function myappointments()
+    public function Appointmentshistory()
     {
-        if (isset($_GET['id']))
-        {
-            //$id=$_GET['id'];
-            //var_dump($id);
-        $Doctor = $this->getModel();
-        //$Doctor->getDoctor($id);
-        $viewPath = VIEWS_PATH . 'users/myappointments.php';
-        require_once $viewPath;
-        $aboutView = new myappointments($this->getModel(), $this);
-        $aboutView->output();
-        }
         
+        $viewPath = VIEWS_PATH . 'users/Appointmentshistory.php';
+        require_once $viewPath;
+        $aboutView = new Appointmentshistory($this->getModel(), $this);
+        $aboutView->output();
+
     }
+    
+    
   
     
 }
