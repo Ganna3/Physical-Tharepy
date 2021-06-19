@@ -3130,9 +3130,9 @@ html.menu-opened body {
 }
 .clinic-booking a {
     background-color: #fff;
-    border: 2px solid #20c0f3;
+    
     border-radius: 4px;
-    color: #20c0f3;
+    color: #020303;
     display: block;
     font-size: 14px;
     font-weight: 500;
@@ -3150,11 +3150,7 @@ html.menu-opened body {
     background-color:#c3ae77;
     color: #fff;
 }
-.clinic-booking a.apt-btn:hover, .clinic-booking a.apt-btn:focus {
-	background-color: #0db9f2;
-	border-color: #0db9f2;
-	color: #fff;
-}
+
 .load-more {
 	margin-bottom: 30px;
 }
