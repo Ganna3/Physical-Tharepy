@@ -27,12 +27,10 @@
 								<a href="<?php echo URLROOT . 'public';?>">Home</a>
 						
 							</li>
-							<li class="has-submenu">
-								<a href="#">Doctors<i></i></a>
-							</li>	
+								
 							<?php  if(isset($_SESSION['id'])) {
-							$f_D = URLROOT . 'public/Users/finddoctor';
-							$MyReports = URLROOT . 'public/Users/';
+							$f_D = URLROOT . 'public/users/finddoctor';
+							$MyReports = URLROOT . 'public/users/doctorreports';
                             
 								$text = <<<EOT
 							<li class="main-nav">
@@ -45,7 +43,7 @@
 							echo $text;
 							}?>
 							<li>
-								<a href="<?php echo URLROOT . 'public/pages/finddoctors'; ?>">Find Doctor</a>
+								<a href="<?php echo URLROOT . 'public/users/finddoctors'; ?>">Find Doctor</a>
 							</li>
 							<li>
 								<a href="<?php echo URLROOT . 'public/pages/services'; ?>">Services</a>

@@ -29,7 +29,7 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/about'; ?>>About us</h2>
+									<h1 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/about'; ?>>About us</h1>
 									
 								</div>
 								<!-- /Footer Widget -->
@@ -40,7 +40,7 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/services'; ?>>Services</a></h2>
+									<h1 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/services'; ?>>Services</a></h1>
 									
 								</div>
 								<!-- /Footer Widget -->
