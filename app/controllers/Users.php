@@ -201,7 +201,7 @@ class Users extends Controller
     }
     public function Appointmentshistory()
     {
-        
+
         $viewPath = VIEWS_PATH . 'users/Appointmentshistory.php';
         require_once $viewPath;
         $aboutView = new Appointmentshistory($this->getModel(), $this);
@@ -210,6 +210,8 @@ class Users extends Controller
     }
     
     
+
   
     
+    }
 }
