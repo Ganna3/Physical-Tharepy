@@ -6,11 +6,10 @@ class AdminProfileModel extends model
 
     public function editprofile($name,$DateofBirth,$EmailID)
     {
-        $this->dbh->query("UPDATE admin SET name=$name,DateofBirth=$DateofBirth,EmailID=$EmailID WHERE id=$_SESSION['id']");
+        $this->dbh->query("UPDATE admin SET name=$name AND DateofBirth=$DateofBirth AND EmailID=$EmailID WHERE id =$_SESSION[id]");
 
         $profile = $this->dbh->resultSet();
-        return $profile;
-    
+        return $profile;  
     }
     public function viewdata()
     {

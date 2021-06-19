@@ -11,7 +11,7 @@ class AdminSpecialitiesModel extends model
         
         $this->dbh->query("INSERT INTO specialities(id,speciality) VALUES(null, :specilaity)");
         
-        $this->dbh->bind(':specilaity', $this->email);
+        $this->dbh->bind(':specilaity', $this->$speciality);
         
         return $this->dbh->execute();
     }
@@ -25,7 +25,7 @@ class AdminSpecialitiesModel extends model
     public function editeSpecialities($speciality)
         {
         //get the id of column
-            $this->dbh->query("UPDATE specialities SET speciality=$speciality WHERE  id=$_GET['id']");
+            $this->dbh->query("UPDATE specialities SET speciality=$speciality WHERE  id=$_GET[id]");
     
             $speciality = $this->dbh->resultSet();
             return $speciality;
@@ -33,7 +33,7 @@ class AdminSpecialitiesModel extends model
         }
 
 
-    }
+    
     
 }
 ?>

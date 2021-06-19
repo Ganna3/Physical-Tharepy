@@ -176,8 +176,7 @@ class AdminHome extends view{
                                     <table class="table table-hover table-center mb-0">
                                         <thead>
                                             <tr>
-                                                <th>Doctor Name</th>
-                                                <th>Speciality</th>
+                                                <th>Receptionist Name</th>
                                                 <th>Earned</th>
                                                 <th>Reviews</th>
                                             </tr>
@@ -190,7 +189,7 @@ class AdminHome extends view{
                                                         <a href="profile.html">Dr. Ruby Perrin</a>
                                                     </h2>
                                                 </td>
-                                                <td>Dental</td>
+                                                
                                                 <td>$3200.00</td>
                                                 <td>
                                                     <i class="fe fe-star text-warning"></i>

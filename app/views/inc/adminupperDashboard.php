@@ -14,7 +14,7 @@ include APPROOT . '/views/inc/includesImp.php';
             <!-- Logo -->
             <div class="header-left">
                 <a href="index.html" class="logo">
-                    <img src="<?php echo APPROOT; ?>public/adminAssests/img/logo.png" alt="Logo">
+                    <img src="<?php echo URLROOT; ?>public/adminAssests/img/logo2.png" alt="Logo" >
                 </a>
                 <a href="index.html" class="logo logo-small">
                     <img src="<?php echo APPROOT; ?>public/adminAssests/img/logo-small.png" alt="Logo" width="30" height="30">
@@ -42,7 +42,7 @@ include APPROOT . '/views/inc/includesImp.php';
                 <!-- User Menu -->
                 <li class="nav-item dropdown has-arrow">
                     <a href="adminupperDashboard.php" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="<?php echo APPROOT; ?>public/adminAssests/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+                        <span class="user-img"><img class="rounded-circle" src="<?php echo URLROOT; ?>public/adminAssests/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
                     </a>
                     <div class="dropdown-menu">
                         <div class="user-header">
@@ -54,8 +54,8 @@ include APPROOT . '/views/inc/includesImp.php';
                                 <p class="text-muted mb-0">Administrator</p>
                             </div>
                         </div>
-                        <a class="dropdown-item" href="profile.php">My Profile</a>
-                        <a class="dropdown-item" href="settings.php">Settings</a>
+                        <a class="dropdown-item" href="<?php echo APPROOT . 'public/Stuff/admin/AdminProfile.php'; ?>">My Profile</a>
+                        <a class="dropdown-item" href="AdminSettings.php">Settings</a>
                         <a class="dropdown-item" href="#">Logout</a>
                     </div>
                 </li>

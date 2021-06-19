@@ -13,10 +13,10 @@ class about extends view{
                 <nav aria-label="breadcrumb" class="page-breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
                     </ol>
                 </nav>
-                <h2 class="breadcrumb-title">Profile Settings</h2>
+                <h2 class="breadcrumb-title">About Us</h2>
             </div>
         </div>
     </div>
@@ -127,7 +127,7 @@ class about extends view{
                         <h4>Security </h4>
                         <h5>Secure Business</h5> 
                         
-                        <h6>All reports will be secured and no one will access it except the speciality </h6></div>
+                        <h6>All reports will be secured and no one will access it except the speciality. </h6></div>
 
                     <div class="section-heading-line-left"></div>
                     
@@ -139,7 +139,7 @@ class about extends view{
                     <div class="serv-section-desc">
                         <h3>24/7 Available </h3>
                         <h5>All time available </h5>
-                        <h5>the system will be avaialble for all users in whole day </h5>
+                        <h5>the system will be avaialble for all users at anytime. </h5>
                          </div>
                     <div class="section-heading-line-left"></div>
                    
@@ -150,7 +150,10 @@ class about extends view{
                     <div class="serv-section-2-icon"> <i class="fas fa-gem"></i> </div>
                     <div class="serv-section-desc">
                         <h4> Customer Support </h4>
-                        <h5>Support section</h5> </div>
+                        <h5>Support section</h5> 
+                        <h5> If you faced any technical issue during booking,contact us and we will support you.  </h5>
+                        </div>
+
                     <div class="section-heading-line-left"></div>
                     
                 </div>
@@ -165,7 +168,7 @@ class about extends view{
           <div class="col-lg-4" data-aos="fade-right">
             <div class="section-title">
               <h2>Location</h2>
-              <p>If you have any proposals , need to know anything clearly or to add any courses please don't hesistate to contact us,just search for our location easily on google maps.</p>
+              <p>65 Nabil El Wakkad,Ard EL Golf,NASRCITY.</p>
             </div>
           </div>
 
@@ -173,22 +176,20 @@ class about extends view{
             <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.440055441303!2d31.33586261413405!3d30.081580981868754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e1a3378eae9%3A0xb4c5f86bc595c089!2s65%20Nabil%20Al%20Wakad%2C%20Al%20Golf%2C%20Nasr%20City%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1623637338849!5m2!1sen!2seg" frameborder="0" allowfullscreen></iframe>
             <div class="info mt-4">
               <i class="icofont-google-map"></i>
-              <h4>Location:</h4>
-              <p>14 Ahmed Helmy street</p>
+             
+            
             </div>
             <div class="row">
               <div class="col-lg-6 mt-4">
                 <div class="info">
                   <i class="icofont-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>physiofirsteg1@gmail.com</p>
+             
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="info w-100 mt-4">
-                  <i class="icofont-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+201551864244</p>
+               
+              
                 </div>
               </div>
             </div>

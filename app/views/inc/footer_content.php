@@ -13,7 +13,9 @@
      height="101" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Our clinic provides good services for patients. </p>
+										<p>Our clinic is specialized in movment and aims to enhace/restore function of multiple body systems.
+										 The clinic is committed to health,lifestyle and quality of life nutrition and body re-shaping concerns with 
+										 body weight, shape or s </p>
 										<div class="social-icon">
 											
 										</div>
@@ -27,12 +29,8 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">Appointment</h2>
-									<ul>
-										<li><a href="search.html"><i class="fas fa-angle-double-right"></i>Book Appointment</a></li>
-										<li><a href="login.html"><i class="fas fa-angle-double-right"></i>Appointments History</a></li>
-										
-									</ul>
+									<h2 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/about'; ?>>About us</h2>
+									
 								</div>
 								<!-- /Footer Widget -->
 								
@@ -42,12 +40,8 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">Doctors</h2>
-									<ul>
-										<li><a href="appointments.html"><i class="fas fa-angle-double-right"></i>Find Doctors</a></li>
-										<li><a href="chat.html"><i class="fas fa-angle-double-right"></i>Doctors Reports</a></li>
-										
-									</ul>
+									<h2 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/services'; ?>>Services</a></h2>
+									
 								</div>
 								<!-- /Footer Widget -->
 								
@@ -61,15 +55,15 @@
 									<div class="footer-contact-info">
 										<div class="footer-address">
 											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p>Location</p>
+											<p>Location   <br> 65 Nabil Al Wakkad,<br> Ard El Golf,Nasr City 
 										</div>
 										<p>
 											<i class="fas fa-phone-alt"></i>
-											Phone Number
+											Phone Number    <br> +201551864244
 										</p>
 										<p class="mb-0">
 											<i class="fas fa-envelope"></i>
-											Email
+											Email           <br>Physiofirsteg1@gmail.com
 										</p>
 									</div>
 								</div>
