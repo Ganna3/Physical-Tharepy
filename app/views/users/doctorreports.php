@@ -14,7 +14,7 @@ class  doctorreports extends view
     public function viewreports()
 	{
 $text =<<<EOT
-<div class="appointments">
+<div class="appointments"
 
 <!-- Appointment List -->
 <div class="appointment-list">
@@ -41,6 +41,7 @@ $text =<<<EOT
 </div>
 
 </div>
+
 
 EOT;
 

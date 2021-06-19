@@ -134,11 +134,8 @@ class Index extends view{
 								<h2>Book Our Doctor</h2>
 								<p>Choose the specific doctor according to your injury</p>
 							</div>
-							<div class="about-content">
-					<p> </p>			
-								<a href="javascript:;">Read More..</a>
-							</div>
-						</div>
+					
+					
 						<div class="col-lg-8">
 							<div class="doctor-slider slider">
 							
