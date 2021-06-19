@@ -168,9 +168,10 @@ EOT;
     $label = str_replace("_", " ", $fieldName);
     $label = ucwords($label);
     $text = <<<EOT
-    <div class="form-group form-focus">
+    <div class="form-group" style="margin-right=100px" >
+    <label class="focus-label" >$fieldName</label>
     <input type="$type" name="$fieldName" id="$fieldName" value="$val" class="form-control floating">
-    <label class="focus-label">$fieldName</label>
+    
     <span clas="invalid-feedback"  style="color:red; font-size: 80%; width: 100%;
         margin-top: .25rem;">$err</span>
 									</div> 

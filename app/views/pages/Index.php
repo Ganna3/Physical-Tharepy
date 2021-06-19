@@ -23,6 +23,7 @@ class Index extends view{
 
 			<!-- /Header -->
 			<!-- Home Banner -->
+			
 			<section class="section section-search">
 				<div class="container-fluid">
 					<div class="banner-wrapper">
@@ -113,8 +114,6 @@ class Index extends view{
 								</div>							
 								<!-- /Slider Item -->
 
-
-								
 							</div>
 							<!-- /Slider -->
 							
@@ -126,100 +125,31 @@ class Index extends view{
 			<!-- Physio Therapy Specialists-->
 		  
 			<!-- Popular Section -->
-			<section class="section section-doctor">
-				<div class="container-fluid">
-				   <div class="row">
-						<div class="col-lg-4">
+		<section class="section section-doctor">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
 							<div class="section-header ">
 								<h2>Book Our Doctor</h2>
 								<p>Choose the specific doctor according to your injury</p>
 							</div>
+					</div>		
+			             <div class="col-lg-8">
+	                         <div class="doctor-slider slider">
+							 
+							
+EOT;
+								echo $text;
+                               $this->Doctors();
+								$text = <<<EOT
 					
-					
-						<div class="col-lg-8">
-							<div class="doctor-slider slider">
-							
-								<!-- Doctor Widget -->
-							
-								<!-- /Doctor Widget -->
-						
-								<!-- Doctor Widget -->
-							
-								<!-- /Doctor Widget -->
-						
-								<!-- Doctor Widget -->
-								
-								<!-- /Doctor Widget -->
-						
-								<!-- Doctor Widget -->
-							
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-								
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-							
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-							
-								<!-- /Doctor Widget -->
-								
-								<!-- Doctor Widget -->
-								<div class="profile-widget">
-									<div class="doc-img">
-										<a href="doctor-profile.html">
-											<img class="img-fluid" alt="User Image" src="assets/img/doctors/doctor-08.jpg">
-										</a>
-										<a href="javascript:void(0)" class="fav-btn">
-											<i class="far fa-bookmark"></i>
-										</a>
-									</div>
-									<div class="pro-content">
-										<h3 class="title">
-											<a href="doctor-profile.html">Paul Richard</a> 
-											<i class="fas fa-check-circle verified"></i>
-										</h3>
-										<p class="speciality">MBBS, MD - Dermatology , Venereology & Lepros</p>
-										<div class="rating">
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star filled"></i>
-											<i class="fas fa-star"></i>
-											<span class="d-inline-block average-rating">(49)</span>
-										</div>
-										<ul class="available-info">
-											<li>
-												<i class="fas fa-map-marker-alt"></i> Cairo, Egypt.
-											</li>
-											<li>
-												<i class="far fa-clock"></i> Available on Fri, 22 Mar
-											</li>
-											<li>
-												<i class="far fa-money-bill-alt"></i> $100 - $400 
-												<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
-											</li>
-										</ul>
-										<div class="row row-sm">
-											<div class="col-6">
-												<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
-											</div>
-											<div class="col-6">
-												<a href="booking.html" class="btn book-btn">Book Now</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Doctor Widget -->
-								
-							</div>
-						</div>
-				   </div>
+				
+					     </div>	
+				      </div>
+				   </div>	
 				</div>
-			</section>
+			 </div>
+		</section>
 			<!-- /Popular Section -->
 		   
 		   
@@ -242,7 +172,7 @@ class Index extends view{
 			<!-- /Footer -->
 		   
 	   
-     </div>
+     
 	   <!-- /Main Wrapper -->
 	  
 		<!-- jQuery -->
@@ -267,4 +197,65 @@ EOT;
   require APPROOT . '/views/inc/footer.php';
 
   }
+  function Doctors(){
+	$pic = URLROOT . 'public/assets/img/Doctors';
+	$Appointment = URLROOT . 'public/users/bookappointments';
+	foreach($this->model->getDoctors() as $Doctors  )
+	{
+	 $Doctor_ID = $Doctors->Stuff_id;
+	 
+     $Fullname = $Doctors->Full_Name;
+	// $Expert_at =$Doctors->Expert_at;
+	 $Profile_pic =$Doctors->Profile_pic;
+	// $Salary =$Doctors->Salary;
+	// $Spaciality_Pic=$Doctors->Spaciality_Pic;
+	$info = $this->model->getDoctor_info($Doctor_ID);
+	$Salary =$info->Salary;
+	$Spaciality_Pic=$info->Spaciality_Pic;
+	$Expert_at =$info->Expert_at;
+	$text = <<<EOT
+
+
+		
+		<!-- Doctor Widget -->
+		<div class="profile-widget">
+			<div class="doc-img">
+				<a href="doctor-profile.html">
+					<img class="img-fluid" alt="User Image" src="$pic/$Profile_pic">
+				</a>
+				<a href="javascript:void(0)" class="fav-btn">
+					<i class="far fa-bookmark"></i>
+				</a>
+			</div>
+			<div class="pro-content">
+				<h3 class="title">
+					<a href="doctor-profile.html">$Fullname</a> 
+					<i class="fas fa-check-circle verified"></i>
+				</h3>
+				
+				<ul class="available-info">
+						<i class="far fa-money-bill-alt"></i>$Salary   LE
+						<i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i>
+					</li>
+				</ul>
+				<div class="row row-sm">
+					<div class="col-6">
+						<a href="doctor-profile.html" class="btn view-btn">View Profile</a>
+					</div>
+					<div class="col-6">
+						<a href="$Appointment" class="btn book-btn">Book Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+
+EOT;
+  echo $text;
+
+  }
+}
 }

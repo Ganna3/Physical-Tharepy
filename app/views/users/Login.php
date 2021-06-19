@@ -52,7 +52,7 @@ EOT;
 								<!-- /Form -->
 								
 								<div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
-                <div class="btn btn-primary btn-block"><a href="$Home">Back to Home</a></div>
+                <div class="text-center forgotpass"><a href="$Home">Back to Home</a></div>
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>
