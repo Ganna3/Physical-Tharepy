@@ -10,8 +10,8 @@ class AdminSettingsModel extends model
     }
     public function editsettings($websitename,$websitelogo)
     {
-        $this->dbh->query("UPDATE websiteinfo SET websitname=$websitename,websitelogo=$websotelogo WHERE id=$_SESSION['id']");
-
+        $this->dbh->query("UPDATE websiteinfo SET websitename=$websitename AND websitelogo=$websitelogo WHERE id=$_SESSION[id]");
+        
         $info = $this->dbh->resultSet();
         return $info;
     
