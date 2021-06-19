@@ -127,12 +127,10 @@ class Users extends Controller
     {
         $_SESSION['id'] = $user->Patient_ID;
         $_SESSION['user_name'] = $user->Username;   
+        $_SESSION['Pic'] =$user->Image ;
         header('location: ' . URLROOT . 'public');  
     }
-    public function isLoggedIn()
-    {
-        return isset($_SESSION['id']);
-    }
+    
     function Post()
     {
         $patients = $this->getModel();
