@@ -4,6 +4,7 @@ class bookappointments extends view
 
     public function output()
     {
+        $Home = URLROOT . 'public';
         require APPROOT . '/views/inc/header.php';
         if(isset($_GET['D_id']) . $_GET['app_id']){
             $doct_ID = $_GET['D_id'];
@@ -44,7 +45,7 @@ class bookappointments extends view
                                <i class="fas fa-check"></i>
                                <h3>Appointment booked Successfully!</h3>
                                <p>Appointment booked with <strong>$DocFName </strong><br> on <strong>$App_Date at  $App_Time</strong></p>
-                               <a href="invoice-view.html" class="btn btn-primary view-inv-btn">View Invoice</a>
+                               <a href="$Home " class="btn btn-primary view-inv-btn">Back to Home</a>
                            </div>
                        </div>
                    </div>
