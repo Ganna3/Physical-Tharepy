@@ -227,6 +227,15 @@ class Users extends Controller
         $aboutView->output();
 
     }
+    public function patientreport()
+    {
+
+        $viewPath = VIEWS_PATH . 'users/patientreport.php';
+        require_once $viewPath;
+        $aboutView = new patientreport($this->getModel(), $this);
+        $aboutView->output();
+
+    }
     
     
 
