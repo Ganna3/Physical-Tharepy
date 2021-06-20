@@ -44,6 +44,7 @@ class bookappointmentsModel extends Model
         
     }
    
+   
     public function Add_APP($Doctor_ID,$Patient_ID,$Doctors_Schedule_ID,$Time,$Day,$Reservation)
     {
 
@@ -55,6 +56,13 @@ class bookappointmentsModel extends Model
         $this->dbh->bind(':Day', $Day);
         $this->dbh->bind(':Reserve', $Reservation);
         return $this->dbh->execute();
+    }
+    Public Function getDoctor_info($D_ID)
+    {
+    $this->dbh->query("SELECT * FROM doctors_data WHERE Doctor_ID =:D_ID ");
+    $this->dbh->bind(':D_ID', $D_ID);
+    $Doctor_info = $this->dbh->single();
+    return $Doctor_info;
     }
 }
 ?>

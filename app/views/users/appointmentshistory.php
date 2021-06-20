@@ -19,8 +19,9 @@ class appointmentshistory extends view
     }
     public function viewreports()
 	{
+        
         $text =<<<EOT
-</div>
+
 <div class="card-body">
 
     <div class="table-responsive">
@@ -36,52 +37,65 @@ class appointmentshistory extends view
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Ahmed Khalal</td>
-                    <td>11/8/2021</td>
-                    <td>6 PM</td>
-                    <td>Sports Injury</td>
-                    <td>100 LE</td>
-                    <td><button onclick="myFunction()" type="button" class="btn btn-danger">Cancel</button></td>
-                </tr>
-                <tr>
-                    <td>Mahah</td>
-                    <td>11/8/2021</td>
-                    <td>6 PM</td>
-                    <td>Sports Injury</td>
-                    <td>100 LE</td>
-                    <td><button onclick="myFunction()" type="button" class="btn btn-danger">Cancel</button></td>
-                </tr>
-                <tr>
-                <td>Ahmed Khalal</td>
-                <td>11/8/2021</td>
-                <td>6 PM</td>
-                <td>Sports Injury</td>
-                <td>100 LE</td>
-                <td><button  type="button" class="btn btn-outline-success">Done</button></td>
-                </tr>
-                <tr>
-                <td>Ahmed Khalal</td>
-                <td>11/8/2021</td>
-                <td>6 PM</td>
-                <td>Sports Injury</td>
-                <td>100 LE</td>
-                <td><button onclick="myFunction()" type="button" class="btn btn-danger">Cancel</button></td>
-             
-               
-              
+EOT;
+    echo $text;
+
+$this->ViewApp();
+$text =<<<EOT
+ 
             </tbody>
-        </table>
+            </table>
     </div>
 </div>
+EOT;
+    echo $text;
+   
+  }
+  function ViewApp()
+  {
+    $App_Page= URLROOT . 'public/users/appointmentshistory';
+    if(isset($_GET['App_id'])){
+        $App_id=$_GET['App_id'];
+        $Doc_Schuale_id =$_GET['Doc_Sch'];
+        $this->model->Delete_App($App_id);
+        $this->model->UpdateCancel($Doc_Schuale_id);
+    }
 
+    foreach($this->model-> getReservedAppointments($_SESSION["id"]) as $App  )
+    { 
+        $Doc_Schuale_id= $App->Doctors_Schedule_ID;
+        $App_Date =$App->Day;
+        $App_Time =$App->Time;
+        $App_id = $App ->Appointment_ID;
+        $Doctor = $App->Doctor_ID;
+        $info = $this->model->getDoctor_info($Doctor);
+        $Doc = $this->model->getDoctor($Doctor);
+        $D_Name = $Doc->Full_Name;
+        $D_Specilaity =  $info->Expert_at;
+        $D_Salary =  $info->Salary;
+       
 
-
-
+        $text =<<<EOT
+            <tr>
+                <td>$D_Name</td>
+                <td>$App_Date</td>
+                <td>$App_Time PM</td>
+                <td>$D_Specilaity</td>
+                <td>$D_Salary LE</td>
+                <td>
+                <div class="btn btn-danger">
+				<a class="apt-btn" onclick="myFunction()" name="$App_id" href="$App_Page&App_id=$App_id&Doc_Sch=$Doc_Schuale_id">Cancel</a>
+				</div>
+                </td>
+                
+            </tr>
+  
 
 EOT;
 
-    echo $text;
+echo $text;
+    }
   }
 }
+
 ?>
