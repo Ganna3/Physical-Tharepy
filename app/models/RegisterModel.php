@@ -6,22 +6,34 @@ class RegisterModel extends UserModel
     protected $nameErr;
     protected $confirmPassword;
     protected $confirmPasswordErr;
+    protected $Phone_Err;
+
     public function __construct()
     {
         parent::__construct();
+        $this->Phone_Err="";
         $this->nameErr = "";
         $this->confirmPassword = "";
         $this->confirmPasswordErr = "";
     }
 
-    public function getNameErr()
+    public function getEmptyErr()
     {
         return $this->nameErr;
     }
 
-    public function setNameErr($nameErr)
+    public function setEmptyErr($nameErr)
     {
         $this->nameErr = $nameErr;
+    }
+    public function getPhoneErr()
+    {
+        return $this->Phone_Err;
+    }
+
+    public function SetPhoneErr($Phone_Err)
+    {
+        $this->Phone_Err = $Phone_Err;
     }
 
     public function getConfirmPassword()

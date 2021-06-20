@@ -28,8 +28,8 @@
 							<div class="col-lg-3 col-md-6">
 							
 								<!-- Footer Widget -->
-								<div class="footer-widget footer-menu">
-									<h1 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/about'; ?>>About us</h1>
+								<div class="footer-widget footer-menu" style="margin-top:30px; margin-left:100px;  " >
+									<h1 class="footer-title"  id="word"><a style="color:white;" href=<?php echo URLROOT . 'public/pages/about'; ?>>About us</h1>
 									
 								</div>
 								<!-- /Footer Widget -->
@@ -39,8 +39,8 @@
 							<div class="col-lg-3 col-md-6">
 							
 								<!-- Footer Widget -->
-								<div class="footer-widget footer-menu">
-									<h1 class="footer-title"><a href=<?php echo URLROOT . 'public/pages/services'; ?>>Services</a></h1>
+								<div class="footer-widget footer-menu"style="margin-top:30px; ">
+									<h1 class="footer-title"><a style="color:white;" href=<?php echo URLROOT . 'public/pages/services'; ?>>Services</a></h1>
 									
 								</div>
 								<!-- /Footer Widget -->
@@ -51,19 +51,20 @@
 							
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-contact">
-									<h2 class="footer-title">Contact Us</h2>
+									<h2 class="footer-title"></h2>
 									<div class="footer-contact-info">
 										<div class="footer-address">
 											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p>Location   <br> 65 Nabil Al Wakkad,<br> Ard El Golf,Nasr City 
+											<p>  65 Nabil Al Wakkad,<br> Ard El Golf,Nasr City 
 										</div>
 										<p>
 											<i class="fas fa-phone-alt"></i>
-											Phone Number    <br> +201551864244
+											 +201551864244
 										</p>
 										<p class="mb-0">
-											<i class="fas fa-envelope"></i>
-											Email           <br>Physiofirsteg1@gmail.com
+										<i class="fas fa-envelope">  </i>
+										 Physiofirsteg1@gmail.com 
+									
 										</p>
 									</div>
 								</div>

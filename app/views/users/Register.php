@@ -14,19 +14,20 @@ class Register extends view
     $loginUrl = URLROOT . 'public/users/login';
     $pic = URLROOT . 'public/assets/img/Logo-footer.png';
     $text = <<<EOT
-    <div class="content">
+    <div class="content" >
     <div class="container-fluid">
             <div class="row">
-              <div class="col-md-8 offset-md-2">
+              <div class="col-md-8 offset-md-2" >
+              
   
                 <!-- Register Content -->
-                <div class="account-content">
+                <div class="account-content" >
                   <div class="row align-items-center justify-content-center">
-                    <div class="col-md-7 col-lg-6 login-left">
-                      <img src="$pic" class="img-fluid" style="width:500px; height:200px;" alt="Doccure Register">	
+                    <div class="col-md-7 col-lg-6 login-left" >
+                      <img src="$pic" class="img-fluid" style="width:500px; height:200px;" alt=" Register">	
                     </div>
-                    <div class="col-md-12 col-lg-6 login-right">
-                      <div class="login-header">
+                    <div class="col-md-12 col-lg-6 login-right "  style="margin-left:-10px;" >
+                      <div class="login-header" >
                         <h3>Patient Register <a href="doctor-register.html">Are you a Doctor?</a></h3>
                       </div>
                       <!-- Register Form -->
@@ -74,7 +75,7 @@ EOT;
   private function printFName()
   {
     $val = $this->model->getFName();
-    $err = $this->model->getNameErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'FName', $val, $err, $valid);
@@ -83,7 +84,7 @@ EOT;
   private function printUsername()
   {
     $val = $this->model->getUsername();
-    $err =// $this->model->getNameErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'Username', $val, $err, $valid);
@@ -92,7 +93,7 @@ EOT;
   private function printLName()
   {
     $val = $this->model->getLName();
-   $err = //$this->model->getLNameErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'LName', $val, $err, $valid);
@@ -100,7 +101,7 @@ EOT;
   private function printNumber()
   {
     $val = $this->model->getNumber();
-    $err = //$this->model->getNumberErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('tel', 'Phone_number', $val, $err, $valid);
@@ -108,7 +109,7 @@ EOT;
   private function printAddress()
   {
     $val = $this->model->getAddress();
-    $err = //$this->model->getAddressErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'Address', $val, $err, $valid);
@@ -116,7 +117,7 @@ EOT;
   private function printGender()
   {
     $val = $this->model->getGender();
-    $err = //$this->model->getGenderErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('text', 'Gender', $val, $err, $valid);
@@ -124,7 +125,7 @@ EOT;
   private function printEmail()
   {
     $val = $this->model->getEmail();
-    $err = //$this->model->getEmailErr();
+    $err = $this->model->getEmailErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('email', 'Email', $val, $err, $valid);
@@ -132,7 +133,7 @@ EOT;
   private function printBirthdate()
   {
     $val = $this->model->getBirthdate();
-    $err = //$this->model->getBithdateErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printInput('date', 'Birthdate', $val, $err, $valid);
@@ -140,7 +141,7 @@ EOT;
   private function printImage()
   {
     $val = $this->model->getImage();
-    $err = //$this->model->getBithdateErr();
+    $err = $this->model->getEmptyErr();
     $valid = (!empty($err) ? 'is-invalid' : '');
 
     $this->printFile('file', 'Image', $val, $err, $valid);
@@ -184,7 +185,7 @@ EOT;
     $label = str_replace("_", " ", $fieldName);
     $label = ucwords($label);
     $text = <<<EOT
-  <div class="form-group  ">
+  <div class="form-group ">
   <label class="focus-label">Profile Picture</label>
     <input class="form-control floating" type="$type" name="$fieldName"  id="$fieldName" >
   </div>

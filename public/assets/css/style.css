@@ -2178,7 +2178,7 @@ html.menu-opened body {
 	padding: 50px;
 	margin-bottom: 50px;
 	margin-top: 50px;
-	margin-left: 270px;
+	margin-left: 290px;
 	box-shadow : 0 2px 2px  #c9ab4b;
 }
 .login-header {
@@ -6125,6 +6125,10 @@ html.menu-opened body {
 	.login-left {
 		display: none;
 	}
+	#word {
+
+    color:#ffffff;
+	}
 	.main-menu-wrapper {
 		order: 3;
 		width: 260px;
@@ -6137,7 +6141,7 @@ html.menu-opened body {
 		z-index: 1060;
 		transform: translateX(-260px);
 		transition: all 0.4s;
-		background-color: #15558d;
+		background-color: #dca409;
 	}
 	.menu-header {
 		display: -webkit-box;

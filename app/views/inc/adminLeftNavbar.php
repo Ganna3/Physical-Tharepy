@@ -18,13 +18,13 @@ include APPROOT . '/views/inc/includesImp.php';
 								<span>Main</span>
 							</li>
 							<li class="active"> 
-								<a href="admin"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+								<a href="<?php echo URLROOT . 'public/Stuff/Admin'; ?>"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
                             <li> 
-								<a href="doctors.php"><i class="fe fe-users"></i> <span>Doctors</span></a>
+								<a href="<?php echo URLROOT . 'public/Stuff/AdminDoctors'; ?>"><i class="fe fe-users"></i> <span>Doctors</span></a>
 							</li>
                             <li> 
-								<a href="receptionists.php"><i class="fe fe-users"></i> <span>Receptionists</span></a>
+								<a href="<?php echo URLROOT . 'public/Stuff/AdminReceptionsits'; ?>"><i class="fe fe-users"></i> <span>Receptionists</span></a>
 							</li>
                             <li> 
 								<a href="patients.php"><i class="fe fe-users"></i> <span>Patients</span></a>

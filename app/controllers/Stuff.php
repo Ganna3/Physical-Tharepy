@@ -75,6 +75,22 @@ public function Admin()
         $homeView->output();
 
 }
+public function AdminDoctors()
+{
+        $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminDoctors.php';
+        require_once $viewPath;
+        $homeView = new  AdminDoctors($this->getModel(), $this);
+        $homeView->output();
+
+}
+public function AdminReceptionsits()
+{
+        $viewPath = VIEWS_PATH . 'Stufjf/Admin/AdminReceptionists.php';
+        require_once $viewPath;
+        $homeView = new  AdminReceptionists($this->getModel(), $this);
+        $homeView->output();
+
+}
 
     
     

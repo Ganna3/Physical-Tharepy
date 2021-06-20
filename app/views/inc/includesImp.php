@@ -1,9 +1,9 @@
 <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Doccure - Dashboard</title>
+        <title> <?php echo SITENAME; ?> </title>
 		
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo URLROOT; ?>public/assets/img/favicon.png">
+		<link href="<?php echo URLROOT; ?>public/assets/img/Logo-footer.png"  style="width:300px" rel="icon">
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<?php echo URLROOT; ?>public/adminAssests/css/bootstrap.min.css">

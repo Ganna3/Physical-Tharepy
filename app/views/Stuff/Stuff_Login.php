@@ -15,7 +15,7 @@ class Stuff_Login extends view{
         <div class="container">
             <div class="loginbox">
                 <div class="login-left">
-                    <img class="img-fluid" src="assets/img/logo-white.png" alt="Logo">
+                    
                 </div>
                 <div class="login-right">
                     <div class="login-right-wrap">
@@ -49,7 +49,7 @@ EOT;
                         </div>
                         <!-- /Social Login -->
                         
-                        <div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>
+                       
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ echo $text;
               
         <div class="form-group form-focus">
 		<input type="$type" name="$fieldName" id="$fieldName" placeholder="$fieldName" class="form-control floating" required="">
-        <label class="focus-label">$fieldName</label>
+        
         <span clas="invalid-feedback" style="color:red; font-size: 80%; width: 100%;
         margin-top: .25rem;">$err</span>
 									</div>  

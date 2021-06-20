@@ -20,12 +20,31 @@ class Users extends Controller
             $registerModel->setUsername(trim($_POST['Username']));
             
             //validation
-            if (empty($registerModel->getLName())) {
-                $registerModel->setNameErr('Please enter a Last name');
-            }
             if (empty($registerModel->getFName())) {
-                $registerModel->setNameErr('Please enter First name');
+                $registerModel->setEmptyErr('Please Fill the Data');
             }
+            if (empty($registerModel->getLName())) {
+                $registerModel->setEmptyErr('Please Fill the Data');
+            }
+            if (empty($registerModel->getNumber())) {
+                $registerModel->getEmptyErr('Please Fill the Data');
+            }elseif (strlen($registerModel->getNumber()) < 11) {
+                $registerModel->SetPhoneErr('Phone Number must contain 11 Number');
+            }
+
+            if (empty($registerModel->getAddress())) {
+                $registerModel->setEmptyErr('Please Fill the Data');
+            }
+            if (empty($registerModel->getBirthdate())) {
+                $registerModel->setEmptyErr('Please Fill the Data');
+            }
+            if (empty($registerModel->getImage())) {
+                $registerModel->setEmptyErr('Please Fill the Data');
+            }
+            if (empty($registerModel->getUsername())) {
+                $registerModel->setEmptyErr('Please Fill the Data');
+            }
+     
             if (empty($registerModel->getEmail())) {
                 $registerModel->setEmailErr('Please enter an email');
             } elseif ($registerModel->emailExist($_POST['Email'])) {
@@ -42,14 +61,14 @@ class Users extends Controller
             }
 
             if (
-                empty($registerModel->getNameErr()) &&
+                empty($registerModel->getEmptyErr()) && empty($registerModel->getPhoneErr()) &&
                 empty($registerModel->getEmailErr()) &&
                 empty($registerModel->getPasswordErr()) &&
                 empty($registerModel->getConfirmPasswordErr())
             ) {
                 //Hash Password
                 //$registerModel->getPassword()
-                $registerModel->setPassword(md5($registerModel->getPassword(), PASSWORD_DEFAULT));
+                //$registerModel->setPassword(md5($registerModel->getPassword(), PASSWORD_DEFAULT));
                 
                 if ($registerModel->signup()) {
                     $_SESSION['auth_status']=true;
@@ -214,4 +233,4 @@ class Users extends Controller
   
     
     }
-}
+

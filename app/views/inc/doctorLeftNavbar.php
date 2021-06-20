@@ -30,7 +30,7 @@ include APPROOT . '/views/inc/includesImp.php';
 							
 							
 							
-                            <li><a href="<?php echo URLROOT . 'public/Stuff/doctor/MyPatients'; ?>">MyPatients</a></li>
+                            <li><a href="<?php echo URLROOT . 'public/Stuff/MyPatients'; ?>">MyPatients</a></li>
 							
 						
 							
