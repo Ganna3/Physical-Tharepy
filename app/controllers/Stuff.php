@@ -211,7 +211,7 @@ public function Stuff_Login()
             
         }
         // Load form
-        //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
+        //echoo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
         
         $viewPath = VIEWS_PATH . 'Stuff/Doctor/Schedule.php';
         require_once $viewPath;
