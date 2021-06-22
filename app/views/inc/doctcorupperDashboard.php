@@ -60,7 +60,7 @@ include APPROOT . '/views/inc/includesImp.php';
 
 ?>
 
-               
+                <!-- /User Menu -->
                 
             </ul>
             <!-- /Header Right Menu -->
