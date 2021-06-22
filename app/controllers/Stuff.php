@@ -79,6 +79,36 @@ public function Doctor()
 }
 public function AdminDoctors()
 {
+    $AddDrModel = $this->getModel();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // from dr. model
+            $AddDrModel->setExpert_at(trim($_POST['Expert_at']));
+            $AddDrModel->setDegree(trim($_POST['Degree']));
+            $AddDrModel->setSalary(trim($_POST['Salary']));
+            $AddDrModel->setSpaciality_Pic(trim($_POST['speciality_pic']));
+            //from stuff model
+            $AddDrModel->setEmail(trim($_POST['Email']));
+            $AddDrModel->setRole(trim($_POST['Role']));
+            $AddDrModel->setPassword(trim($_POST['Password']));
+            $AddDrModel->setNumber(trim($_POST['Number']));
+
+            $AddDrModel->setUsername(trim($_POST['username']));
+            $AddDrModel->setAddress(trim($_POST['Address']));
+            $AddDrModel->setGender(trim($_POST['Gender']));
+            $AddDrModel->setBithdate(trim($_POST['Birthdate']));
+            $AddDrModel->setImage(trim($_POST['image']));
+            $AddDrModel->setUsername(trim($_POST['username']));
+            
+                
+                if ( $scheduleModel->Schedule()) {
+                    
+                    header('location: ' . URLROOT . 'Public/Stuff/Doctor');
+                } else {
+                    die('Error in sign up');
+                }
+            
+        }
+
         $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminDoctors.php';
         require_once $viewPath;
         $homeView = new  AdminDoctors($this->getModel(), $this);
@@ -199,8 +229,8 @@ public function Stuff_Login()
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Process form
             $scheduleModel->setschedule_day(trim($_POST['Doctors_Schedule_day']));
-            $scheduleModel->setschedule_date(trim($_POST['Doctors_Schedule_date']));
-            $scheduleModel->setschedule_start(trim($_POST['Doctors_Schedule_Start']));
+            $scheduleModel->setschedule_date(trim($_POST['Docule_date']));
+            $scheduleModel->setschedule_start(trim($_POST['Doctors_Schetors_Scheddule_Start']));
             $scheduleModel->setSession_Price(trim($_POST['Session_Price']));
                 
                 if ( $scheduleModel->Schedule()) {

@@ -34,30 +34,140 @@ public function output(){
                 <div class="modal-dialog modal-dialog-centered" role="document" >
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Add Specialities</h5>
+                            <h5 class="modal-title">Add Doctors</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+
+                            <form method="POST">
                                 <div class="row form-row">
                                     <div class="col-12 col-sm-6">
                                         <div class="form-group">
-                                            <label>Specialities</label>
-                                            <input type="text" class="form-control">
+                                            <label>Doctor name:</label>
+                                            <input type="text" class="form-control" name="username">
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="row form-row">
                                     <div class="col-12 col-sm-6">
                                         <div class="form-group">
-                                            <label>Image</label>
-                                            <input type="file"  class="form-control">
+                                            <label>Address:</label>
+                                            <input type="text" class="form-control" name="Address">
                                         </div>
                                     </div>
-                                    
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+
+                                <div class="row form-row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Gender:</label>
+                                            <input type="text" class="form-control" name="Gender">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Birthdate:</label>
+                                            <input type="text" class="form-control" name="Birthdate">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Email:</label>
+                                            <input type="text" class="form-control" name="Email">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Password:</label>
+                                            <input type="text" class="form-control" name="Password">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Role:</label>
+                                            <input type="text" class="form-control" name="Role">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label>Number:</label>
+                                            <input type="text" class="form-control" name="Number">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Expert_at( speciality):</label>
+                                        <input type="text" class="form-control" name="Expert_at">
+                                    </div>
+                                </div>
+                            
+                                <div class="row form-row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>speciality picture</label>
+                                        <input type="file"  class="form-control" name="speciality_pic">
+                                    </div>
+                                </div>
+                             </div>
+
+                            
+
+                            
+                            
+
+                            <div class="row form-row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Degree:</label>
+                                        <input type="text" class="form-control" name="Degree">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form-row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Salary:</label>
+                                        <input type="text" class="form-control" name="Salary">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form-row">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="file"  class="form-control" name="image">
+                                    </div>
+                                </div>
+                            </div>
+                                
+                           
+                                <button type="submit" class="btn btn-primary btn-block">Add Doctor</button>
                             </form>
+
+
                         </div>
                     </div>
                 </div>
@@ -138,7 +248,8 @@ $text = <<<EOT
         </div>
         <!-- /Page Wrapper -->
     
-   
+    </div>
+    <!-- /Main Wrapper -->
                       
                  
                    
