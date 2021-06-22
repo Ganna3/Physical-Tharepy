@@ -36,6 +36,10 @@ class StuffModel extends Model{
               $this->emailErr    = "";
               $this->passwordErr = "";
           }
+
+          
+
+
       
           public function getEmail()
           {
