@@ -56,7 +56,7 @@ include APPROOT . '/views/inc/includesImp.php';
             </div>
 			<!-- /Sidebar -->
 				<!-- jQuery -->
-
+  <!-- jQuery -->
 		
     </body>
 
