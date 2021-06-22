@@ -1,6 +1,7 @@
 <?php
-class AdminDoctorsModel extends Model
+require_once 'AdminModel.php';
+class AdminDoctorsModel extends AdminModel
 {
-
+  
 }
 ?>

@@ -15,40 +15,40 @@ include APPROOT . '/views/inc/doctorLeftNavbar.php';
 								
 								<div class="card-body" style="margin-left:300px; margin-top:70px;">
 								<div >
-									<h4 class="card-title style="margin-bottom:70px;">Basic Form</h4>
+									<h4 class="card-title style="margin-bottom:70px;">Add schedule</h4>
 								</div>
 									<form action="$ADD" method="POST">
 										<div class="form-group row">
 											
-											<label class="col-lg-3 ">First Name</label>
+											<label class="col-lg-3 ">Schedule Day </label>
 											<div class="col-lg-9">
-											<select name="Scheduleday" required=""  class="form-control">
+											<select name="Doctors_Schedule_day" required=""  class="form-control">
 											<option value="Saturday">Saturday</option>
 										     <option value="Sunday">Sunday</option>
 										 <option value="Monday">Monday</option>
 										 <option value="Tuesday">Tuesday</option>
 										 <option value="Wednesday">Wednesday</option>
-										 <option value="Thurday">Thurday</option>
+										 <option value="Thursday">Thursday</option>
 										 <option value="Friday">Friday</option>
 									   </select>  
 											</div>
 										</div>
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Last Name</label>
+											<label class="col-lg-3 col-form-label">Schecdule Date</label>
 											<div class="col-lg-9">
-												<input type="date" name="day" class="form-control">
+												<input type="date" name="Doctors_Schedule_date" class="form-control">
 											</div>
 										</div>
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Email Address</label>
+											<label class="col-lg-3 col-form-label">Schedule Time</label>
 											<div class="col-lg-9">
-												<input type="time" class="form-control">
+												<input type="time"  name="Doctors_Schedule_Start" class="form-control">
 											</div>
 										</div>
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Username</label>
+											<label class="col-lg-3 col-form-label">Session Price</label>
 											<div class="col-lg-9">
-												<input type="number" class="form-control">
+												<input type="number" name="Session_Price"  class="form-control">
 											</div>
 										</div>
 								

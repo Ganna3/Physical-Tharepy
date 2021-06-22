@@ -40,25 +40,26 @@ include APPROOT . '/views/inc/includesImp.php';
             
                 
                 <!-- User Menu -->
-                <li class="nav-item dropdown has-arrow">
-                    <a href="adminupperDashboard.php" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="<?php echo APPROOT; ?>public/adminAssests/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="user-header">
-                            <div class="avatar avatar-sm">
-                                <img src="<?php echo URLROOT; ?>public/adminAssests/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
-                            </div>
-                            <div class="user-text">
-                                <h6>Ryan Taylor</h6>
-                                <p class="text-muted mb-0">Administrator</p>
-                            </div>
-                        </div>
-                        <a class="dropdown-item" href="profile.php">My Profile</a>
-                        <a class="dropdown-item" href="settings.php">Settings</a>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </li>
+<?php 
+ if(isset($_SESSION['Stuff_id'])) {
+
+    $logout = URLROOT . 'public/Stuff/logout';
+    $text = <<<EOT
+    
+    
+    <!-- Notifications -->
+    <li class="nav-item">
+    <a class="nav-link header-login"  href="$logout" >Logout</a>
+    </li>
+    
+    EOT;
+    echo $text;
+    
+ }
+
+
+?>
+
                 <!-- /User Menu -->
                 
             </ul>

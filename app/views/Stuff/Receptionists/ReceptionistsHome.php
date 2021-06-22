@@ -5,8 +5,8 @@ class ReceptionistsHome extends view{
     //$subtitle = $this->model->subtitle;
    // require APPROOT . '/views/inc/header.php';
     include APPROOT . '/views/inc/includesImp.php';
-    include APPROOT . '/views/inc/adminupperDashboard.php';
-    include APPROOT . '/views/inc/adminLeftNavbar.php';
+    include APPROOT . '/views/inc/ReceptionistsUpperDashboard.php';
+    include APPROOT . '/views/inc/ReceptionistsLeftNavbar.php';
     $text = <<<EOT
    
         <!-- Page Wrapper -->
@@ -18,7 +18,7 @@ class ReceptionistsHome extends view{
                 <div class="page-header">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="page-title">Welcome Admin!</h3>
+                            <h3 class="page-title">Welcome Receptionist!</h3>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item active">Dashboard</li>
                             </ul>
