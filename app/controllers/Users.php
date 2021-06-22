@@ -187,8 +187,7 @@ class Users extends Controller
     public function doctorreports()
 
     {
-      
-      
+
         $viewPath = VIEWS_PATH . 'users/doctorreports.php';
         require_once $viewPath;
         $aboutView = new doctorreports($this->getModel(), $this);
@@ -207,11 +206,9 @@ class Users extends Controller
         $aboutView = new bookappointments($this->getModel(), $this);
         $aboutView->output();
         }
-        
     }
     public function ConfirmBook()
     {
-        
         $viewPath = VIEWS_PATH . 'users/ConfirmBook.php';
         require_once $viewPath;
         $aboutView = new bookappointments($this->getModel(), $this);
