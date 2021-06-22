@@ -32,7 +32,7 @@ class Core
                 unset($url[0]);
             }
         }
-        // Check for second part of url to get view and model name
+        // Check for second part of url to get view and model name (concatination between view and model)
         if (isset($url[1])) {
             // Check to see if method exists in controller
             $modelPath = Util\pathBuilder('models', $url[1] . 'Model');
