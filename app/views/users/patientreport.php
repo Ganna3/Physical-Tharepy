@@ -3,49 +3,37 @@ class patientreport extends view{
 public function Output(){
     require APPROOT . '/views/inc/header.php';
      // require APPROOT . '/views/inc/AdminNavbar.php';
-    
- 
-    
- 
-
+     $pic = URLROOT . 'public/assets/img/Logo-footer.png';
+     if(isset($_GET['id'])){
+         $Report_id=$_GET['id'];
+         $p_id = $_SESSION['id'];
+         $Rep = $this->model->getReportData($p_id,$Report_id);
+         $date = $Rep->App_Date ;
+         $Notes =  $Rep->Doctor_Report;
+         $Medicine =  $Rep->Medicine;
 
   $text = <<<EOT
-
-  <div class="row">
+<div class="row">
   <div class="col-lg-8 offset-lg-2">
       <div class="invoice-content">
           <div class="invoice-item">
               <div class="row">
                   <div class="col-md-6">
                       <div class="invoice-logo">
-                          <img src="assets/img/logo.png" alt="logo">
+                          <img src=" $pic" alt="logo">
                       </div>
                   </div>
                   <div class="col-md-6">
                       <p class="invoice-details">
-                      <strong>Date:</strong> 20/4/2021
+                      <strong>Date:</strong> $date
                       </p>
                   </div>
               </div>
           </div>
           
-          <!-- Invoice Item -->
-          <div class="invoice-item">
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="invoice-info">
-                          <strong class="customer-text">Doctor Name</strong>
-                         
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="invoice-info invoice-info2">
-                          <strong class="customer-text">Patient Name</strong>
-                        
-                      </div>
-                  </div>
-              </div>
-          </div>
+                 
+                 
+            
           <!-- /Invoice Item -->
           
           <!-- Invoice Item -->
@@ -67,21 +55,16 @@ public function Output(){
                           <table class="invoice-table table table-bordered">
                               <thead>
                                   <tr>
-                                      <th>Session Name</th>
-                                      <th class="text-center">Notes</th>
+                                      <th>Session Feedback</th>
+                                      <th class="text-center">Medicine</th>
                                    
                                   </tr>
                               </thead>
                               <tbody>
                                   <tr>
-                                      <td></td>
-                                      <td class="text-center"></td>
+                                      <td>$Notes</td>
+                                      <td class="text-center">$Medicine</td>
                                   
-                                  </tr>
-                                  <tr>
-                                      <td></td>
-                                      <td class="text-center"></td>
-                                      
                                   </tr>
                               </tbody>
                           </table>
@@ -94,21 +77,16 @@ public function Output(){
                   </div>
               </div>
           </div>
-          <!-- /Invoice Item -->
-          
-          <!-- Invoice Information -->
-          <div class="other-info">
-              <h4>Other information</h4>
-            
-          </div>
-          <!-- /Invoice Information -->
+         
           
       </div>
   </div>
+  </div>
 
 
-  EOT;
+EOT;
   echo $text;
+     }
   require APPROOT . '/views/inc/footer.php';
   
   }

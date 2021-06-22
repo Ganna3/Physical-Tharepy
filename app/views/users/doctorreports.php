@@ -16,7 +16,7 @@ class  doctorreports extends view
       require APPROOT . '/views/inc/footer.php';
     }
     public function viewreports()
-	{
+	{   $Report_page = URLROOT . 'public/users/patientreport';
         $pic = URLROOT . 'public/assets/img/Doctors';
         foreach($this->model->getDoctorsReport($_SESSION["id"]) as $Reports  )
         {
@@ -42,19 +42,14 @@ $text =<<<EOT
                            </div>
         </div>
     </div>
+
     <div class="appointment-action">
-        <a href="   &id=$Report_id" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-            <i class="far fa-eye"></i> View
-        </a>
-        <a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-            <i class="fas fa-check"></i> Print
-        </a>
-    </div>
+	<a class="btn btn-sm bg-info-light"  class="far fa-eye"  name="$Report_id" href="$Report_page&id=$Report_id" >View</a>
+	</div>
 </div>
 
 
 </div>
-        
 
 EOT;
 
