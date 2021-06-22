@@ -23,24 +23,18 @@ include APPROOT . '/views/inc/includesImp.php';
                             <li> 
 								<a href="doctors.php"><i class="fe fe-users"></i> <span>Doctors</span></a>
 							</li>
-                            <li> 
-								<a href="receptionists.php"><i class="fe fe-users"></i> <span>Receptionists</span></a>
-							</li>
+                        
                             <li> 
 								<a href="patients.php"><i class="fe fe-users"></i> <span>Patients</span></a>
 							</li>
 							<li> 
 								<a href="appointments.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
-							<li> 
-								<a href="specialities.php"><i class="fe fe-user-plus"></i> <span>Specialities</span></a>
-							</li>
+							
 						
 							
 							
-							<li> 
-								<a href="settings.php"><i class="fe fe-vector"></i> <span>Settings</span></a>
-							</li>
+						
 						
 							
 							<li> 

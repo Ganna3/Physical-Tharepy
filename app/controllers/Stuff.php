@@ -65,12 +65,13 @@ public function Doctor()
         require_once $viewPath;
         $homeView = new DoctorHome($this->getModel(), $this);
         $homeView->output();
-
 }
 
-public function Admin()
-{
-        $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminHome.php';
+
+
+    public function Admin()
+    {
+            $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminHome.php';
         require_once $viewPath;
         $homeView = new AdminHome($this->getModel(), $this);
         $homeView->output();
