@@ -4,553 +4,277 @@ public function Output(){
   //$title = $this->model->title;
   //$subtitle = $this->model->subtitle;
  // require APPROOT . '/views/inc/header.php';
- 
+ $ADD = URLROOT . 'public/Stuff/Schedule';
 include APPROOT . '/views/inc/doctcorupperDashboard.php';
 include APPROOT . '/views/inc/doctorLeftNavbar.php';
   $text = <<<EOT
-  
-			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-md-12 col-12">
-							<nav aria-label="breadcrumb" class="page-breadcrumb">
-								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Appointments</li>
-								</ol>
-							</nav>
-							<h2 class="breadcrumb-title">Appointments</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /Breadcrumb -->
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+			  <div class="content container-fluid">
+			  
+				  <!-- Page Header -->
+				  <div class="page-header">
+					  <div class="row">
+						  <div class="col-sm-12">
+							  <h3 class="page-title">List of Patients</h3>
+							  
+						  </div>
+					  </div>
+				  </div>
+				  <ul class="nav nav-tabs nav-tabs-solid nav-tabs-rounded">
+				  <li class="nav-item">
+					  <a class="nav-link active" href="$ADD" ">Add Schedule</a>
+				  </li>
+			  </ul>
+				  <!-- /Page Header -->
+				  
+				  <div class="row">
+					  <div class="col-sm-12">
+						  <div class="card">
+							  <div class="card-body">
+								  <div class="table-responsive">
+									  <div class="table-responsive">
+									  <table class="datatable table table-hover table-center mb-0">
+										  <thead>
+											  <tr>
+												  <th>Patient ID</th>
+												  <th>Patient Name</th>
+												  <th>Age</th>
+												  <th>Address</th>
+												  <th>Phone</th>
+												  <th>Last Visit</th>
+												  <th class="text-right">Paid</th>
+											  </tr>
+										  </thead>
+										  <tbody>
+											  <tr>
+												  <td>#PT001</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>
+														  <a href="profile.html">Charlene Reed </a>
+													  </h2>
+												  </td>
+												  <td>29</td>
+												  <td>4417  Goosetown Drive, Taylorsville, North Carolina, 28681</td>
+												  <td>8286329170</td>
+												  <td>20 Oct 2019</td>
+												  <td class="text-right">$100.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT002</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient2.jpg" alt="User Image"></a>
+														  <a href="profile.html">Travis Trimble </a>
+													  </h2>
+												  </td>
+												  <td>23</td>
+												  <td>4026  Fantages Way, Brunswick, Maine, 04011</td>
+												  <td>2077299974</td>
+												  <td>22 Oct 2019</td>
+												  <td class="text-right">$200.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT003</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
+														  <a href="profile.html">Carl Kelly</a>
+													  </h2>
+												  </td>
+												  <td>29</td>
+												  <td>2037 Pearcy Avenue, Decatur, Indiana, 46733</td>
+												  <td>2607247769</td>
+												  <td>21 Oct 2019</td>
+												  <td class="text-right">$250.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT004</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
+														  <a href="profile.html"> Michelle Fairfax</a>
+													  </h2>
+												  </td>
+												  <td>25</td>
+												  <td>2037 Pearcy Avenue, Decatur, Indiana, 46733</td>
+												  <td>5043686874</td>
+												  <td>21 Sep 2019</td>
+												  <td class="text-right">$150.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT005</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
+														  <a href="profile.html">Gina Moore</a>
+													  </h2>
+												  </td>
+												  <td>23</td>
+												  <td>888  Everette Alley, Hialeah, Florida, 33012</td>
+												  <td>9548207887</td>
+												  <td>18 Sep 2019</td>
+												  <td class="text-right">$350.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT006</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient6.jpg" alt="User Image"></a>
+														  <a href="profile.html">Elsie Gilley</a>
+													  </h2>
+												  </td>
+												  <td>16</td>
+												  <td>644  Coffman Alley, Bowling Green, Kentucky, 42101</td>
+												  <td>3153844562</td>
+												  <td>18 Sep 2019</td>
+												  <td class="text-right">$300.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT007</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient7.jpg" alt="User Image"></a>
+														  <a href="profile.html"> Joan Gardner</a>
+													  </h2>
+												  </td>
+												  <td>25</td>
+												  <td>2399  Hillview Drive, San Francisco, California, 94103</td>
+												  <td>7072202603</td>
+												  <td>18 Sep 2019</td>
+												  <td class="text-right">$250.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT008</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient8.jpg" alt="User Image"></a>
+														  <a href="profile.html"> Daniel Griffing</a>
+													  </h2>
+												  </td>
+												  <td>21</td>
+												  <td>4914  Hilltop Haven Drive, Passaic, New Jersey, 07055</td>
+												  <td>9737739497</td>
+												  <td>7 Sep 2019</td>
+												  <td class="text-right">$150.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT009</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient9.jpg" alt="User Image"></a>
+														  <a href="profile.html">Walter Roberson</a>
+													  </h2>
+												  </td>
+												  <td>18</td>
+												  <td>1299  Star Trek Drive, Panama City, Florida, 32405</td>
+												  <td>8503584445</td>
+												  <td>11 Sep 2019</td>
+												  <td class="text-right">$100.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT010</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient10.jpg" alt="User Image"></a>
+														  <a href="profile.html">Robert Rhodes</a>
+													  </h2>
+												  </td>
+												  <td>19</td>
+												  <td>1214  Hamill Avenue, Del Mar, California, 92014</td>
+												  <td>8582595285</td>
+												  <td>12 Sep 2019</td>
+												  <td class="text-right">$120.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT011</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient11.jpg" alt="User Image"></a>
+														  <a href="profile.html">Harry Williams</a>
+													  </h2>
+												  </td>
+												  <td>9</td>
+												  <td>4566  Sampson Street, Denver, Colorado, 80202</td>
+												  <td>3036077075</td>
+												  <td>14 Sep 2019</td>
+												  <td class="text-right">$130.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT012</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient12.jpg" alt="User Image"></a>
+														  <a href="profile.html">Robert Johnston</a>
+													  </h2>
+												  </td>
+												  <td>29</td>
+												  <td>1996  Crummit Lane, Beatrice, Nebraska, 68310</td>
+												  <td>4022231492</td>
+												  <td>7 Nov 2019</td>
+												  <td class="text-right">$260.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT013</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient13.jpg" alt="User Image"></a>
+														  <a href="profile.html">Tracy Mason</a>
+													  </h2>
+												  </td>
+												  <td>32</td>
+												  <td>4211  Vesta Drive, TOLEDO, Washington, 98591</td>
+												  <td>7737265795</td>
+												  <td>9 Nov 2019</td>
+												  <td class="text-right">$290.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT014</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient14.jpg" alt="User Image"></a>
+														  <a href="profile.html"> Daniel Finch</a>
+													  </h2>
+												  </td>
+												  <td>23</td>
+												  <td>186  Bryan Street, Greensboro, North Carolina, 27409</td>
+												  <td>3362314023</td>
+												  <td>5 Nov 2019</td>
+												  <td class="text-right">$300.00</td>
+											  </tr>
+											  <tr>
+												  <td>#PT015</td>
+												  <td>
+													  <h2 class="table-avatar">
+														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient15.jpg" alt="User Image"></a>
+														  <a href="profile.html">Jessica Garza</a>
+													  </h2>
+												  </td>
+												  <td>10</td>
+												  <td>4672  Rose Street, Schaumburg, Illinois, 60173</td>
+												  <td>7082788201</td>
+												  <td>6 Nov 2019</td>
+												  <td class="text-right">$310.00</td>
+											  </tr>
+										  </tbody>
+									  </table>
+								  </div>
+								  </div>
+							  </div>
+						  </div>
+					  </div>			
+				  </div>
+				  
+			  </div>			
+		  </div>
+		  <!-- /Page Wrapper -->
+	  
+	  </div>
+	  <!-- /Main Wrapper -->
+	  </div>
+	  <!-- /Main Wrapper -->
 			
-			<!-- Page Content -->
-			<div class="content">
-				<div class="container-fluid">
-
-					<div class="row">
-						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-						
-							<!-- Profile Sidebar -->
-							<div class="profile-sidebar">
-								<div class="widget-profile pro-widget-content">
-									<div class="profile-info-widget">
-										<a href="#" class="booking-doc-img">
-											<img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3>Dr. Darren Elder</h3>
-											
-											<div class="patient-details">
-											
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="dashboard-widget">
-									<nav class="dashboard-menu">
-										<ul>
-											<li>
-												<a href="doctor-dashboard.html">
-													<i class="fas fa-columns"></i>
-													<span>Dashboard</span>
-												</a>
-											</li>
-											<li class="active">
-												<a href="appointments.html">
-													<i class="fas fa-calendar-check"></i>
-													<span>Appointments</span>
-												</a>
-											</li>
-											<li>
-												<a href="my-patients.html">
-													<i class="fas fa-user-injured"></i>
-													<span>My Patients</span>
-												</a>
-											</li>
-											<li>
-												<a href="schedule-timings.html">
-													<i class="fas fa-hourglass-start"></i>
-													<span>Schedule Timings</span>
-												</a>
-											</li>
-											<li>
-												<a href="invoices.html">
-													<i class="fas fa-file-invoice"></i>
-													<span>Invoices</span>
-												</a>
-											</li>
-											<li>
-												<a href="reviews.html">
-													<i class="fas fa-star"></i>
-													<span>Reviews</span>
-												</a>
-											</li>
-											<li>
-												<a href="chat-doctor.html">
-													<i class="fas fa-comments"></i>
-													<span>Message</span>
-													<small class="unread-msg">23</small>
-												</a>
-											</li>
-											<li>
-												<a href="doctor-profile-settings.html">
-													<i class="fas fa-user-cog"></i>
-													<span>Profile Settings</span>
-												</a>
-											</li>
-											<li>
-												<a href="social-media.html">
-													<i class="fas fa-share-alt"></i>
-													<span>Social Media</span>
-												</a>
-											</li>
-											<li>
-												<a href="doctor-change-password.html">
-													<i class="fas fa-lock"></i>
-													<span>Change Password</span>
-												</a>
-											</li>
-											<li>
-												<a href="index-2.html">
-													<i class="fas fa-sign-out-alt"></i>
-													<span>Logout</span>
-												</a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<!-- /Profile Sidebar -->
-							
-						</div>
-						
-						<div class="col-md-7 col-lg-8 col-xl-9">
-							<div class="appointments">
-							
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Richard Wilson</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
-												<h5><i class="fas fa-envelope"></i> richard@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-							
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient1.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Charlene Reed </a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 12 Nov 2019, 5.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> North Carolina, United States</h5>
-												<h5><i class="fas fa-envelope"></i> charlenereed@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 828 632 9170</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient2.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Travis Trimble</a></h3>
-											
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 11 Nov 2019, 8.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Maine, United States</h5>
-												<h5><i class="fas fa-envelope"></i> travistrimble@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 207 729 9974</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient3.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Carl Kelly</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 9 Nov 2019, 9.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
-												<h5><i class="fas fa-envelope"></i> carlkelly@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 260 724 7769</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient4.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Michelle Fairfax</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 9 Nov 2019, 1.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Indiana, United States</h5>
-												<h5><i class="fas fa-envelope"></i> michellefairfax@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 504 368 6874</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient5.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Gina Moore</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 8 Nov 2019, 3.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Florida, United States</h5>
-												<h5><i class="fas fa-envelope"></i> ginamoore@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 954 820 7887</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient6.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Elsie Gilley</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 6 Nov 2019, 9.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Kentucky, United States</h5>
-												<h5><i class="fas fa-envelope"></i> elsiegilley@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 315 384 4562</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient7.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Joan Gardner</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 5 Nov 2019, 12.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> California, United States</h5>
-												<h5><i class="fas fa-envelope"></i> joangardner@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 707 2202 603</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient8.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Daniel Griffing</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 5 Nov 2019, 7.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> New Jersey, United States</h5>
-												<h5><i class="fas fa-envelope"></i> danielgriffing@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 973 773 9497</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient9.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Walter Roberson</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 4 Nov 2019, 10.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Florida, United States</h5>
-												<h5><i class="fas fa-envelope"></i> walterroberson@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 850 358 4445</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient10.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Robert Rhodes</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 4 Nov 2019, 11.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> California, United States</h5>
-												<h5><i class="fas fa-envelope"></i> robertrhodes@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 858 259 5285</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-								<!-- Appointment List -->
-								<div class="appointment-list">
-									<div class="profile-info-widget">
-										<a href="patient-profile.html" class="booking-doc-img">
-											<img src="assets/img/patients/patient11.jpg" alt="User Image">
-										</a>
-										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Harry Williams</a></h3>
-											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 3 Nov 2019, 6.00 PM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Colorado, United States</h5>
-												<h5><i class="fas fa-envelope"></i> harrywilliams@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 303 607 7075</h5>
-											</div>
-										</div>
-									</div>
-									<div class="appointment-action">
-										<a href="#" class="btn btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details">
-											<i class="far fa-eye"></i> View
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
-											<i class="fas fa-check"></i> Accept
-										</a>
-										<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-											<i class="fas fa-times"></i> Cancel
-										</a>
-									</div>
-								</div>
-								<!-- /Appointment List -->
-								
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>		
-			<!-- /Page Content -->
-   
-		   
-		</div>
-		<!-- /Main Wrapper -->
-		
-		<!-- Appointment Details Modal -->
-		<div class="modal fade custom-modal" id="appt_details">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Appointment Details</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<ul class="info-details">
-							<li>
-								<div class="details-header">
-									<div class="row">
-										<div class="col-md-6">
-											<span class="title">#APT0001</span>
-											<span class="text">21 Oct 2019 10:00 AM</span>
-										</div>
-										<div class="col-md-6">
-											<div class="text-right">
-												<button type="button" class="btn bg-success-light btn-sm" id="topup_status">Completed</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="title">Status:</span>
-								<span class="text">Completed</span>
-							</li>
-							<li>
-								<span class="title">Confirm Date:</span>
-								<span class="text">29 Jun 2019</span>
-							</li>
-							<li>
-								<span class="title">Paid Amount</span>
-								<span class="text">$450</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
- 
     
 
 EOT;

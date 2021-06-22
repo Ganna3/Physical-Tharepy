@@ -67,6 +67,14 @@ public function Doctor()
         $homeView->output();
 
 }
+public function Schedule()
+{
+        $viewPath = VIEWS_PATH . 'Stuff/Doctor/Schedule.php';
+        require_once $viewPath;
+        $homeView = new Schedule($this->getModel(), $this);
+        $homeView->output();
+
+}
 public function Admin()
 {
         $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminHome.php';

@@ -8,12 +8,6 @@ class FinddoctorsModel extends BookappointmentsModel{
          $Doctors = $this->dbh->resultSet();
          return $Doctors;
      }
-    Public Function getDoctor_info($D_ID)
-    {
-    $this->dbh->query("SELECT * FROM doctors_data WHERE Doctor_ID =:D_ID ");
-    $this->dbh->bind(':D_ID', $D_ID);
-    $Doctor_info = $this->dbh->single();
-    return $Doctor_info;
-    }
+  
 
 }
