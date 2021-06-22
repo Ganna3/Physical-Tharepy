@@ -35,7 +35,7 @@ include APPROOT . '/views/inc/includesImp.php';
 						
 							
 							<li> 
-								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+<!-- <a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a> -->
 							</li>
 
                            

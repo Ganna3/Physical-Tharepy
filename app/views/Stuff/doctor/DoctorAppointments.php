@@ -16,7 +16,7 @@ include APPROOT . '/views/inc/doctorLeftNavbar.php';
 				  <div class="page-header">
 					  <div class="row">
 						  <div class="col-sm-12">
-							  <h3 class="page-title">List of Patients</h3>
+							  <h3 class="page-title">My Schedule</h3>
 							  
 						  </div>
 					  </div>
@@ -48,7 +48,7 @@ include APPROOT . '/views/inc/doctorLeftNavbar.php';
 										  
 										  <tbody>
 EOT;
-										  echo $text;
+  echo $text;
 
 		$this->getsch();
 										  $text = <<<EOT
