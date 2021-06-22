@@ -199,7 +199,7 @@ EOT;
   }
   function Doctors(){
 	$pic = URLROOT . 'public/assets/img/Doctors';
-	$Appointment = URLROOT . 'public/users/bookappointments';
+	$Appointment = URLROOT . 'public/users/finddoctors';
 	foreach($this->model->getDoctors() as $Doctors  )
 	{
 	 $Doctor_ID = $Doctors->Stuff_id;

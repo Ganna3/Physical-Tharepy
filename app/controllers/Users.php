@@ -66,9 +66,8 @@ class Users extends Controller
                 empty($registerModel->getPasswordErr()) &&
                 empty($registerModel->getConfirmPasswordErr())
             ) {
-                //Hash Password
-                //$registerModel->getPassword()
-                //$registerModel->setPassword(md5($registerModel->getPassword(), PASSWORD_DEFAULT));
+                
+                $registerModel->setPassword(password_hash($registerModel->getPassword(), PASSWORD_DEFAULT));
                 
                 if ($registerModel->signup()) {
                     $_SESSION['auth_status']=true;
@@ -112,7 +111,7 @@ class Users extends Controller
                 empty($userModel->getEmailErr()) &&
                 empty($userModel->getPasswordErr())
             ) {
-    
+               
                $loggedUser = $userModel->login();
                if ($loggedUser) {
                  $this->createUserSession($loggedUser);
@@ -150,19 +149,7 @@ class Users extends Controller
         header('location: ' . URLROOT . 'public');  
     }
     
-    function Post()
-    {
-        $patients = $this->getModel();
-        $patients->getPatients();
-        //var_dump($patients);
-       // $this->patients['patients'] =$patients;
-        $viewPath = VIEWS_PATH . 'users/Post.php';
-        require_once $viewPath;
-        $view = new Post($this->getModel(), $this);
-        $view->output();
-       // return $patients;
-
-    }
+ 
     function EditProfile()
     {
         $Edit = $this->getModel();
