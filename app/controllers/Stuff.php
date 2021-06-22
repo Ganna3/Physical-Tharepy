@@ -210,7 +210,7 @@ public function Stuff_Login()
                 }
             
         }
-        // Load form
+        // Load formm
         //echoo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
         
         $viewPath = VIEWS_PATH . 'Stuff/Doctor/Schedule.php';
