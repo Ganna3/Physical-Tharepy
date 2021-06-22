@@ -63,10 +63,10 @@ include APPROOT . '/views/inc/includesImp.php';
                
                 
             </ul>
-           
+            <!-- /Header Right Menu -->
             
         </div>
-		
+			<!-- /Header -->
 
 
      
