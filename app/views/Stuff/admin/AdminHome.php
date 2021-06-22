@@ -116,7 +116,7 @@ class AdminHome extends view{
             
                 <div class="row">
                     <div class="col-md-12 d-flex">
-                    
+                    <!-- ------------------------------ Doctors lists---------------------------------------- -->
                         <!-- Doctors list -->
                         <div class="card card-table flex-fill">
                             <div class="card-header">
@@ -129,29 +129,21 @@ class AdminHome extends view{
                                             <tr>
                                                 <th>Doctor Name</th>
                                                 <th>Speciality</th>
-                                                <th>Earned</th>
-                                                <th>Reviews</th>
+                                                <th>Degree</th>
+                                                <th>Salary</th>
+                                                <th>Email</th>
+                                                <th>Phone number</th>
+                                                <th>Gender</th>
+                                                <th>Address</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="<?php echo URLROOT; ?>public/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
-                                                        <a href="profile.html">Dr. Ruby Perrin</a>
-                                                    </h2>
-                                                </td>
-                                                <td>Dental</td>
-                                                <td>$3200.00</td>
-                                                <td>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star-o text-secondary"></i>
-                                                </td>
-                                            </tr>
-                                           
+                                        
+EOT;
+
+echo $text;
+$this->ViewDoctors();
+$text = <<<EOT
                                            
                                           
                                            
@@ -165,7 +157,7 @@ class AdminHome extends view{
                     </div>
                     <div class="row">
                     <div class="col-md-12 d-flex">
-                    
+                    <!--------------- Receptionists list -------------------------------->
                         <!-- Receptionists list -->
                         <div class="card card-table flex-fill">
                             <div class="card-header">
@@ -177,40 +169,30 @@ class AdminHome extends view{
                                         <thead>
                                             <tr>
                                                 <th>Receptionist Name</th>
-                                                <th>Earned</th>
-                                                <th>Reviews</th>
+                                                <th>Email</th>
+                                                <th>Phone number</th>
+                                                <th>Gender</th>
+                                                <th>Address</th>
+                                                
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="<?php echo URLROOT; ?>public/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
-                                                        <a href="profile.html">Dr. Ruby Perrin</a>
-                                                    </h2>
-                                                </td>
-                                                
-                                                <td>$3200.00</td>
-                                                <td>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star text-warning"></i>
-                                                    <i class="fe fe-star-o text-secondary"></i>
-                                                </td>
-                                            </tr>
-                                           
-                                          
-                                           
-                                           
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Receptionists list -->
-                        
-                    </div>
+                                       
+                                   
+
+EOT;
+
+echo $text;
+$this->viewReceptionists();
+$text = <<<EOT
+
+</table>
+</div>
+</div>
+</div>
+<!--------------------------------- Patient list---------------------------------------- -->
+<!-- /Receptionists list -->
+
+</div>
                     <div class="col-md-12 d-flex">
                     
                         <!-- Patients list -->
@@ -224,23 +206,19 @@ class AdminHome extends view{
                                         <thead>
                                             <tr>													
                                                 <th>Patient Name</th>
-                                                <th>Phone</th>
-                                                <th>Last Session</th>
-                                                <th>Paid</th>													
+                                                <th>Email</th>
+                                                <th>Phone number</th>
+                                                <th>Gender</th>	
+                                                <th>Adresse</th>													
                                             </tr>
                                         </thead>
+EOT;
+
+echo $text;
+$this->viewPatients();
+$text = <<<EOT
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="<?php echo URLROOT; ?>public/assets/img/patients/patient1.jpg" alt="User Image"></a>
-                                                        <a href="profile.html">Charlene Reed </a>
-                                                    </h2>
-                                                </td>
-                                                <td>8286329170</td>
-                                                <td>20 Oct 2019</td>
-                                                <td class="text-left">$100.00</td>
-                                            </tr>
+                                            
                                           
                                           
                                            
@@ -250,8 +228,10 @@ class AdminHome extends view{
                                 </div>
                             </div>
                         </div>
+
+
                         <!-- /Patients list -->
-                        
+                        <!-----------------------------Appointments list--------------------------------->
                     </div>
                 </div>
                 <div class="row">
@@ -268,39 +248,19 @@ class AdminHome extends view{
                                         <thead>
                                             <tr>
                                                 <th>Doctor Name</th>
-                                                <th>Speciality</th>
                                                 <th>Patient Name</th>
-                                                <th>Apointment Time</th>
-                                                <th>Status</th>
-                                                <th class="text-right">Amount</th>
+                                                <th>Apointment Date</th>
+                                                <th>Apointment duration time</th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="<?php echo URLROOT; ?>public/assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
-                                                        <a href="profile.html">Dr. Ruby Perrin</a>
-                                                    </h2>
-                                                </td>
-                                                <td>Dental</td>
-                                                <td>
-                                                    <h2 class="table-avatar">
-                                                        <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="<?php echo URLROOT; ?>public/assets/img/patients/patient1.jpg" alt="User Image"></a>
-                                                        <a href="profile.html">Charlene Reed </a>
-                                                    </h2>
-                                                </td>
-                                                <td>9 Nov 2019 <span class="text-primary d-block">11.00 AM - 11.15 AM</span></td>
-                                                <td>
-                                                    <div class="status-toggle">
-                                                        <input type="checkbox" id="status_1" class="check" checked>
-                                                        <label for="status_1" class="checktoggle">checkbox</label>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    $200.00
-                                                </td>
-                                            </tr>
+EOT;
+
+echo $text;
+$this->viewAppointments();
+$text = <<<EOT
+                                      
 
                                         </tbody>
                                     </table>
@@ -325,6 +285,194 @@ class AdminHome extends view{
 EOT;
   echo $text;
   
+  }
+
+
+
+
+
+  function ViewDoctors()
+  {
+    $pic = URLROOT . 'public/assets/img/Doctors';
+    foreach($this->model->getDoctors() as $Doctors)
+	{
+        $Doctor_name=$Doctors->Full_Name;
+        $Doctor_Pic=$Doctors->Profile_pic;
+        $Doctor_id=$Doctors->Stuff_id;
+
+        $email=$Doctors->Email;
+        $phonenumber=$Doctors->PhoneNum;
+        $Gender=$Doctors->Gender;
+        $address=$Doctors->Address;
+
+
+        $info=$this->model->getDoctor_info($Doctor_id);
+        $spec= $info->Expert_at;
+        $degree= $info->Degree;
+        $salary= $info->Salary;
+        $egb='EGB';
+    $text = <<<EOT
+    
+    <tr>
+       <td>
+                                                    <h2 class="table-avatar">
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src=" $pic/$Doctor_Pic" alt="User Image"></a>
+                                                        <a href="#">$Doctor_name</a>
+                                                    </h2>
+                                                </td>
+                                                <td>$spec</td>
+                                                <td>$degree</td>
+                                                <td>$salary$egb</td>
+                                                <td>$email</td>
+                                                <td>$phonenumber</td>
+                                                <td>$Gender</td>
+                                                <td>$address</td>
+                                                
+                                                
+                                            </tr>
+EOT;
+  echo $text;
+    }
+
+  }
+  function viewReceptionists()
+  {
+    $pic = URLROOT . 'public/assets/img/Doctors';
+    foreach($this->model->getReceptionist() as $Receptionists)
+	{
+        $recep_name=$Receptionists->Full_Name;
+        $recep_Pic=$Receptionists->Profile_pic;
+        $recep_id=$Receptionists->Stuff_id;
+
+        $email=$Receptionists->Email;
+        $phonenumber=$Receptionists->PhoneNum;
+        $Gender=$Receptionists->Gender;
+        $address=$Receptionists->Address;
+
+
+       
+    $text = <<<EOT
+    
+    <tr>
+       <td>
+                                                    <h2 class="table-avatar">
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src=" $pic/$recep_Pic" alt="User Image"></a>
+                                                        <a href="#">$recep_name</a>
+                                                    </h2>
+                                                </td>
+                                                
+                                                
+                                                
+                                                <td>$email</td>
+                                                <td>$phonenumber</td>
+                                                <td>$Gender</td>
+                                                <td>$address</td>
+                                                
+                                                
+                                            </tr>
+EOT;
+  echo $text;
+    }
+
+  }
+
+  function viewPatients()
+  {
+    $pic = URLROOT . 'public/assets/img/Doctors';
+    foreach($this->model->getPatients() as $Patients)
+	{
+        $patient_fname=$Patients->FName;
+        $patient_lname=$Patients->LName;
+        $patient_Pic=$Patients->Image;
+        $space=' ';
+
+        $email=$Patients->Email;
+        $phonenumber=$Patients->Phone_Num;
+        $Gender=$Patients->Gender;
+        $address=$Patients->Address;
+
+
+       
+    $text = <<<EOT
+    
+    <tr>
+       <td>
+                                                    <h2 class="table-avatar">
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src=" $pic/$patient_Pic" alt="User Image"></a>
+                                                        <a href="#">$patient_fname $patient_lname </a>
+                                                    </h2>
+                                                </td>
+                                                
+                                                
+                                                
+                                                <td>$email</td>
+                                                <td>$phonenumber</td>
+                                                <td>$Gender</td>
+                                                <td>$address</td>
+                                                
+                                                
+                                            </tr>
+EOT;
+  echo $text;
+    }
+
+  }
+
+  function viewAppointments()
+  {
+    $pic = URLROOT . 'public/assets/img/Doctors';
+    foreach($this->model->getAppointments() as $Appointment)
+	{
+        $Day=$Appointment->Day;
+        $Time=$Appointment->Time;
+
+        $drID=$Appointment->Doctor_ID;
+        $PatientID=$Appointment->Patient_ID;
+
+//get dr name
+        $name=$this->model->getDoctorName($drID);
+        $drName= $name->Full_Name;
+// get patient name
+$name=$this->model->getPatientFName($PatientID);
+        $PatientFName= $name->FName;
+
+        $name=$this->model->getPatientLName($PatientID);
+        $PatientLName= $name->LName;
+
+        
+
+
+       
+    $text = <<<EOT
+    
+    <tr>
+       <td>
+                                                    <h2 class="table-avatar">
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="" alt="User Image"></a>
+                                                        <a href="#">$drName </a>
+                                                    </h2>
+
+                                                </td>
+                                                <td>
+                                                    <h2 class="table-avatar">
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="" alt="User Image"></a>
+                                                        <a href="#">$PatientFName $PatientLName</a>
+                                                    </h2>
+                                                    
+                                                </td>
+                                                
+                                                
+                                                
+                                                <td>$Day</td>
+                                                <td>$Time</td>
+                                                
+                                                
+                                                
+                                            </tr>
+EOT;
+  echo $text;
+    }
+
   }
 
 }

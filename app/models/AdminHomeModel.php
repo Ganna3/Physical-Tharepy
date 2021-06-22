@@ -1,5 +1,6 @@
 <?php
-class AdminHomeModel extends Model
+require_once 'AdminModel.php'; 
+class AdminHomeModel extends AdminModel
 {
 
 

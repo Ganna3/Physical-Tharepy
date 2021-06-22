@@ -13,6 +13,7 @@ class StuffModel extends Model{
         protected $email;
         protected $Birthdate;
         protected $image;
+        protected $Role;
         protected $emailErr;
         protected $passwordErr;
       
@@ -28,6 +29,7 @@ class StuffModel extends Model{
               $this->address="";
               $this->password="";
               $this->Gender="";
+              $this->Role="";
              //$this->email    = "";
               //$this->password = "";
       
@@ -42,6 +44,14 @@ class StuffModel extends Model{
           public function setEmail($email)
           {
               $this->email = $email;
+          }
+          public function getRole()
+          {
+              return $this->Role;
+          }
+          public function setRole($Role)
+          {
+              $this->Role = $Role;
           }
       
           public function getPassword()
