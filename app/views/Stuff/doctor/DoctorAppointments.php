@@ -37,73 +37,21 @@ include APPROOT . '/views/inc/doctorLeftNavbar.php';
 									  <table class="datatable table table-hover table-center mb-0">
 										  <thead>
 											  <tr>
-												  <th>Patient ID</th>
-												  <th>Patient Name</th>
-												  <th>Age</th>
-												  <th>Address</th>
-												  <th>Phone</th>
-												  <th>Last Visit</th>
-												  <th class="text-right">Paid</th>
+												  
+												  <th>schedule day</th>
+												  <th>schedule date</th>
+												  <th>time</th>
+												  <th>price</th>
+												  <th>status</th>
 											  </tr>
 										  </thead>
+										  
 										  <tbody>
-											  <tr>
-												  <td>#PT001</td>
-												  <td>
-													  <h2 class="table-avatar">
-														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>
-														  <a href="profile.html">Charlene Reed </a>
-													  </h2>
-												  </td>
-												  <td>29</td>
-												  <td>4417  Goosetown Drive, Taylorsville, North Carolina, 28681</td>
-												  <td>8286329170</td>
-												  <td>20 Oct 2019</td>
-												  <td class="text-right">$100.00</td>
-											  </tr>
-											  <tr>
-												  <td>#PT002</td>
-												  <td>
-													  <h2 class="table-avatar">
-														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient2.jpg" alt="User Image"></a>
-														  <a href="profile.html">Travis Trimble </a>
-													  </h2>
-												  </td>
-												  <td>23</td>
-												  <td>4026  Fantages Way, Brunswick, Maine, 04011</td>
-												  <td>2077299974</td>
-												  <td>22 Oct 2019</td>
-												  <td class="text-right">$200.00</td>
-											  </tr>
-											  <tr>
-												  <td>#PT003</td>
-												  <td>
-													  <h2 class="table-avatar">
-														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
-														  <a href="profile.html">Carl Kelly</a>
-													  </h2>
-												  </td>
-												  <td>29</td>
-												  <td>2037 Pearcy Avenue, Decatur, Indiana, 46733</td>
-												  <td>2607247769</td>
-												  <td>21 Oct 2019</td>
-												  <td class="text-right">$250.00</td>
-											  </tr>
-											  <tr>
-												  <td>#PT004</td>
-												  <td>
-													  <h2 class="table-avatar">
-														  <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
-														  <a href="profile.html"> Michelle Fairfax</a>
-													  </h2>
-												  </td>
-												  <td>25</td>
-												  <td>2037 Pearcy Avenue, Decatur, Indiana, 46733</td>
-												  <td>5043686874</td>
-												  <td>21 Sep 2019</td>
-												  <td class="text-right">$150.00</td>
-											  </tr>
-											 
+EOT;
+										  echo $text;
+
+		$this->getsch();
+										  $text = <<<EOT
 										  </tbody>
 									  </table>
 								  </div>
@@ -129,4 +77,37 @@ echo $text;
 //require APPROOT . '/views/inc/.php';
 //require APPROOT . '/views/inc/footer.php';
 }
+function getsch()
+{
+	$d_id=$_SESSION['Stuff_id'];
+	foreach($this->model->getschedules($d_id) as $sch  )
+	{
+		$status=$sch->Reservation;
+		if($status=='Yes')
+		{
+        $stat="Reserved";
+		}else{
+		$stat="Not Reserved";
+		}
+		$day= $sch->Doctors_Schedule_day;
+		$time= $sch->Doctors_Schedule_date;
+		$start=$sch->Doctors_Schedule_Start;
+		$price=$sch->Session_Price;
+	$text = <<<EOT
+	<tr>
+	
+	<td>$day</td>
+	<td>$time</td>
+	<td>$start</td>
+	<td>$price</td>
+	<td>$stat</td>
+	
+    </tr>
+	
+EOT;
+echo $text;
+
+	}
+}
+
 }

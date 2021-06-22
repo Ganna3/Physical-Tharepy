@@ -177,7 +177,7 @@ public function Stuff_Login()
         unset($_SESSION['Stuff_name']);
         session_destroy();
         //redirect('users/login');
-        header('location: ' . URLROOT . 'public/Stuff_Login');
+        header('location: ' . URLROOT . 'public/Stuff/Stuff_Login');
     }
     public function createUserSession($Stuff)
     {

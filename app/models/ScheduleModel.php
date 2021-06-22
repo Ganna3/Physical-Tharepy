@@ -70,6 +70,13 @@ class ScheduleModel extends model
         $this->dbh->bind(':price', $this->Session_Price);
         return $this->dbh->execute();
     }
+    public function getschedules($id)
+    {
+        $this->dbh->query("SELECT * FROM doctors_schedule WHERE Doctor_ID = :ID");
+        $this->dbh->bind(':ID',$id);
+        $SCHEDULE = $this->dbh->resultSet();
+        return $SCHEDULE;
+    }
 
      
 
