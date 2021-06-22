@@ -67,14 +67,7 @@ public function Doctor()
         $homeView->output();
 
 }
-public function Schedule()
-{
-        $viewPath = VIEWS_PATH . 'Stuff/Doctor/Schedule.php';
-        require_once $viewPath;
-        $homeView = new Schedule($this->getModel(), $this);
-        $homeView->output();
 
-}
 public function Admin()
 {
         $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminHome.php';
@@ -150,7 +143,7 @@ public function Stuff_Login()
                if ($logged_Stuff) 
                {
                   // die($logged_Stuff->Role);
-                $this->createUserSession($loggedUser);
+                $this->createUserSession($logged_Stuff);
                if($logged_Stuff->Role == 'Admin'){
                 header('location: ' . URLROOT . 'public/Stuff/Admin/AdminHome');
                }
@@ -189,12 +182,41 @@ public function Stuff_Login()
     public function createUserSession($Stuff)
     {
         $_SESSION['Stuff_id'] = $Stuff->Stuff_id;
+       
         $_SESSION['Stuff_name'] = $Stuff->Full_Name;   
        // header('location: ' . URLROOT . 'public');  
     }
     public function isLoggedIn()
     {
         return isset($_SESSION['id']);
+    }
+
+
+    public function  Schedule()
+    {
+        $scheduleModel = $this->getModel();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // Process form
+            $scheduleModel->setschedule_day(trim($_POST['Doctors_Schedule_day']));
+            $scheduleModel->setschedule_date(trim($_POST['Doctors_Schedule_date']));
+            $scheduleModel->setschedule_start(trim($_POST['Doctors_Schedule_Start']));
+            $scheduleModel->setSession_Price(trim($_POST['Session_Price']));
+                
+                if ( $scheduleModel->Schedule()) {
+                    
+                    header('location: ' . URLROOT . 'Public/Stuff/Doctor');
+                } else {
+                    die('Error in sign up');
+                }
+            
+        }
+        // Load form
+        //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
+        
+        $viewPath = VIEWS_PATH . 'Stuff/Doctor/Schedule.php';
+        require_once $viewPath;
+        $homeView = new Schedule($this->getModel(), $this);
+        $homeView->output();
     }
 
 
