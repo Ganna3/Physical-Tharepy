@@ -77,6 +77,22 @@ public function Doctor()
         $homeView->output();
 
 }
+
+public function AdminSettings()
+{
+    $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminSettings.php';
+    require_once $viewPath;
+    $settingsView = new AdminSettings($this->getModel(), $this);
+    $settingsView->output();
+}
+public function Adminprofile()
+{
+    $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminProfile.php';
+    require_once $viewPath;
+    $settingsView = new AdminProfile($this->getModel(), $this);
+    $settingsView->output();
+}
+
 public function AdminDoctors()
 {
     $AddDrModel = $this->getModel();
@@ -88,7 +104,7 @@ public function AdminDoctors()
             $AddDrModel->setSpaciality_Pic(trim($_POST['speciality_pic']));
             //from stuff model
             $AddDrModel->setEmail(trim($_POST['Email']));
-            $AddDrModel->setRole(trim($_POST['Role']));
+            
             $AddDrModel->setPassword(trim($_POST['Password']));
             $AddDrModel->setNumber(trim($_POST['Number']));
 
@@ -97,15 +113,21 @@ public function AdminDoctors()
             $AddDrModel->setGender(trim($_POST['Gender']));
             $AddDrModel->setBithdate(trim($_POST['Birthdate']));
             $AddDrModel->setImage(trim($_POST['image']));
-            $AddDrModel->setUsername(trim($_POST['username']));
             
+            
+
+           
+            $admin = $this->getModel();
+            
+            $admin->addDoctor();
+            $admin->addDoctorInStuff();
+
+            
+              
+            
+
                 
-                if ( $scheduleModel->Schedule()) {
-                    
-                    header('location: ' . URLROOT . 'Public/Stuff/Doctor');
-                } else {
-                    die('Error in sign up');
-                }
+                
             
         }
 
@@ -115,7 +137,7 @@ public function AdminDoctors()
         $homeView->output();
 
 }
-public function AdminReceptionsits()
+public function AdminReceptionists()
 {
         $viewPath = VIEWS_PATH . 'Stuff/admin/AdminReceptionists.php';
         require_once $viewPath;
@@ -124,6 +146,13 @@ public function AdminReceptionsits()
 
 }
 
+public function AdminAppointments()
+{
+        $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminAppointments.php';
+        require_once $viewPath;
+        $settingsView = new AdminAppointments($this->getModel(), $this);
+        $settingsView->output();
+}
     
     
     public function DoctorAppointments()
@@ -134,6 +163,13 @@ public function AdminReceptionsits()
         $settingsView->output();
 }
     
+public function AdminPatients()
+{
+    $viewPath = VIEWS_PATH . 'Stuff/Admin/AdminPatients.php';
+    require_once $viewPath;
+    $patientView = new AdminPatients($this->getModel(), $this);
+    $patientView->output();
+}
 
  public function MyPatients()
 {

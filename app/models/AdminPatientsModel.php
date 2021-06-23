@@ -1,5 +1,6 @@
 <?php
-class AdminPatientsModel extends model
+require_once 'AdminModel.php';
+class AdminPatientsModel extends AdminModel
 {
 
 

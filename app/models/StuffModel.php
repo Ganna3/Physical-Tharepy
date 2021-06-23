@@ -94,7 +94,7 @@ class StuffModel extends Model{
               return $this->username;
             }
             function setUsername($username) {
-              return $this->usernae = $username;
+              return $this->username = $username;
             }
             function getAddress() {
               return $this->address;
@@ -104,6 +104,9 @@ class StuffModel extends Model{
             }
             function getID() {
               return $this->id;
+            }
+            function setID($ID) {
+              return $this->id = $ID;
             }
             function getGender() {
               return $this->Gender;

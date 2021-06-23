@@ -63,6 +63,17 @@ class AdminModel extends Model
         
     }
 
+    public function getDoctorImage($id)
+    {
+        //var_dump($id);
+        $this->dbh->query("SELECT Profile_pic FROM clinic_stuff WHERE Stuff_id = :id");
+        $this->dbh->bind(':id', $id);
+        $DoctorImage = $this->dbh->single();
+        //var_dump($Doctor);
+        return $DoctorImage;
+        
+    }
+
     public function getPatientFName($id)
     {
         //var_dump($id);
@@ -84,6 +95,20 @@ class AdminModel extends Model
         return $PatientLName;
         
     }
+
+    public function getPatientImage($id)
+    {
+        //var_dump($id);
+        $this->dbh->query("SELECT Image FROM patient WHERE Patient_ID = :id");
+        $this->dbh->bind(':id', $id);
+        $PatientImage = $this->dbh->single();
+        //var_dump($Doctor);
+        return $PatientImage;
+        
+    }
+
+    
+    
     
    
     

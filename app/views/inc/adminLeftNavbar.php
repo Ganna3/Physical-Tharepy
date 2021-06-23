@@ -23,28 +23,22 @@ include APPROOT . '/views/inc/includesImp.php';
                             <li> 
 								<a href="<?php echo URLROOT . 'public/Stuff/AdminDoctors'; ?>"><i class="fe fe-users"></i> <span>Doctors</span></a>
 							</li>
+                            
                             <li> 
-								<a href="<?php echo URLROOT . 'public/Stuff/admin/AdminReceptionists'; ?>"><i class="fe fe-users"></i> <span>Receptionists</span></a>
-							</li>
-                            <li> 
-								<a href="patients.php"><i class="fe fe-users"></i> <span>Patients</span></a>
+								<a href="<?php echo URLROOT . 'public/Stuff/AdminPatients'; ?>"><i class="fe fe-users"></i> <span>Patients</span></a>
 							</li>
 							<li> 
-								<a href="appointments.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+								<a href="<?php echo URLROOT . 'public/Stuff/AdminAppointments'; ?>"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
-							<li> 
-								<a href="specialities.php"><i class="fe fe-user-plus"></i> <span>Specialities</span></a>
-							</li>
+							
 						
 							
 							
-							<li> 
-								<a href="settings.php"><i class="fe fe-vector"></i> <span>Settings</span></a>
-							</li>
+							
 						
 							
 							<li> 
-								<a href="<?php echo URLROOT . 'public/Stuff/admin/AdminProfile'; ?>"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+								<a href="<?php echo URLROOT . 'public/Stuff/AdminProfile'; ?>"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
 							</li>
 
                            

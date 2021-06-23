@@ -1,5 +1,6 @@
 <?php
-class AdminAppointmentsModel extends model
+require_once 'AdminModel.php';
+class AdminAppointmentsModel extends AdminModel
 {
 
     function displayappointments()

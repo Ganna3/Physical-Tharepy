@@ -54,8 +54,8 @@ include APPROOT . '/views/inc/includesImp.php';
                                 <p class="text-muted mb-0">Administrator</p>
                             </div>
                         </div>
-                        <a class="dropdown-item" href="<?php echo APPROOT . 'public/Stuff/admin/AdminProfile.php'; ?>">My Profile</a>
-                        <a class="dropdown-item" href="AdminSettings.php">Settings</a>
+                        <a class="dropdown-item" href="<?php echo URLROOT . 'public/Stuff/AdminProfile'; ?>">My Profile</a>
+                        
                         <a class="dropdown-item" href="#">Logout</a>
                     </div>
                 </li>

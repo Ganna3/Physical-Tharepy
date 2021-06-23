@@ -6,50 +6,46 @@ public function output(){
     include APPROOT . '/views/inc/adminupperDashboard.php';
     include APPROOT . '/views/inc/adminLeftNavbar.php';
     $text = <<<EOT
-    
-    <!-- Page Wrapper -->
+     <!-- Page Wrapper -->
     <div class="page-wrapper">
-        <div class="content container-fluid">
-        
-            <!-- Page Header -->
-            <div class="page-header">
-                <div class="row">
-                    <div class="col-sm-7 col-auto">
-                        <h3 class="page-title">Doctors</h3>
-                        
-                    </div>
-                    <div class="col-sm-5 col">
-                        <a href="#Add_Specialities_details" data-toggle="modal" class="btn btn-primary float-right mt-2">Add doctor</a>
-                    </div>
-                </div>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-7 col-auto">
+                <h3 class="page-title"></h3>
+                
             </div>
-            <!-- /Page Header -->
-            </div>			
+            <div class="col-sm-5 col">
+                <a href="#Add_Specialities_details" data-toggle="modal" class="btn btn-primary float-right mt-5">Add doctor</a>
             </div>
-            <!-- /Page Wrapper -->
+        </div>
+    </div>
+    <!-- /Page Header -->
+               
             
             
             <!-- Add Modal -->
-            <div class="modal fade" id="Add_Specialities_details" aria-hidden="true" role="dialog">
-                <div class="modal-dialog modal-dialog-centered" role="document" >
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Add Doctors</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
+    <div class="modal fade" id="Add_Specialities_details" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document" >
+            <div class="modal-content">
 
-                            <form method="POST">
-                                <div class="row form-row">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Doctor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="Post">
+                       
+                    <div class="row form-row">
                                     <div class="col-12 col-sm-6">
                                         <div class="form-group">
                                             <label>Doctor name:</label>
                                             <input type="text" class="form-control" name="username">
                                         </div>
                                     </div>
-                                </div>
+                    </div>
 
                                 <div class="row form-row">
                                     <div class="col-12 col-sm-6">
@@ -96,14 +92,7 @@ public function output(){
                                     </div>
                                 </div>
 
-                                <div class="row form-row">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="form-group">
-                                            <label>Role:</label>
-                                            <input type="text" class="form-control" name="Role">
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div class="row form-row">
                                     <div class="col-12 col-sm-6">
@@ -121,7 +110,9 @@ public function output(){
                                         <input type="text" class="form-control" name="Expert_at">
                                     </div>
                                 </div>
-                            
+                                </div>
+                                
+
                                 <div class="row form-row">
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
@@ -157,25 +148,30 @@ public function output(){
                             <div class="row form-row">
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
-                                        <label>Image</label>
+                                        <label>Profile picture:</label>
                                         <input type="file"  class="form-control" name="image">
                                     </div>
                                 </div>
                             </div>
-                                
-                           
-                                <button type="submit" class="btn btn-primary btn-block">Add Doctor</button>
-                            </form>
 
 
-                        </div>
-                    </div>
+
+
+
+
+                        <button type="submit" class="btn btn-primary btn-block">Add Doctor</button>
+                    </form>
                 </div>
             </div>
-            <!-- /ADD Modal -->
+        </div>
+    </div>
+    
+    <!-- /ADD Modal -->
             
             
-            
+   
+    
+        <div class="content container-fluid">
             <!-- Delete Modal -->
             <div class="modal fade" id="delete_modal" aria-hidden="true" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document" >
@@ -190,7 +186,7 @@ public function output(){
                             <div class="form-content p-2">
                                 <h4 class="modal-title">Delete</h4>
                                 <p class="mb-4">Are you sure want to delete?</p>
-                                <button type="button" class="btn btn-primary">Save </button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
                         </div>
@@ -198,7 +194,8 @@ public function output(){
                 </div>
             </div>
             <!-- /Delete Modal -->
-        </div>
+         </div> 
+         
 
 
         <!-- /Main Wrapper -->
@@ -234,23 +231,24 @@ $text = <<<EOT
                                   </tbody>
                                     </table>
            
-                                    
+                                    <!-- /Main wrapper -->    
                                 </div>
                             </div>
                         </div>
-                        <!-- /Appointments list -->
                         
-                    </div>
-                </div>
+                        
+                    
             
                 
+
+
+
             </div>			
         </div>
         <!-- /Page Wrapper -->
     
-    </div>
-    <!-- /Main Wrapper -->
-                      
+    
+                 
                  
                    
 

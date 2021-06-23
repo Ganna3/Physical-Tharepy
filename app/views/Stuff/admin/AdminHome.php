@@ -378,7 +378,7 @@ EOT;
 
   function viewPatients()
   {
-    $pic = URLROOT . 'public/assets/img/Doctors';
+    $pic = URLROOT . 'public/assets/img/patients';
     foreach($this->model->getPatients() as $Patients)
 	{
         $patient_fname=$Patients->FName;
@@ -420,7 +420,8 @@ EOT;
 
   function viewAppointments()
   {
-    $pic = URLROOT . 'public/assets/img/Doctors';
+    $Dpic = URLROOT . 'public/assets/img/Doctors';
+    $Ppic = URLROOT . 'public/assets/img/Patients';
     foreach($this->model->getAppointments() as $Appointment)
 	{
         $Day=$Appointment->Day;
@@ -438,8 +439,14 @@ $name=$this->model->getPatientFName($PatientID);
 
         $name=$this->model->getPatientLName($PatientID);
         $PatientLName= $name->LName;
-
+//get dr image
+$dImage=$this->model->getDoctorImage($drID);
+        $drImage =$dImage->Profile_pic;
         
+        //get dr patient image
+$pImage=$this->model->getPatientImage($PatientID);
+$ptImage= $pImage->Image;
+
 
 
        
@@ -448,14 +455,14 @@ $name=$this->model->getPatientFName($PatientID);
     <tr>
        <td>
                                                     <h2 class="table-avatar">
-                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="" alt="User Image"></a>
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="Dpic/$drImage" alt="User Image"></a>
                                                         <a href="#">$drName </a>
                                                     </h2>
 
                                                 </td>
                                                 <td>
                                                     <h2 class="table-avatar">
-                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="" alt="User Image"></a>
+                                                        <a href="" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="Ppic/$ptImage" alt="User Image"></a>
                                                         <a href="#">$PatientFName $PatientLName</a>
                                                     </h2>
                                                     
