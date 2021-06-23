@@ -39,7 +39,7 @@ class bookappointments extends view
                                
                            </ol>
                        </nav>
-                       <h2 class="breadcrumb-title"> Doctor : $FullName </h2>
+                       <h2 class="breadcrumb-title">$FullName </h2>
                    </div>
                </div>
            </div>

@@ -32,7 +32,7 @@ $text =<<<EOT
                         <div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Login</h1>
-                <h5><a href="$Doctor">Are you a Doctor?</a></h5>
+                <h5><a href="$Doctor">STUFF? CLick here</a></h5>
 								<p class="account-subtitle">Login To Use Our Features</p>
 								<form action="$action" method="post">
 								<!-- Form -->
