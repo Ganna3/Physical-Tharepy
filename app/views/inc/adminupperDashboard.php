@@ -56,7 +56,7 @@ include APPROOT . '/views/inc/includesImp.php';
                         </div>
                         <a class="dropdown-item" href="<?php echo URLROOT . 'public/Stuff/AdminProfile'; ?>">My Profile</a>
                         
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="<?php echo URLROOT . 'public/Stuff/Stuff_Login';?>">Logout</a>
                     </div>
                 </li>
                 <!-- /User Menu -->
